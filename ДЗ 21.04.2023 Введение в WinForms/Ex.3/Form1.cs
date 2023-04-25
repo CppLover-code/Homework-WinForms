@@ -33,12 +33,14 @@ namespace Ex._3
                 {
                     MessageBox.Show("Точка внутри прямоугольника", "Сообщение");
                 }
-                else if (e.X == frm.Width - 100 && e.Y == frm.Height - 100 &&
-                    e.X == 100 && e.Y == 100)
+                else if (e.Y == 100 && e.X <= frm.Width - 100  ||
+                         e.X == 100 && e.Y <= frm.Height - 100 ||
+                         e.X == frm.Width - 100 && e.Y <= frm.Height - 100 ||
+                         e.Y == frm.Height - 100 && e.X <= frm.Width - 100)
                 {
                     MessageBox.Show("Точка на границе прямоугольника", "Сообщение");
-                }               
-                else
+                }
+                else 
                 {
                     MessageBox.Show("Точка снаружи прямоугольника", "Сообщение");
                 }               
