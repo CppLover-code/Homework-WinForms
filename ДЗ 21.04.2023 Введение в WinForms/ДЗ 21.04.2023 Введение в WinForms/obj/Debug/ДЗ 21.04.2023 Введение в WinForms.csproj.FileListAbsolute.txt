@@ -1,0 +1,11 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\bin\Debug\ДЗ 21.04.2023 Введение в WinForms.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\bin\Debug\ДЗ 21.04.2023 Введение в WinForms.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\bin\Debug\ДЗ 21.04.2023 Введение в WinForms.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ_21._04._2023_Введение_в_WinForms.Form1.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ_21._04._2023_Введение_в_WinForms.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\ДЗ 21.04.2023 Введение в WinForms\obj\Debug\ДЗ 21.04.2023 Введение в WinForms.pdb
