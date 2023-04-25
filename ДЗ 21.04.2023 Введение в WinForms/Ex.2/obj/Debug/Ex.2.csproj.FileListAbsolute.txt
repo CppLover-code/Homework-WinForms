@@ -8,3 +8,4 @@ C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\E
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.csproj.CoreCompileInputs.cache
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.exe
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex._2.GuessNumber.resources
