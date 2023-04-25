@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2653B8BC-A223-416F-B73C-588DC2FDAACC}</ProjectGuid>
+    <ProjectGuid>{A6ABD8B6-2617-4B10-B93F-AD8137271FB3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ДЗ_21._04._2023_Введение_в_WinForms</RootNamespace>
-    <AssemblyName>ДЗ 21.04.2023 Введение в WinForms</AssemblyName>
+    <RootNamespace>Ex._2</RootNamespace>
+    <AssemblyName>Ex.2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resume.cs">
+    <Compile Include="GuessNumber.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resume.Designer.cs">
-      <DependentUpon>Resume.cs</DependentUpon>
+    <Compile Include="GuessNumber.Designer.cs">
+      <DependentUpon>GuessNumber.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Resume.resx">
-      <DependentUpon>Resume.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

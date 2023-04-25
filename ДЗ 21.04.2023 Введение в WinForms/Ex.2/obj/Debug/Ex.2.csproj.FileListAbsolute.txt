@@ -1,0 +1,10 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\bin\Debug\Ex.2.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\bin\Debug\Ex.2.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\bin\Debug\Ex.2.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex._2.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.2\obj\Debug\Ex.2.pdb
