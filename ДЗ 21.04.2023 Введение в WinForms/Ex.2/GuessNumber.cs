@@ -28,16 +28,16 @@ namespace Ex._2
         private void Game()
         {
             Random random = new Random();
-            int number = random.Next(1, 21);
+            int number = random.Next(1, 21); // случайное загаданное число
             MessageBox.Show($"Загаданное число {number}", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             int guess;
-            int attempt = 0;
+            int attempt = 0;                // счётчик попыток
             while (true)
             {
-                guess = random.Next(1, 21);
+                guess = random.Next(1, 21); // случайное число, попытка угадать
 
-                attempt++;
+                attempt++; 
                // MessageBox.Show($" Number {number}, guess {guess}, attempt {attempt}");
                 if (guess == number)
                 {

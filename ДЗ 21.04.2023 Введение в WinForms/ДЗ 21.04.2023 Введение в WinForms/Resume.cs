@@ -28,20 +28,18 @@ namespace ДЗ_21._04._2023_Введение_в_WinForms
                 "Профессия: учитель украинского языка и литературы"
             };
 
-            int symb = 0;
-            int box = resume.Count;
+            int symb = 0;            // счётчик кол-ва символов
+            int box = resume.Count;  // кол-во mes.box
             int count = 1;
             foreach (string item in resume)
             {
                 symb += item.Length;
+
                 if(count == resume.Count)
-                {
                     MessageBox.Show(item, $"Резюме, символов - {symb}, MessageBox’ов - {box}");
-                }
                 else
-                {
                     MessageBox.Show(item, "Резюме");
-                }
+
                 count++;
             }
         }
