@@ -1,0 +1,11 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\bin\Debug\Ex.3.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\bin\Debug\Ex.3.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\bin\Debug\Ex.3.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex._3.Form1.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex._3.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 21.04.2023 Введение в WinForms\Ex.3\obj\Debug\Ex.3.pdb
