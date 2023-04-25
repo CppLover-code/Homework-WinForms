@@ -1,6 +1,6 @@
 ﻿namespace ДЗ_21._04._2023_Введение_в_WinForms
 {
-    partial class Form1
+    partial class Resume
     {
         /// <summary>
         /// Обязательная переменная конструктора.

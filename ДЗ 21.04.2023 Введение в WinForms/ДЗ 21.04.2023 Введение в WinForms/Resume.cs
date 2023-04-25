@@ -14,9 +14,9 @@ using System.Windows.Forms;
 //(общее количество символов в резюме / количество MessageBox’ов).
 namespace ДЗ_21._04._2023_Введение_в_WinForms
 {
-    public partial class Form1 : Form
+    public partial class Resume : Form
     {
-        public Form1()
+        public Resume()
         {
             InitializeComponent();
             List<string> resume = new List<string>()
@@ -30,15 +30,20 @@ namespace ДЗ_21._04._2023_Введение_в_WinForms
 
             int symb = 0;
             int box = resume.Count;
-
+            int count = 1;
             foreach (string item in resume)
             {
                 symb += item.Length;
-                
+                if(count == resume.Count)
+                {
+                    MessageBox.Show(item, $"Резюме, символов - {symb}, MessageBox’ов - {box}");
+                }
+                else
+                {
+                    MessageBox.Show(item, "Резюме");
+                }
+                count++;
             }
-            MessageBox.Show(resume.Count.ToString());
-            MessageBox.Show(symb.ToString());
-            MessageBox.Show("Hello", " Message window");
         }
     }
 }
