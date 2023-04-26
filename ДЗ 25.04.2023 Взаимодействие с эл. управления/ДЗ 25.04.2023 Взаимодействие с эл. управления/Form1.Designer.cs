@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Surname = new System.Windows.Forms.Label();
             this.tSurname = new System.Windows.Forms.TextBox();
             this.tName = new System.Windows.Forms.TextBox();
@@ -44,6 +45,8 @@
             this.AddInfo = new System.Windows.Forms.Label();
             this.bSave = new System.Windows.Forms.Button();
             this.bLoad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Surname
@@ -166,6 +169,7 @@
             this.bSave.TabIndex = 14;
             this.bSave.Text = "Сохранить";
             this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bSave_MouseClick);
             // 
             // bLoad
             // 
@@ -175,10 +179,23 @@
             this.bLoad.TabIndex = 15;
             this.bLoad.Text = "Загрузить";
             this.bLoad.UseVisualStyleBackColor = true;
+            this.bLoad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bLoad_MouseClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(222, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 155);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(482, 469);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bLoad);
             this.Controls.Add(this.bSave);
             this.Controls.Add(this.tAddInfo);
@@ -196,6 +213,7 @@
             this.Controls.Add(this.tSurname);
             this.Controls.Add(this.Surname);
             this.Name = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +237,7 @@
         private System.Windows.Forms.Label AddInfo;
         private System.Windows.Forms.Button bSave;
         private System.Windows.Forms.Button bLoad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
