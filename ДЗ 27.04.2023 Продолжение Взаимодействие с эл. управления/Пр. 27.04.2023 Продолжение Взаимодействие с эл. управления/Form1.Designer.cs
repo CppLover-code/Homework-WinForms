@@ -45,6 +45,9 @@
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelGas = new System.Windows.Forms.Label();
             this.groupBoxCafe = new System.Windows.Forms.GroupBox();
+            this.groupBoxPaymentCafe = new System.Windows.Forms.GroupBox();
+            this.labelUahCafe = new System.Windows.Forms.Label();
+            this.labelCafePayment = new System.Windows.Forms.Label();
             this.textBox4ColaCount = new System.Windows.Forms.TextBox();
             this.textBox3FriesCount = new System.Windows.Forms.TextBox();
             this.textBox2HamburgerCount = new System.Windows.Forms.TextBox();
@@ -59,9 +62,6 @@
             this.checkBox1HotDog = new System.Windows.Forms.CheckBox();
             this.label2CountCafe = new System.Windows.Forms.Label();
             this.label1PriceCafe = new System.Windows.Forms.Label();
-            this.labelUahCafe = new System.Windows.Forms.Label();
-            this.labelCafePayment = new System.Windows.Forms.Label();
-            this.groupBoxPaymentCafe = new System.Windows.Forms.GroupBox();
             this.labelUahTotal = new System.Windows.Forms.Label();
             this.labelTotalPayment = new System.Windows.Forms.Label();
             this.groupBoxTotalPayment = new System.Windows.Forms.GroupBox();
@@ -262,12 +262,43 @@
             this.groupBoxCafe.TabStop = false;
             this.groupBoxCafe.Text = "Мини-кафе";
             // 
+            // groupBoxPaymentCafe
+            // 
+            this.groupBoxPaymentCafe.Controls.Add(this.labelUahCafe);
+            this.groupBoxPaymentCafe.Controls.Add(this.labelCafePayment);
+            this.groupBoxPaymentCafe.Location = new System.Drawing.Point(6, 214);
+            this.groupBoxPaymentCafe.Name = "groupBoxPaymentCafe";
+            this.groupBoxPaymentCafe.Size = new System.Drawing.Size(200, 100);
+            this.groupBoxPaymentCafe.TabIndex = 14;
+            this.groupBoxPaymentCafe.TabStop = false;
+            this.groupBoxPaymentCafe.Text = "К оплате:";
+            // 
+            // labelUahCafe
+            // 
+            this.labelUahCafe.AutoSize = true;
+            this.labelUahCafe.Location = new System.Drawing.Point(158, 74);
+            this.labelUahCafe.Name = "labelUahCafe";
+            this.labelUahCafe.Size = new System.Drawing.Size(27, 13);
+            this.labelUahCafe.TabIndex = 11;
+            this.labelUahCafe.Text = "грн.";
+            // 
+            // labelCafePayment
+            // 
+            this.labelCafePayment.BackColor = System.Drawing.SystemColors.Control;
+            this.labelCafePayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelCafePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCafePayment.Location = new System.Drawing.Point(36, 52);
+            this.labelCafePayment.Name = "labelCafePayment";
+            this.labelCafePayment.Size = new System.Drawing.Size(115, 35);
+            this.labelCafePayment.TabIndex = 0;
+            // 
             // textBox4ColaCount
             // 
             this.textBox4ColaCount.Location = new System.Drawing.Point(173, 148);
             this.textBox4ColaCount.Name = "textBox4ColaCount";
             this.textBox4ColaCount.Size = new System.Drawing.Size(49, 20);
             this.textBox4ColaCount.TabIndex = 13;
+            this.textBox4ColaCount.Text = "0";
             // 
             // textBox3FriesCount
             // 
@@ -275,6 +306,7 @@
             this.textBox3FriesCount.Name = "textBox3FriesCount";
             this.textBox3FriesCount.Size = new System.Drawing.Size(49, 20);
             this.textBox3FriesCount.TabIndex = 12;
+            this.textBox3FriesCount.Text = "0";
             // 
             // textBox2HamburgerCount
             // 
@@ -282,6 +314,7 @@
             this.textBox2HamburgerCount.Name = "textBox2HamburgerCount";
             this.textBox2HamburgerCount.Size = new System.Drawing.Size(49, 20);
             this.textBox2HamburgerCount.TabIndex = 11;
+            this.textBox2HamburgerCount.Text = "0";
             // 
             // textBox1HotDogCount
             // 
@@ -289,6 +322,7 @@
             this.textBox1HotDogCount.Name = "textBox1HotDogCount";
             this.textBox1HotDogCount.Size = new System.Drawing.Size(49, 20);
             this.textBox1HotDogCount.TabIndex = 10;
+            this.textBox1HotDogCount.Text = "0";
             // 
             // textBox4ColaPrice
             // 
@@ -297,6 +331,7 @@
             this.textBox4ColaPrice.ReadOnly = true;
             this.textBox4ColaPrice.Size = new System.Drawing.Size(49, 20);
             this.textBox4ColaPrice.TabIndex = 9;
+            this.textBox4ColaPrice.Text = "20,00";
             // 
             // textBox3FriesPrice
             // 
@@ -305,6 +340,7 @@
             this.textBox3FriesPrice.ReadOnly = true;
             this.textBox3FriesPrice.Size = new System.Drawing.Size(49, 20);
             this.textBox3FriesPrice.TabIndex = 8;
+            this.textBox3FriesPrice.Text = "30,00";
             // 
             // textBox2HamburgerPrice
             // 
@@ -313,6 +349,7 @@
             this.textBox2HamburgerPrice.ReadOnly = true;
             this.textBox2HamburgerPrice.Size = new System.Drawing.Size(49, 20);
             this.textBox2HamburgerPrice.TabIndex = 7;
+            this.textBox2HamburgerPrice.Text = "50,00";
             // 
             // textBox1HotDogPrice
             // 
@@ -322,6 +359,7 @@
             this.textBox1HotDogPrice.ReadOnly = true;
             this.textBox1HotDogPrice.Size = new System.Drawing.Size(49, 20);
             this.textBox1HotDogPrice.TabIndex = 6;
+            this.textBox1HotDogPrice.Text = "60,00";
             // 
             // checkBox4Cola
             // 
@@ -380,36 +418,6 @@
             this.label1PriceCafe.Size = new System.Drawing.Size(33, 13);
             this.label1PriceCafe.TabIndex = 0;
             this.label1PriceCafe.Text = "Цена";
-            // 
-            // labelUahCafe
-            // 
-            this.labelUahCafe.AutoSize = true;
-            this.labelUahCafe.Location = new System.Drawing.Point(158, 74);
-            this.labelUahCafe.Name = "labelUahCafe";
-            this.labelUahCafe.Size = new System.Drawing.Size(27, 13);
-            this.labelUahCafe.TabIndex = 11;
-            this.labelUahCafe.Text = "грн.";
-            // 
-            // labelCafePayment
-            // 
-            this.labelCafePayment.BackColor = System.Drawing.SystemColors.Control;
-            this.labelCafePayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelCafePayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCafePayment.Location = new System.Drawing.Point(36, 52);
-            this.labelCafePayment.Name = "labelCafePayment";
-            this.labelCafePayment.Size = new System.Drawing.Size(115, 35);
-            this.labelCafePayment.TabIndex = 0;
-            // 
-            // groupBoxPaymentCafe
-            // 
-            this.groupBoxPaymentCafe.Controls.Add(this.labelUahCafe);
-            this.groupBoxPaymentCafe.Controls.Add(this.labelCafePayment);
-            this.groupBoxPaymentCafe.Location = new System.Drawing.Point(6, 214);
-            this.groupBoxPaymentCafe.Name = "groupBoxPaymentCafe";
-            this.groupBoxPaymentCafe.Size = new System.Drawing.Size(200, 100);
-            this.groupBoxPaymentCafe.TabIndex = 14;
-            this.groupBoxPaymentCafe.TabStop = false;
-            this.groupBoxPaymentCafe.Text = "К оплате:";
             // 
             // labelUahTotal
             // 
