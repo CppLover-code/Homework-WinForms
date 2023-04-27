@@ -296,6 +296,7 @@
             // 
             this.textBox4ColaCount.Location = new System.Drawing.Point(173, 148);
             this.textBox4ColaCount.Name = "textBox4ColaCount";
+            this.textBox4ColaCount.ReadOnly = true;
             this.textBox4ColaCount.Size = new System.Drawing.Size(49, 20);
             this.textBox4ColaCount.TabIndex = 13;
             this.textBox4ColaCount.Text = "0";
@@ -304,6 +305,7 @@
             // 
             this.textBox3FriesCount.Location = new System.Drawing.Point(173, 110);
             this.textBox3FriesCount.Name = "textBox3FriesCount";
+            this.textBox3FriesCount.ReadOnly = true;
             this.textBox3FriesCount.Size = new System.Drawing.Size(49, 20);
             this.textBox3FriesCount.TabIndex = 12;
             this.textBox3FriesCount.Text = "0";
@@ -312,6 +314,7 @@
             // 
             this.textBox2HamburgerCount.Location = new System.Drawing.Point(173, 73);
             this.textBox2HamburgerCount.Name = "textBox2HamburgerCount";
+            this.textBox2HamburgerCount.ReadOnly = true;
             this.textBox2HamburgerCount.Size = new System.Drawing.Size(49, 20);
             this.textBox2HamburgerCount.TabIndex = 11;
             this.textBox2HamburgerCount.Text = "0";
@@ -320,6 +323,7 @@
             // 
             this.textBox1HotDogCount.Location = new System.Drawing.Point(173, 33);
             this.textBox1HotDogCount.Name = "textBox1HotDogCount";
+            this.textBox1HotDogCount.ReadOnly = true;
             this.textBox1HotDogCount.Size = new System.Drawing.Size(49, 20);
             this.textBox1HotDogCount.TabIndex = 10;
             this.textBox1HotDogCount.Text = "0";
@@ -370,6 +374,7 @@
             this.checkBox4Cola.TabIndex = 5;
             this.checkBox4Cola.Text = "Кока-кола";
             this.checkBox4Cola.UseVisualStyleBackColor = true;
+            this.checkBox4Cola.CheckedChanged += new System.EventHandler(this.checkBoxFood_CheckedChanged);
             // 
             // checkBox3Fries
             // 
@@ -380,6 +385,7 @@
             this.checkBox3Fries.TabIndex = 4;
             this.checkBox3Fries.Text = "Картошка-фри";
             this.checkBox3Fries.UseVisualStyleBackColor = true;
+            this.checkBox3Fries.CheckedChanged += new System.EventHandler(this.checkBoxFood_CheckedChanged);
             // 
             // checkBox2Hamburger
             // 
@@ -390,6 +396,7 @@
             this.checkBox2Hamburger.TabIndex = 3;
             this.checkBox2Hamburger.Text = "Гамбургер";
             this.checkBox2Hamburger.UseVisualStyleBackColor = true;
+            this.checkBox2Hamburger.CheckedChanged += new System.EventHandler(this.checkBoxFood_CheckedChanged);
             // 
             // checkBox1HotDog
             // 
@@ -400,6 +407,7 @@
             this.checkBox1HotDog.TabIndex = 2;
             this.checkBox1HotDog.Text = "Хот-дог";
             this.checkBox1HotDog.UseVisualStyleBackColor = true;
+            this.checkBox1HotDog.CheckedChanged += new System.EventHandler(this.checkBoxFood_CheckedChanged);
             // 
             // label2CountCafe
             // 

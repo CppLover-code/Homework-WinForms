@@ -89,6 +89,22 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         }
 
         ///////////Мини-кафе//////////////
-        ///
+        private void checkBoxFood_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1HotDog.Checked)
+                textBox1HotDogCount.ReadOnly = false;
+
+            if (checkBox2Hamburger.Checked)
+                textBox2HamburgerCount.ReadOnly = false;
+
+            if (checkBox3Fries.Checked)
+                textBox3FriesCount.ReadOnly = false;
+
+            if (checkBox4Cola.Checked)
+                textBox4ColaCount.ReadOnly = false;
+        }
+
+
+        
     }
 }
