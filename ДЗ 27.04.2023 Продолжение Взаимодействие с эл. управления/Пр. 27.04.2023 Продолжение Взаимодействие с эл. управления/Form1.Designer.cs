@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxGas = new System.Windows.Forms.GroupBox();
             this.groupBoxPaymentGas = new System.Windows.Forms.GroupBox();
             this.label4UahPayment = new System.Windows.Forms.Label();
@@ -65,13 +66,16 @@
             this.labelUahTotal = new System.Windows.Forms.Label();
             this.labelTotalPayment = new System.Windows.Forms.Label();
             this.groupBoxTotalPayment = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCalculateTotal = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBoxGas.SuspendLayout();
             this.groupBoxPaymentGas.SuspendLayout();
             this.panelGas.SuspendLayout();
             this.groupBoxCafe.SuspendLayout();
             this.groupBoxPaymentCafe.SuspendLayout();
             this.groupBoxTotalPayment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxGas
@@ -452,6 +456,7 @@
             // 
             // groupBoxTotalPayment
             // 
+            this.groupBoxTotalPayment.Controls.Add(this.pictureBox1);
             this.groupBoxTotalPayment.Controls.Add(this.buttonCalculateTotal);
             this.groupBoxTotalPayment.Controls.Add(this.labelUahTotal);
             this.groupBoxTotalPayment.Controls.Add(this.labelTotalPayment);
@@ -462,6 +467,17 @@
             this.groupBoxTotalPayment.TabStop = false;
             this.groupBoxTotalPayment.Text = "ВСЕГО к оплате:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления.Properties.Resources.rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonCalculateTotal
             // 
             this.buttonCalculateTotal.Location = new System.Drawing.Point(88, 47);
@@ -469,8 +485,13 @@
             this.buttonCalculateTotal.Size = new System.Drawing.Size(118, 42);
             this.buttonCalculateTotal.TabIndex = 12;
             this.buttonCalculateTotal.Text = "Посчитать";
-            this.buttonCalculateTotal.UseVisualStyleBackColor = true; 
+            this.buttonCalculateTotal.UseVisualStyleBackColor = true;
             this.buttonCalculateTotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonCalculateTotal_MouseClick);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -495,6 +516,7 @@
             this.groupBoxPaymentCafe.PerformLayout();
             this.groupBoxTotalPayment.ResumeLayout(false);
             this.groupBoxTotalPayment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,6 +561,8 @@
         private System.Windows.Forms.Label labelTotalPayment;
         private System.Windows.Forms.GroupBox groupBoxTotalPayment;
         private System.Windows.Forms.Button buttonCalculateTotal;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

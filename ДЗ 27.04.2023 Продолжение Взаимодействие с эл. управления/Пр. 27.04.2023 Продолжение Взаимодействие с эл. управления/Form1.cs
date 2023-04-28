@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления
 {
@@ -18,9 +19,10 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         {
             InitializeComponent();
             this.Text = "BestOil";
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(300, 200);
             this.Height = 523;
-            this.Width = 523;
-            //this.Location = 
+            this.Width = 523;     
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -180,6 +182,24 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             if(e.Button == MouseButtons.Left)
             {
                 labelTotalPayment.Text = TotalPayment().ToString("N2");
+                timer1.Enabled = true;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)////????
+        {
+            DialogResult result = MessageBox.Show("Очистить форму?", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);           
+            if(result == DialogResult.OK)
+            {
+                timer1.Enabled = false;
+                comboGas.SelectedIndex = 0;
+                rbCountGas.Checked = true;
+                this.;
+                
+            }
+            else
+            {
+
             }
         }
     }
