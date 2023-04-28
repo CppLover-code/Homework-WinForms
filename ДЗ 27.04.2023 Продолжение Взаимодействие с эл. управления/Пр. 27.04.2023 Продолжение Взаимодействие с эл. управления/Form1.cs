@@ -20,7 +20,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             this.Text = "BestOil";
             this.Height = 523;
             this.Width = 523;
-
+            //this.Location = 
         }
 
         private void Form1_Load(object sender, EventArgs e)
