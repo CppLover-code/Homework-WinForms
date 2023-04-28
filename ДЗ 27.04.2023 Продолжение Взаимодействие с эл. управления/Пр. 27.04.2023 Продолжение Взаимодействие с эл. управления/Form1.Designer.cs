@@ -300,6 +300,7 @@
             this.textBox4ColaCount.Size = new System.Drawing.Size(49, 20);
             this.textBox4ColaCount.TabIndex = 13;
             this.textBox4ColaCount.Text = "0";
+            this.textBox4ColaCount.TextChanged += new System.EventHandler(this.textBoxFoodCount_TextChanged);
             // 
             // textBox3FriesCount
             // 
@@ -309,6 +310,7 @@
             this.textBox3FriesCount.Size = new System.Drawing.Size(49, 20);
             this.textBox3FriesCount.TabIndex = 12;
             this.textBox3FriesCount.Text = "0";
+            this.textBox3FriesCount.TextChanged += new System.EventHandler(this.textBoxFoodCount_TextChanged);
             // 
             // textBox2HamburgerCount
             // 
@@ -318,6 +320,7 @@
             this.textBox2HamburgerCount.Size = new System.Drawing.Size(49, 20);
             this.textBox2HamburgerCount.TabIndex = 11;
             this.textBox2HamburgerCount.Text = "0";
+            this.textBox2HamburgerCount.TextChanged += new System.EventHandler(this.textBoxFoodCount_TextChanged);
             // 
             // textBox1HotDogCount
             // 
@@ -327,6 +330,7 @@
             this.textBox1HotDogCount.Size = new System.Drawing.Size(49, 20);
             this.textBox1HotDogCount.TabIndex = 10;
             this.textBox1HotDogCount.Text = "0";
+            this.textBox1HotDogCount.TextChanged += new System.EventHandler(this.textBoxFoodCount_TextChanged);
             // 
             // textBox4ColaPrice
             // 
@@ -465,7 +469,8 @@
             this.buttonCalculateTotal.Size = new System.Drawing.Size(118, 42);
             this.buttonCalculateTotal.TabIndex = 12;
             this.buttonCalculateTotal.Text = "Посчитать";
-            this.buttonCalculateTotal.UseVisualStyleBackColor = true;
+            this.buttonCalculateTotal.UseVisualStyleBackColor = true; 
+            this.buttonCalculateTotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonCalculateTotal_MouseClick);
             // 
             // Form1
             // 
