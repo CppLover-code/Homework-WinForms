@@ -1,0 +1,11 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\bin\Debug\ДЗ 28.04.2023 Списки.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\bin\Debug\ДЗ 28.04.2023 Списки.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\bin\Debug\ДЗ 28.04.2023 Списки.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ_28._04._2023_Списки.Form1.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ_28._04._2023_Списки.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 28.04.2023 Списки\ДЗ 28.04.2023 Списки\obj\Debug\ДЗ 28.04.2023 Списки.pdb
