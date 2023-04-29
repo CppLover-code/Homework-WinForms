@@ -10,11 +10,12 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления
-{
+{  
     public partial class Form1 : Form
     {
         private double a98 = 43;
         private double a95 = 45;
+        private double dayTotal = 0;
         public Form1()
         {
             InitializeComponent();
@@ -22,13 +23,14 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(300, 200);
             this.Height = 523;
-            this.Width = 523;     
+            this.Width = 523;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             comboGas.SelectedIndex = 0;
             rbCountGas.Checked = true;
+            labelCafePayment.Text = PaymentCafe().ToString("N2");
         }
 
         ///////////Автозаправка//////////////
@@ -140,17 +142,18 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         {
             double toPaymentCafe = 0;
 
-            if (checkBox1HotDog.Checked)
-                toPaymentCafe += (int.Parse(textBox1HotDogCount.Text) * double.Parse(textBox1HotDogPrice.Text));
+                if (checkBox1HotDog.Checked)
+                    //if (String.IsNullOrEmpty(textBox1HotDogCount.Text)) textBox1HotDogCount.Text = "0"; // не очень удобно потом вводить количество!
+                    toPaymentCafe += (int.Parse(textBox1HotDogCount.Text) * double.Parse(textBox1HotDogPrice.Text));
 
-            if (checkBox2Hamburger.Checked)
-                toPaymentCafe += (int.Parse(textBox2HamburgerCount.Text) * double.Parse(textBox2HamburgerPrice.Text));
+                if (checkBox2Hamburger.Checked)
+                    toPaymentCafe += (int.Parse(textBox2HamburgerCount.Text) * double.Parse(textBox2HamburgerPrice.Text));
 
-            if (checkBox3Fries.Checked)
-                toPaymentCafe += (int.Parse(textBox3FriesCount.Text) * double.Parse(textBox3FriesPrice.Text));
+                if (checkBox3Fries.Checked)
+                    toPaymentCafe += (int.Parse(textBox3FriesCount.Text) * double.Parse(textBox3FriesPrice.Text));
 
-            if (checkBox4Cola.Checked)
-                toPaymentCafe += (int.Parse(textBox4ColaCount.Text) * double.Parse(textBox4ColaPrice.Text));
+                if (checkBox4Cola.Checked)
+                    toPaymentCafe += (int.Parse(textBox4ColaCount.Text) * double.Parse(textBox4ColaPrice.Text));
 
             return toPaymentCafe;
         }
@@ -186,21 +189,84 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)////????
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Очистить форму?", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);           
+            timer1.Enabled = false;
+            DialogResult result = MessageBox.Show("Завершить покупку?", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);           
+
             if(result == DialogResult.OK)
             {
-                timer1.Enabled = false;
+                dayTotal += TotalPayment();
+                //while (Controls.Count > 0)    // проблема - используя данный способ, закрытие происходит
+                //{                             // несколько раз (вывод mes.box)
+                //    Controls[0].Dispose();
+                //}
+                //InitializeComponent();
+                //comboGas.SelectedIndex = 0;
+                //rbCountGas.Checked = true;
+                //labelCafePayment.Text = PaymentCafe().ToString("N2");
+
+                // Вопрос: как использовать код ниже, не копируя. Ведь он взят из событий выше!
                 comboGas.SelectedIndex = 0;
                 rbCountGas.Checked = true;
-                this.;
-                
+
+                if (comboGas.SelectedIndex == 0)
+                {
+                    tbPriceGas.Text = a98.ToString();
+                }
+                else if (comboGas.SelectedIndex == 1)
+                {
+                    tbPriceGas.Text = a95.ToString();
+                }
+                label4PaymentGas.Text = PaymentGas().ToString("N2");
+
+                if (rbCountGas.Checked)
+                {
+                    tbCountGas.ReadOnly = false;
+                    tbSumGas.ReadOnly = true;
+                    tbCountGas.Text = 10.ToString("N2");
+                    tbSumGas.Text = string.Empty;
+                }
+                else if (rbSumGas.Checked)
+                {
+                    tbCountGas.ReadOnly = true;
+                    tbSumGas.ReadOnly = false;
+                    tbSumGas.Text = 100.ToString("N2");
+                    tbCountGas.Text = string.Empty;
+                }
+
+                checkBox1HotDog.Checked = false;
+                textBox1HotDogCount.Text = "0";
+                textBox1HotDogCount.ReadOnly = true;
+
+                checkBox2Hamburger.Checked = false;
+                textBox2HamburgerCount.Text = "0";
+                textBox2HamburgerCount.ReadOnly = true;
+
+
+                checkBox3Fries.Checked = false;
+                textBox3FriesCount.Text = "0";
+                textBox3FriesCount.ReadOnly = true;
+
+
+                checkBox4Cola.Checked = false;
+                textBox4ColaCount.Text = "0";
+                textBox4ColaCount.ReadOnly = true;
+
+                labelCafePayment.Text = PaymentCafe().ToString("N2");
+                labelTotalPayment.Text = string.Empty;
             }
             else
             {
-
+                timer1.Enabled = true;
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show($"Сумма {dayTotal} грн.", "Выручка за день", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            e.Cancel = false;
+            MessageBox.Show("До свидания!");
         }
     }
 }

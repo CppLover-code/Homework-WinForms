@@ -480,29 +480,34 @@
             // 
             // buttonCalculateTotal
             // 
+            this.buttonCalculateTotal.BackColor = System.Drawing.Color.Lavender;
             this.buttonCalculateTotal.Location = new System.Drawing.Point(88, 47);
             this.buttonCalculateTotal.Name = "buttonCalculateTotal";
             this.buttonCalculateTotal.Size = new System.Drawing.Size(118, 42);
             this.buttonCalculateTotal.TabIndex = 12;
             this.buttonCalculateTotal.Text = "Посчитать";
-            this.buttonCalculateTotal.UseVisualStyleBackColor = true;
+            this.buttonCalculateTotal.UseVisualStyleBackColor = false;
             this.buttonCalculateTotal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonCalculateTotal_MouseClick);
             // 
             // timer1
             // 
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(507, 474);
             this.Controls.Add(this.groupBoxTotalPayment);
             this.Controls.Add(this.groupBoxCafe);
             this.Controls.Add(this.groupBoxGas);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxGas.ResumeLayout(false);
             this.groupBoxGas.PerformLayout();
