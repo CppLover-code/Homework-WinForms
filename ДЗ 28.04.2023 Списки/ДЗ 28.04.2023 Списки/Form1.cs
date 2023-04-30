@@ -32,10 +32,8 @@ namespace ДЗ_28._04._2023_Списки
             foreach(var item in persons)
                 listBox1.Items.Add(item);
         }
-        // добавить событие textChanged при вводе новых данных,
-        // а при Редактировании поменять ReadOnly, чтоб все боксы были доступны для редактирования
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
+        private void buttonAdd_Click(object sender, EventArgs e) // добавление в список
+        {           
             string txtName = textBox1Name.Text;
             string txtSurname = textBox2Surname.Text;
             string txtEmail = textBox3Mail.Text;
@@ -48,6 +46,66 @@ namespace ДЗ_28._04._2023_Списки
             textBox2Surname.Text = string.Empty;
             textBox3Mail.Text = string.Empty;
             textBox4Tel.Text = string.Empty;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e) // удаление из списка одного человека
+        {
+            int index = listBox1.SelectedIndex;
+            if(index != -1)
+            {
+                listBox1.Items.RemoveAt(index);
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index != -1)
+            {
+                buttonAdd.Enabled = false;
+                buttonDelete.Enabled = false;
+                buttonSave.Enabled = true;
+                var person = (Person)listBox1.Items[index];
+
+                textBox1Name.Text = person.Name;
+                textBox2Surname.Text = person.Surname;
+                textBox3Mail.Text = person.Email;
+                textBox4Tel.Text = person.Phone;
+                
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index != -1)
+            {
+                string txtName = textBox1Name.Text;
+                string txtSurname = textBox2Surname.Text;
+                string txtEmail = textBox3Mail.Text;
+                string txtPhone = textBox4Tel.Text;
+
+                var person = new Person(txtName, txtSurname, txtEmail, txtPhone);
+                listBox1.Items[index] = person;
+
+                textBox1Name.Text = string.Empty;
+                textBox2Surname.Text = string.Empty;
+                textBox3Mail.Text = string.Empty;
+                textBox4Tel.Text = string.Empty;
+
+            }
+            buttonDelete.Enabled = true;
+        }
+
+        private void textBox1Name_TextChanged(object sender, EventArgs e)
+        {
+            if ((String.IsNullOrEmpty(textBox1Name.Text) ||                        // (если поле Имя или Фамилия пустые) ИЛИ 
+                String.IsNullOrEmpty(textBox2Surname.Text)) || buttonEdit.Focused) // фокус управления находится на кнопке Редактировать
+            {
+                buttonAdd.Enabled = false;                                         // кнопка Добавить не активна
+
+            }
+            else { buttonAdd.Enabled = true; }
         }
     }
     class Person

@@ -41,6 +41,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelListPerson = new System.Windows.Forms.Label();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1Name
@@ -50,21 +51,23 @@
             this.label1Name.Name = "label1Name";
             this.label1Name.Size = new System.Drawing.Size(100, 14);
             this.label1Name.TabIndex = 0;
-            this.label1Name.Text = "Имя";
+            this.label1Name.Text = "Имя*";
             // 
             // textBox1Name
             // 
             this.textBox1Name.Location = new System.Drawing.Point(13, 30);
             this.textBox1Name.Name = "textBox1Name";
-            this.textBox1Name.Size = new System.Drawing.Size(100, 20);
+            this.textBox1Name.Size = new System.Drawing.Size(118, 20);
             this.textBox1Name.TabIndex = 1;
+            this.textBox1Name.TextChanged += new System.EventHandler(this.textBox1Name_TextChanged);
             // 
             // textBox2Surname
             // 
             this.textBox2Surname.Location = new System.Drawing.Point(13, 81);
             this.textBox2Surname.Name = "textBox2Surname";
-            this.textBox2Surname.Size = new System.Drawing.Size(100, 20);
+            this.textBox2Surname.Size = new System.Drawing.Size(118, 20);
             this.textBox2Surname.TabIndex = 3;
+            this.textBox2Surname.TextChanged += new System.EventHandler(this.textBox1Name_TextChanged);
             // 
             // label2Surname
             // 
@@ -73,13 +76,13 @@
             this.label2Surname.Name = "label2Surname";
             this.label2Surname.Size = new System.Drawing.Size(100, 14);
             this.label2Surname.TabIndex = 2;
-            this.label2Surname.Text = "Фамилия";
+            this.label2Surname.Text = "Фамилия*";
             // 
             // textBox3Mail
             // 
             this.textBox3Mail.Location = new System.Drawing.Point(13, 135);
             this.textBox3Mail.Name = "textBox3Mail";
-            this.textBox3Mail.Size = new System.Drawing.Size(100, 20);
+            this.textBox3Mail.Size = new System.Drawing.Size(118, 20);
             this.textBox3Mail.TabIndex = 5;
             // 
             // label3Mail
@@ -95,7 +98,7 @@
             // 
             this.textBox4Tel.Location = new System.Drawing.Point(13, 189);
             this.textBox4Tel.Name = "textBox4Tel";
-            this.textBox4Tel.Size = new System.Drawing.Size(100, 20);
+            this.textBox4Tel.Size = new System.Drawing.Size(118, 20);
             this.textBox4Tel.TabIndex = 7;
             // 
             // label4Tel
@@ -109,6 +112,7 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Enabled = false;
             this.buttonAdd.Location = new System.Drawing.Point(13, 225);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(96, 43);
@@ -133,6 +137,7 @@
             this.buttonDelete.TabIndex = 10;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
@@ -142,6 +147,7 @@
             this.buttonEdit.TabIndex = 11;
             this.buttonEdit.Text = "Редактировать";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // labelListPerson
             // 
@@ -153,11 +159,23 @@
             this.labelListPerson.Text = "Список анкет";
             this.labelListPerson.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Location = new System.Drawing.Point(13, 274);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(96, 43);
+            this.buttonSave.TabIndex = 13;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 344);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelListPerson);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDelete);
@@ -194,6 +212,7 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Label labelListPerson;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
 
