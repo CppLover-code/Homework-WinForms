@@ -18,7 +18,6 @@ namespace ДЗ_28._04._2023_Списки
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             var p1 = new Person("Алексей", "Петров", "alex_petrov94@gmail.com","+380938754265" );
@@ -107,6 +106,19 @@ namespace ДЗ_28._04._2023_Списки
             }
             else { buttonAdd.Enabled = true; }
         }
+
+        private void buttonShowInfo_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index != -1)
+            {
+                var prsn = (Person)listBox1.Items[index];
+                //MessageBox.Show(prsn.Name + " " + h.Age.ToString());
+                //MessageBox.Show($"Имя: {prsn.Name}\nФамилия: {prsn.Surname}\n E-mail: {prsn.Email}\nТелефон: {prsn.Phone}");
+                MessageBox.Show(prsn.ShowInfo(),"Анкета");
+            }
+        }
+
     }
     class Person
     {
@@ -125,10 +137,10 @@ namespace ДЗ_28._04._2023_Списки
         {
             return $"{Name} {Surname}";
         }
-        //public override string ToString()
-        //{
-        //    return $"Имя: {Name}\nФамилия: {Surname}\n" +
-        //        $"E-mail: {Email}\nТелефон: {Phone}";
-        //}
+        public string ShowInfo()
+        {
+            return $"Имя: {Name}\nФамилия: {Surname}\n" +
+                $"E-mail: {Email}\nТелефон: {Phone}";
+        }
     }
 }

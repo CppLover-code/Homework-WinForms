@@ -42,6 +42,7 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelListPerson = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonShowInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1Name
@@ -170,11 +171,22 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonShowInfo
+            // 
+            this.buttonShowInfo.Location = new System.Drawing.Point(303, 135);
+            this.buttonShowInfo.Name = "buttonShowInfo";
+            this.buttonShowInfo.Size = new System.Drawing.Size(96, 43);
+            this.buttonShowInfo.TabIndex = 14;
+            this.buttonShowInfo.Text = "Показать анкету";
+            this.buttonShowInfo.UseVisualStyleBackColor = true;
+            this.buttonShowInfo.Click += new System.EventHandler(this.buttonShowInfo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 344);
+            this.Controls.Add(this.buttonShowInfo);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelListPerson);
             this.Controls.Add(this.buttonEdit);
@@ -213,6 +225,7 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Label labelListPerson;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonShowInfo;
     }
 }
 
