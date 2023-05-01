@@ -43,6 +43,8 @@
             this.labelListPerson = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonShowInfo = new System.Windows.Forms.Button();
+            this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonImport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1Name
@@ -132,7 +134,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(303, 30);
+            this.buttonDelete.Location = new System.Drawing.Point(303, 35);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(96, 43);
             this.buttonDelete.TabIndex = 10;
@@ -142,7 +144,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(303, 81);
+            this.buttonEdit.Location = new System.Drawing.Point(303, 89);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(96, 43);
             this.buttonEdit.TabIndex = 11;
@@ -173,7 +175,7 @@
             // 
             // buttonShowInfo
             // 
-            this.buttonShowInfo.Location = new System.Drawing.Point(303, 135);
+            this.buttonShowInfo.Location = new System.Drawing.Point(303, 143);
             this.buttonShowInfo.Name = "buttonShowInfo";
             this.buttonShowInfo.Size = new System.Drawing.Size(96, 43);
             this.buttonShowInfo.TabIndex = 14;
@@ -181,11 +183,33 @@
             this.buttonShowInfo.UseVisualStyleBackColor = true;
             this.buttonShowInfo.Click += new System.EventHandler(this.buttonShowInfo_Click);
             // 
+            // buttonExport
+            // 
+            this.buttonExport.Location = new System.Drawing.Point(155, 225);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(244, 43);
+            this.buttonExport.TabIndex = 15;
+            this.buttonExport.Text = "Экспорт информации";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
+            // buttonImport
+            // 
+            this.buttonImport.Location = new System.Drawing.Point(155, 274);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(244, 43);
+            this.buttonImport.TabIndex = 16;
+            this.buttonImport.Text = "Импорт информации";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 344);
+            this.ClientSize = new System.Drawing.Size(420, 335);
+            this.Controls.Add(this.buttonImport);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.buttonShowInfo);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelListPerson);
@@ -226,6 +250,8 @@
         private System.Windows.Forms.Label labelListPerson;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonShowInfo;
+        private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.Button buttonImport;
     }
 }
 

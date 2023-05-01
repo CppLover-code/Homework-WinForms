@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +16,7 @@ namespace ДЗ_28._04._2023_Списки
     public partial class Form1 : Form
     {
         List<Person> persons = new List<Person>();
+        string info = "Анкета.txt";
         public Form1()
         {
             InitializeComponent();
@@ -119,6 +122,81 @@ namespace ДЗ_28._04._2023_Списки
             }
         }
 
+        private void buttonExport_Click(object sender, EventArgs e)
+        {
+            //List<Person> pers = new List<Person>();
+            persons.Clear();
+            foreach (var item in listBox1.Items)
+            {
+                persons.Add((Person)item);
+            }
+            try
+            {
+                StreamWriter sw = new StreamWriter(info);
+                
+                foreach (var item in persons)
+                {
+                    sw.WriteLine(item.Name);
+                    sw.WriteLine(item.Surname);
+                    sw.WriteLine(item.Email);
+                    sw.WriteLine(item.Phone);
+
+                }
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+            }
+        }
+
+        private void buttonImport_Click(object sender, EventArgs e)
+        {
+            List<Person> pers = new List<Person>();
+            string name = "",surname="",email = "",phone = "";
+            int i = 0;
+            try
+            {
+
+                StreamReader sr = new StreamReader(info, Encoding.UTF8);
+                String line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    //Console.WriteLine(line);
+                    
+                    
+                        switch (i)
+                            {
+                            case 0:
+                                name = line; 
+                                break;
+                            case 1:
+                                surname = line;
+                                break;
+                            case 2:
+                                email = line;
+                                break;
+                            case 3:
+                                phone = line;
+                                break;
+
+                        }
+                    i++;
+                    if (i == 4) i = 0;
+
+                    
+                }
+                sr.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            pers.Add(new Person(name, surname, email, phone));
+            foreach (var item in pers)
+                listBox1.Items.Add(item);
+        }
     }
     class Person
     {
@@ -136,6 +214,10 @@ namespace ДЗ_28._04._2023_Списки
         public override string ToString()
         {
             return $"{Name} {Surname}";
+        }
+        public string GetInfo()
+        {
+            return $"{Name} {Surname} {Email}{Phone}";
         }
         public string ShowInfo()
         {
