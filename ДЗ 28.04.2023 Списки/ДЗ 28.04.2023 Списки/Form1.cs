@@ -76,7 +76,6 @@ namespace ДЗ_28._04._2023_Списки
                 textBox2Surname.Text = person.Surname;
                 textBox3Mail.Text = person.Email;
                 textBox4Tel.Text = person.Phone;
-                
             }
         }
 
@@ -97,18 +96,16 @@ namespace ДЗ_28._04._2023_Списки
                 textBox2Surname.Text = string.Empty;
                 textBox3Mail.Text = string.Empty;
                 textBox4Tel.Text = string.Empty;
-
             }
             buttonDelete.Enabled = true;
         }
 
-        private void textBox1Name_TextChanged(object sender, EventArgs e)
+        private void textBox_TextChanged(object sender, EventArgs e)
         {
             if ((String.IsNullOrEmpty(textBox1Name.Text) ||                        // (если поле Имя или Фамилия пустые) ИЛИ 
                 String.IsNullOrEmpty(textBox2Surname.Text)) || buttonEdit.Focused) // фокус управления находится на кнопке Редактировать
             {
                 buttonAdd.Enabled = false;                                         // кнопка Добавить не активна
-
             }
             else { buttonAdd.Enabled = true; }
         }

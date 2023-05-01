@@ -62,7 +62,7 @@
             this.textBox1Name.Name = "textBox1Name";
             this.textBox1Name.Size = new System.Drawing.Size(118, 20);
             this.textBox1Name.TabIndex = 1;
-            this.textBox1Name.TextChanged += new System.EventHandler(this.textBox1Name_TextChanged);
+            this.textBox1Name.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // textBox2Surname
             // 
@@ -70,7 +70,7 @@
             this.textBox2Surname.Name = "textBox2Surname";
             this.textBox2Surname.Size = new System.Drawing.Size(118, 20);
             this.textBox2Surname.TabIndex = 3;
-            this.textBox2Surname.TextChanged += new System.EventHandler(this.textBox1Name_TextChanged);
+            this.textBox2Surname.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // label2Surname
             // 
