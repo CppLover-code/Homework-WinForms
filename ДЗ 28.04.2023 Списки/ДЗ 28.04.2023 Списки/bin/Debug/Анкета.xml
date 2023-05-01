@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Name>Алексей</Name>
+    <Surname>Петров</Surname>
+    <Email>alex_petrov94@gmail.com</Email>
+    <Phone>+380938754265</Phone>
+  </Person>
+  <Person>
+    <Name>Алёна</Name>
+    <Surname>Степанова</Surname>
+    <Email>al97_stepanova@gmail.com</Email>
+    <Phone>+380689845366</Phone>
+  </Person>
+  <Person>
+    <Name>Владимир</Name>
+    <Surname>Фёдоров</Surname>
+    <Email>fedorov-vova1988@gmail.com</Email>
+    <Phone>+380689845366</Phone>
+  </Person>
+  <Person>
+    <Name>Анна</Name>
+    <Surname>Бойко</Surname>
+    <Email />
+    <Phone />
+  </Person>
+</ArrayOfPerson>
