@@ -7,9 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace ДЗ_28._04._2023_Списки
@@ -26,6 +28,11 @@ namespace ДЗ_28._04._2023_Списки
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            Text = "Список анкет";
+            StartPosition = FormStartPosition.Manual;
+            Width = 436;
+            Height = 374;   
+
             var p1 = new Person("Алексей", "Петров", "alex_petrov94@gmail.com","+380938754265" );
             var p2 = new Person("Алёна", "Степанова", "al97_stepanova@gmail.com", "+380689845366");
             var p3 = new Person("Владимир", "Фёдоров", "fedorov-vova1988@gmail.com", "+380689845366");
@@ -36,9 +43,27 @@ namespace ДЗ_28._04._2023_Списки
 
             foreach(var item in persons)
                 listBox1.Items.Add(item);
+
+            ToolTip toolTip1 = new ToolTip();   // всплывающая подсказка
+         
+            toolTip1.AutoPopDelay = 5000;       // Установка задержек для объекта ToolTip.
+            toolTip1.InitialDelay = 300;
+            toolTip1.ReshowDelay = 200;
+            
+            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы
+
+            toolTip1.SetToolTip(this.textBox1Name, "Имя должно начинаться с большой буквы");
+            toolTip1.SetToolTip(this.textBox2Surname, "Фамилия должна начинаться с большой буквы");
+            toolTip1.SetToolTip(this.textBox3Mail, "Формат: ИмяПользователя@почтовый сервис.com");
+            toolTip1.SetToolTip(this.textBox4Tel, "Формат: +380 XX XXX XX XX");
         }
         private void buttonAdd_Click(object sender, EventArgs e) // добавление в список
-        {           
+        {
+            //CheckName(textBox1Name.Text);
+            //CheckSurname(textBox2Surname.Text);
+            //CheckEmail(textBox3Mail.Text);
+            //CheckPhone(textBox4Tel.Text);
+
             string txtName = textBox1Name.Text;
             string txtSurname = textBox2Surname.Text;
             string txtEmail = textBox3Mail.Text;
@@ -108,6 +133,7 @@ namespace ДЗ_28._04._2023_Списки
                 buttonAdd.Enabled = false;                                         // кнопка Добавить не активна
             }
             else { buttonAdd.Enabled = true; }
+           
         }
 
         private void buttonShowInfo_Click(object sender, EventArgs e)
@@ -145,6 +171,39 @@ namespace ДЗ_28._04._2023_Списки
 
             foreach (var item in persons)
                 listBox1.Items.Add(item);   
+        }
+
+        private void CheckName(string name)
+        {
+            string pattern = "^([А-Я]{1}[а-яё]{1,10}$)";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(name))
+                 MessageBox.Show("Ошибка в имени!");
+        }
+        private void CheckSurname(string surname)
+        {
+            string pattern = "^([А-Я]{1}[а-яё]{1,12}$)";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(surname))
+                MessageBox.Show("Ошибка в фамилии!");
+        }
+        private void CheckEmail(string email)
+        {
+            string pattern = @"(\W|^)[\w.\-]{0,25}@[a-z]{0,8}\.com(\W|$)";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(email))
+                MessageBox.Show("Ошибка в почте!");
+        }
+        private void CheckPhone(string email)// доделать
+        {
+            string pattern = @"надо дописать";
+            Regex regex = new Regex(pattern);
+
+            if (!regex.IsMatch(email))
+                MessageBox.Show("Ошибка в почте!");
         }
     }
 
