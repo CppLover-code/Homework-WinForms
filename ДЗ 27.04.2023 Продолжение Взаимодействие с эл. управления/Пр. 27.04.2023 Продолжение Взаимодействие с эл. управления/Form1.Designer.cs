@@ -69,6 +69,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCalculateTotal = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.groupBoxGas.SuspendLayout();
             this.groupBoxPaymentGas.SuspendLayout();
             this.panelGas.SuspendLayout();
@@ -76,6 +80,7 @@
             this.groupBoxPaymentCafe.SuspendLayout();
             this.groupBoxTotalPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxGas
@@ -170,6 +175,7 @@
             this.panelGas.Name = "panelGas";
             this.panelGas.Size = new System.Drawing.Size(108, 96);
             this.panelGas.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.panelGas, "Выберите удобный вариант подсчёта ");
             // 
             // rbSumGas
             // 
@@ -211,6 +217,7 @@
             this.tbPriceGas.ReadOnly = true;
             this.tbPriceGas.Size = new System.Drawing.Size(100, 20);
             this.tbPriceGas.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.tbPriceGas, "Цена за 1 литр");
             // 
             // comboGas
             // 
@@ -222,6 +229,7 @@
             this.comboGas.Name = "comboGas";
             this.comboGas.Size = new System.Drawing.Size(100, 21);
             this.comboGas.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.comboGas, "Выберите необходимый тип бензина");
             this.comboGas.SelectedIndexChanged += new System.EventHandler(this.comboGas_SelectedIndexChanged);
             // 
             // labelPrice
@@ -453,6 +461,7 @@
             this.labelTotalPayment.Name = "labelTotalPayment";
             this.labelTotalPayment.Size = new System.Drawing.Size(115, 35);
             this.labelTotalPayment.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.labelTotalPayment, "Общая стоимость всех выбранных продуктов");
             // 
             // groupBoxTotalPayment
             // 
@@ -471,7 +480,7 @@
             // 
             this.pictureBox1.Image = global::Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления.Properties.Resources.rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah;
             this.pictureBox1.Location = new System.Drawing.Point(10, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(73, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -494,12 +503,33 @@
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 485);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(507, 22);
+            this.statusStrip1.TabIndex = 12;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(507, 474);
+            this.ClientSize = new System.Drawing.Size(507, 507);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBoxTotalPayment);
             this.Controls.Add(this.groupBoxCafe);
             this.Controls.Add(this.groupBoxGas);
@@ -522,7 +552,10 @@
             this.groupBoxTotalPayment.ResumeLayout(false);
             this.groupBoxTotalPayment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -568,6 +601,10 @@
         private System.Windows.Forms.Button buttonCalculateTotal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

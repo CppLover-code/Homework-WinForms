@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления
-{  
+{
     public partial class Form1 : Form
     {
         private double a98 = 43;
         private double a95 = 45;
         private double dayTotal = 0;
+
+        int flag = 0;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +20,10 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             this.Location = new Point(300, 200);
             this.Height = 523;
             this.Width = 523;
+            timer2.Start();
+            
+            //toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +31,12 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             comboGas.SelectedIndex = 0;
             rbCountGas.Checked = true;
             labelCafePayment.Text = PaymentCafe().ToString("N2");
+
+            toolTip1.AutoPopDelay = 3000;       // Установка задержек для объекта ToolTip.
+            toolTip1.InitialDelay = 300;
+            toolTip1.ReshowDelay = 200;
+
+            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы
         }
 
         ///////////Автозаправка//////////////
@@ -54,7 +60,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
 
         private void rbCountGas_CheckedChanged(object sender, EventArgs e)
         {
-            if(rbCountGas.Checked)
+            if (rbCountGas.Checked)
             {
                 tbCountGas.ReadOnly = false;
                 tbSumGas.ReadOnly = true;
@@ -66,18 +72,18 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
                 tbCountGas.ReadOnly = true;
                 tbSumGas.ReadOnly = false;
                 tbSumGas.Text = 100.ToString("N2");
-                tbCountGas.Text = string.Empty; 
+                tbCountGas.Text = string.Empty;
             }
         }
         private double PaymentGas()
         {
             double toPaymentGas = 0;
 
-            if(rbCountGas.Checked)
+            if (rbCountGas.Checked)
             {
                 toPaymentGas = double.Parse(tbCountGas.Text) * double.Parse(tbPriceGas.Text);
             }
-            else if(rbSumGas.Checked)
+            else if (rbSumGas.Checked)
             {
                 toPaymentGas = double.Parse(tbSumGas.Text);
                 /// изменение кол-ва литров, если пользователь выбрал сумму
@@ -96,26 +102,26 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         ///////////Мини-кафе//////////////
         private void checkBoxFood_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1HotDog.Checked)
+            if (checkBox1HotDog.Checked)
             {
                 textBox1HotDogCount.ReadOnly = false;
-            }               
+            }
             else
             {
                 textBox1HotDogCount.Text = "0";
                 textBox1HotDogCount.ReadOnly = true;
             }
-                
+
             if (checkBox2Hamburger.Checked)
             {
                 textBox2HamburgerCount.ReadOnly = false;
-            } 
+            }
             else
             {
                 textBox2HamburgerCount.Text = "0";
                 textBox2HamburgerCount.ReadOnly = true;
             }
-                
+
             if (checkBox3Fries.Checked)
             {
                 textBox3FriesCount.ReadOnly = false;
@@ -125,7 +131,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
                 textBox3FriesCount.Text = "0";
                 textBox3FriesCount.ReadOnly = true;
             }
-                
+
             if (checkBox4Cola.Checked)
             {
                 textBox4ColaCount.ReadOnly = false;
@@ -135,25 +141,25 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
                 textBox4ColaCount.Text = "0";
                 textBox4ColaCount.ReadOnly = true;
             }
-                
+
         }
 
         private double PaymentCafe()
         {
             double toPaymentCafe = 0;
 
-                if (checkBox1HotDog.Checked)
-                    //if (String.IsNullOrEmpty(textBox1HotDogCount.Text)) textBox1HotDogCount.Text = "0"; // не очень удобно потом вводить количество!
-                    toPaymentCafe += (int.Parse(textBox1HotDogCount.Text) * double.Parse(textBox1HotDogPrice.Text));
+            if (checkBox1HotDog.Checked)
+                //if (String.IsNullOrEmpty(textBox1HotDogCount.Text)) textBox1HotDogCount.Text = "0"; // не очень удобно потом вводить количество!
+                toPaymentCafe += (int.Parse(textBox1HotDogCount.Text) * double.Parse(textBox1HotDogPrice.Text));
 
-                if (checkBox2Hamburger.Checked)
-                    toPaymentCafe += (int.Parse(textBox2HamburgerCount.Text) * double.Parse(textBox2HamburgerPrice.Text));
+            if (checkBox2Hamburger.Checked)
+                toPaymentCafe += (int.Parse(textBox2HamburgerCount.Text) * double.Parse(textBox2HamburgerPrice.Text));
 
-                if (checkBox3Fries.Checked)
-                    toPaymentCafe += (int.Parse(textBox3FriesCount.Text) * double.Parse(textBox3FriesPrice.Text));
+            if (checkBox3Fries.Checked)
+                toPaymentCafe += (int.Parse(textBox3FriesCount.Text) * double.Parse(textBox3FriesPrice.Text));
 
-                if (checkBox4Cola.Checked)
-                    toPaymentCafe += (int.Parse(textBox4ColaCount.Text) * double.Parse(textBox4ColaPrice.Text));
+            if (checkBox4Cola.Checked)
+                toPaymentCafe += (int.Parse(textBox4ColaCount.Text) * double.Parse(textBox4ColaPrice.Text));
 
             return toPaymentCafe;
         }
@@ -173,16 +179,16 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             {
                 totalPayment = gasPayment + cafePayment;
             }
-            else if(gasPayment > 0 && cafePayment < 1)
+            else if (gasPayment > 0 && cafePayment < 1)
             {
                 totalPayment = gasPayment;
-            }          
+            }
 
             return totalPayment;
-        }     
+        }
         private void buttonCalculateTotal_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 labelTotalPayment.Text = TotalPayment().ToString("N2");
                 timer1.Enabled = true;
@@ -192,9 +198,9 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            DialogResult result = MessageBox.Show("Завершить покупку?", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);           
+            DialogResult result = MessageBox.Show("Завершить покупку?", "Внимание!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            if(result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 dayTotal += TotalPayment();
                 //while (Controls.Count > 0)    // проблема - используя данный способ, закрытие происходит
@@ -267,6 +273,21 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             MessageBox.Show($"Сумма {dayTotal} грн.", "Выручка за день", MessageBoxButtons.OK, MessageBoxIcon.Information);
             e.Cancel = false;
             MessageBox.Show("До свидания!");
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            flag += 10;
+            if (flag % 20 == 0)
+            {
+                toolStripStatusLabel1.Text = DateTime.Now.ToLongTimeString();
+            }
+            else
+            {
+                toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString();
+            }
+
+
         }
     }
 }
