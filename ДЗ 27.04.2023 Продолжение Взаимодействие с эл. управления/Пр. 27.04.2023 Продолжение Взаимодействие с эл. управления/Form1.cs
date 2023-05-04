@@ -289,5 +289,22 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             }
             toolStripDropDownButton1.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
         }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            Show(); // показываем форму
+            WindowState = FormWindowState.Normal; // переводим форму в нормальный вид из свёрнутого
+            this.notifyIcon1.Visible = false; // прячем иконку
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (FormWindowState.Minimized == WindowState)
+            {
+                Hide(); // прячем форму
+                this.notifyIcon1.Visible = true; // появляется иконка
+                this.notifyIcon1.ShowBalloonTip(3); //
+            }
+        }
     }
 }

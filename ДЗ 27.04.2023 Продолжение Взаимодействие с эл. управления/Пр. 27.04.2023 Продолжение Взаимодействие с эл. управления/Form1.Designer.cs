@@ -67,7 +67,6 @@
             this.labelUahTotal = new System.Windows.Forms.Label();
             this.labelTotalPayment = new System.Windows.Forms.Label();
             this.groupBoxTotalPayment = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCalculateTotal = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -75,15 +74,17 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxGas.SuspendLayout();
             this.groupBoxPaymentGas.SuspendLayout();
             this.panelGas.SuspendLayout();
             this.groupBoxCafe.SuspendLayout();
             this.groupBoxPaymentCafe.SuspendLayout();
             this.groupBoxTotalPayment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxGas
@@ -479,17 +480,6 @@
             this.groupBoxTotalPayment.TabStop = false;
             this.groupBoxTotalPayment.Text = "ВСЕГО к оплате:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления.Properties.Resources.rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonCalculateTotal
             // 
             this.buttonCalculateTotal.BackColor = System.Drawing.Color.Lavender;
@@ -533,6 +523,14 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 17);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "BestOil в области уведомлений";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -540,6 +538,17 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(13, 20);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Пр._27._04._2023_Продолжение_Взаимодействие_с_эл.управления.Properties.Resources.rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -557,6 +566,7 @@
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.groupBoxGas.ResumeLayout(false);
             this.groupBoxGas.PerformLayout();
             this.groupBoxPaymentGas.ResumeLayout(false);
@@ -569,9 +579,9 @@
             this.groupBoxPaymentCafe.PerformLayout();
             this.groupBoxTotalPayment.ResumeLayout(false);
             this.groupBoxTotalPayment.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,6 +635,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

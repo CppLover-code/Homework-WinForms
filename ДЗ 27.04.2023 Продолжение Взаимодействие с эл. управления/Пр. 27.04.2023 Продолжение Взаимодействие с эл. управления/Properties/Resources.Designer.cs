@@ -63,6 +63,16 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing_com__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah {
             get {
                 object obj = ResourceManager.GetObject("rasschitat_strahovku_avto_osago_kalkulyator_2016_rosgosstrah", resourceCulture);
