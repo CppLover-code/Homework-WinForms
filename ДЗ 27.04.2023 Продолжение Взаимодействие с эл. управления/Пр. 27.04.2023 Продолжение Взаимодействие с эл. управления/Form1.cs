@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -20,10 +21,8 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             this.Location = new Point(300, 200);
             this.Height = 523;
             this.Width = 523;
+
             timer2.Start();
-            
-            //toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             toolTip1.InitialDelay = 300;
             toolTip1.ReshowDelay = 200;
 
-            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы
+            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы  
         }
 
         ///////////Автозаправка//////////////
@@ -275,19 +274,20 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             MessageBox.Show("До свидания!");
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e) // работа со строкой состояния и таймером
         {
             flag += 10;
             if (flag % 20 == 0)
-            {
-                toolStripStatusLabel1.Text = DateTime.Now.ToLongTimeString();
+            {  
+                toolStripStatusLabel1.Text = "Дата:";
+                toolStripStatusLabel2.Text = DateTime.Now.ToLongDateString();
             }
             else
             {
-                toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString();
+                toolStripStatusLabel1.Text = "Время:";
+                toolStripStatusLabel2.Text = DateTime.Now.ToLongTimeString();
             }
-
-
+            toolStripDropDownButton1.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
         }
     }
 }
