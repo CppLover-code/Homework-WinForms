@@ -1,0 +1,12 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\bin\Debug\ДЗ_05._05._2023_Создание_доп.форм.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\bin\Debug\ДЗ_05._05._2023_Создание_доп.форм.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\bin\Debug\ДЗ_05._05._2023_Создание_доп.форм.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ 05.05.2023 Создание доп. форм.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ 05.05.2023 Создание доп. форм.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ_05._05._2023_Создание_доп.форм.Form1.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ_05._05._2023_Создание_доп.форм.Form2.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ_05._05._2023_Создание_доп.форм.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ 05.05.2023 Создание доп. форм.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ 05.05.2023 Создание доп. форм.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ_05._05._2023_Создание_доп.форм.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 05.05.2023 Создание доп. форм\ДЗ 05.05.2023 Создание доп. форм\obj\Debug\ДЗ_05._05._2023_Создание_доп.форм.pdb

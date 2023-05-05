@@ -46,11 +46,12 @@
             // 
             // panel1Sales
             // 
+            this.panel1Sales.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1Sales.Controls.Add(this.label2);
             this.panel1Sales.Controls.Add(this.label1);
             this.panel1Sales.Controls.Add(this.textBox1TotalCost);
             this.panel1Sales.Controls.Add(this.listBox1Sales);
-            this.panel1Sales.Location = new System.Drawing.Point(0, 12);
+            this.panel1Sales.Location = new System.Drawing.Point(12, 12);
             this.panel1Sales.Name = "panel1Sales";
             this.panel1Sales.Size = new System.Drawing.Size(225, 303);
             this.panel1Sales.TabIndex = 0;
@@ -136,7 +137,7 @@
             // 
             // button2ChangeListGoods
             // 
-            this.button2ChangeListGoods.Location = new System.Drawing.Point(244, 238);
+            this.button2ChangeListGoods.Location = new System.Drawing.Point(257, 240);
             this.button2ChangeListGoods.Name = "button2ChangeListGoods";
             this.button2ChangeListGoods.Size = new System.Drawing.Size(138, 63);
             this.button2ChangeListGoods.TabIndex = 6;
@@ -150,7 +151,7 @@
             this.panel1.Controls.Add(this.comboBox1Goods);
             this.panel1.Controls.Add(this.textBox1PriceOfProd);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(231, 12);
+            this.panel1.Location = new System.Drawing.Point(244, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 189);
             this.panel1.TabIndex = 4;
@@ -159,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 327);
+            this.ClientSize = new System.Drawing.Size(421, 327);
             this.Controls.Add(this.button2ChangeListGoods);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel1Sales);
