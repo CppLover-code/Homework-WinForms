@@ -303,6 +303,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
             {
                 Hide(); // прячем форму
                 this.notifyIcon1.Visible = true; // появляется иконка
+                this.notifyIcon1.BalloonTipText = "OK";
                 this.notifyIcon1.ShowBalloonTip(3); //
             }
         }
