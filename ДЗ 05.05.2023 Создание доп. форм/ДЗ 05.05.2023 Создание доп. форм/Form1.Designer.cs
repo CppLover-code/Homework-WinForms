@@ -136,9 +136,9 @@
             // 
             // button2ChangeListGoods
             // 
-            this.button2ChangeListGoods.Location = new System.Drawing.Point(247, 264);
+            this.button2ChangeListGoods.Location = new System.Drawing.Point(244, 238);
             this.button2ChangeListGoods.Name = "button2ChangeListGoods";
-            this.button2ChangeListGoods.Size = new System.Drawing.Size(135, 51);
+            this.button2ChangeListGoods.Size = new System.Drawing.Size(138, 63);
             this.button2ChangeListGoods.TabIndex = 6;
             this.button2ChangeListGoods.Text = "Изменить список товаров";
             this.button2ChangeListGoods.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 444);
+            this.ClientSize = new System.Drawing.Size(409, 327);
             this.Controls.Add(this.button2ChangeListGoods);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel1Sales);
