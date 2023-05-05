@@ -139,6 +139,7 @@
             // 
             // panel1Edit
             // 
+            this.panel1Edit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1Edit.Controls.Add(this.button3Cancel);
             this.panel1Edit.Controls.Add(this.button2Refresh);
             this.panel1Edit.Controls.Add(this.button1Edit);
