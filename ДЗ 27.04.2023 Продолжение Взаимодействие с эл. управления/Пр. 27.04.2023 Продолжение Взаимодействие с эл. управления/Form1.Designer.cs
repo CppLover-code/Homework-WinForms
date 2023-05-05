@@ -513,7 +513,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripDropDownButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 485);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 470);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(507, 22);
             this.statusStrip1.TabIndex = 12;
@@ -555,7 +555,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(507, 507);
+            this.ClientSize = new System.Drawing.Size(507, 492);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBoxTotalPayment);
             this.Controls.Add(this.groupBoxCafe);
