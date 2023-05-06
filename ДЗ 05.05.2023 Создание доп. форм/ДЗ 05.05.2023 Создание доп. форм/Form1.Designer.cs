@@ -30,17 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1Sales = new System.Windows.Forms.Panel();
-            this.listBox1Sales = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox1TotalCost = new System.Windows.Forms.TextBox();
+            this.listBox1Sales = new System.Windows.Forms.ListBox();
             this.comboBox1Goods = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1PriceOfProd = new System.Windows.Forms.TextBox();
             this.button1AddToListSales = new System.Windows.Forms.Button();
             this.button2ChangeListGoods = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1Sales.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +51,7 @@
             // 
             this.panel1Sales.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1Sales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1Sales.Controls.Add(this.label6);
             this.panel1Sales.Controls.Add(this.label2);
             this.panel1Sales.Controls.Add(this.label1);
             this.panel1Sales.Controls.Add(this.textBox1TotalCost);
@@ -58,40 +61,14 @@
             this.panel1Sales.Size = new System.Drawing.Size(225, 303);
             this.panel1Sales.TabIndex = 0;
             // 
-            // listBox1Sales
+            // label2
             // 
-            this.listBox1Sales.FormattingEnabled = true;
-            this.listBox1Sales.Location = new System.Drawing.Point(12, 26);
-            this.listBox1Sales.Name = "listBox1Sales";
-            this.listBox1Sales.ScrollAlwaysVisible = true;
-            this.listBox1Sales.Size = new System.Drawing.Size(196, 173);
-            this.listBox1Sales.TabIndex = 0;
-            // 
-            // textBox1TotalCost
-            // 
-            this.textBox1TotalCost.Location = new System.Drawing.Point(15, 226);
-            this.textBox1TotalCost.Multiline = true;
-            this.textBox1TotalCost.Name = "textBox1TotalCost";
-            this.textBox1TotalCost.ReadOnly = true;
-            this.textBox1TotalCost.Size = new System.Drawing.Size(196, 63);
-            this.textBox1TotalCost.TabIndex = 1;
-            // 
-            // comboBox1Goods
-            // 
-            this.comboBox1Goods.FormattingEnabled = true;
-            this.comboBox1Goods.Location = new System.Drawing.Point(16, 26);
-            this.comboBox1Goods.Name = "comboBox1Goods";
-            this.comboBox1Goods.Size = new System.Drawing.Size(132, 21);
-            this.comboBox1Goods.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Список товаров";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 243);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Общая стоимость";
             // 
             // label1
             // 
@@ -102,14 +79,42 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Список продаж";
             // 
-            // label2
+            // textBox1TotalCost
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 210);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Общая стоимость";
+            this.textBox1TotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1TotalCost.Location = new System.Drawing.Point(12, 259);
+            this.textBox1TotalCost.Name = "textBox1TotalCost";
+            this.textBox1TotalCost.ReadOnly = true;
+            this.textBox1TotalCost.Size = new System.Drawing.Size(178, 31);
+            this.textBox1TotalCost.TabIndex = 1;
+            this.textBox1TotalCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // listBox1Sales
+            // 
+            this.listBox1Sales.FormattingEnabled = true;
+            this.listBox1Sales.Location = new System.Drawing.Point(12, 26);
+            this.listBox1Sales.Name = "listBox1Sales";
+            this.listBox1Sales.ScrollAlwaysVisible = true;
+            this.listBox1Sales.Size = new System.Drawing.Size(199, 199);
+            this.listBox1Sales.TabIndex = 0;
+            // 
+            // comboBox1Goods
+            // 
+            this.comboBox1Goods.FormattingEnabled = true;
+            this.comboBox1Goods.Location = new System.Drawing.Point(16, 26);
+            this.comboBox1Goods.Name = "comboBox1Goods";
+            this.comboBox1Goods.Size = new System.Drawing.Size(132, 21);
+            this.comboBox1Goods.TabIndex = 1;
+            this.comboBox1Goods.SelectedIndexChanged += new System.EventHandler(this.comboBox1Goods_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Список товаров";
             // 
             // label4
             // 
@@ -125,18 +130,20 @@
             this.textBox1PriceOfProd.Location = new System.Drawing.Point(16, 88);
             this.textBox1PriceOfProd.Name = "textBox1PriceOfProd";
             this.textBox1PriceOfProd.ReadOnly = true;
-            this.textBox1PriceOfProd.Size = new System.Drawing.Size(135, 20);
+            this.textBox1PriceOfProd.Size = new System.Drawing.Size(96, 20);
             this.textBox1PriceOfProd.TabIndex = 4;
             // 
             // button1AddToListSales
             // 
             this.button1AddToListSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1AddToListSales.Enabled = false;
             this.button1AddToListSales.Location = new System.Drawing.Point(13, 125);
             this.button1AddToListSales.Name = "button1AddToListSales";
             this.button1AddToListSales.Size = new System.Drawing.Size(135, 51);
             this.button1AddToListSales.TabIndex = 5;
             this.button1AddToListSales.Text = "Добавить в список";
             this.button1AddToListSales.UseVisualStyleBackColor = true;
+            this.button1AddToListSales.Click += new System.EventHandler(this.button1AddToListSales_Click);
             // 
             // button2ChangeListGoods
             // 
@@ -153,6 +160,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1AddToListSales);
             this.panel1.Controls.Add(this.comboBox1Goods);
@@ -162,6 +170,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 189);
             this.panel1.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(118, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "грн.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(193, 277);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "грн.";
             // 
             // Form1
             // 
@@ -176,6 +202,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Продажа компонентов компьютера";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1Sales.ResumeLayout(false);
             this.panel1Sales.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -198,6 +225,8 @@
         private System.Windows.Forms.Button button1AddToListSales;
         private System.Windows.Forms.Button button2ChangeListGoods;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

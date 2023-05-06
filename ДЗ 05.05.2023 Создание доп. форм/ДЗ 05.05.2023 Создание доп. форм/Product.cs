@@ -11,7 +11,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         string title;       // название товара
         string detail;      // характеристика
         string description; // описание
-        double price;       //цена
+        double price;       // цена
 
         public string Title
         {
@@ -55,7 +55,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         }
         public override string ToString()
         {
-            return Title + "\nХарактеристика: " + Detail +"\nОписание: " + Description; //+ "\nЦена: " + Price
+            return Title;// + "\nХарактеристика: " + Detail +"\nОписание: " + Description; //+ "\nЦена: " + Price
         }
     }
 }
