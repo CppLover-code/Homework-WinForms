@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1Sales = new System.Windows.Forms.Panel();
             this.listBox1Sales = new System.Windows.Forms.ListBox();
             this.textBox1TotalCost = new System.Windows.Forms.TextBox();
@@ -46,7 +47,8 @@
             // 
             // panel1Sales
             // 
-            this.panel1Sales.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1Sales.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1Sales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1Sales.Controls.Add(this.label2);
             this.panel1Sales.Controls.Add(this.label1);
             this.panel1Sales.Controls.Add(this.textBox1TotalCost);
@@ -128,6 +130,7 @@
             // 
             // button1AddToListSales
             // 
+            this.button1AddToListSales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1AddToListSales.Location = new System.Drawing.Point(13, 125);
             this.button1AddToListSales.Name = "button1AddToListSales";
             this.button1AddToListSales.Size = new System.Drawing.Size(135, 51);
@@ -137,15 +140,19 @@
             // 
             // button2ChangeListGoods
             // 
+            this.button2ChangeListGoods.BackColor = System.Drawing.Color.Beige;
+            this.button2ChangeListGoods.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2ChangeListGoods.Location = new System.Drawing.Point(257, 240);
             this.button2ChangeListGoods.Name = "button2ChangeListGoods";
             this.button2ChangeListGoods.Size = new System.Drawing.Size(138, 63);
             this.button2ChangeListGoods.TabIndex = 6;
             this.button2ChangeListGoods.Text = "Изменить список товаров";
-            this.button2ChangeListGoods.UseVisualStyleBackColor = true;
+            this.button2ChangeListGoods.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1AddToListSales);
             this.panel1.Controls.Add(this.comboBox1Goods);
@@ -164,8 +171,11 @@
             this.Controls.Add(this.button2ChangeListGoods);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel1Sales);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Продажа компонентов компьютера";
             this.panel1Sales.ResumeLayout(false);
             this.panel1Sales.PerformLayout();
             this.panel1.ResumeLayout(false);

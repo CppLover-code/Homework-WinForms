@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.listBox1GoodsInfo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -130,6 +131,7 @@
             // 
             // button1AddProd
             // 
+            this.button1AddProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1AddProd.Location = new System.Drawing.Point(283, 221);
             this.button1AddProd.Name = "button1AddProd";
             this.button1AddProd.Size = new System.Drawing.Size(117, 47);
@@ -139,7 +141,8 @@
             // 
             // panel1Edit
             // 
-            this.panel1Edit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1Edit.BackColor = System.Drawing.Color.Transparent;
+            this.panel1Edit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1Edit.Controls.Add(this.button3Cancel);
             this.panel1Edit.Controls.Add(this.button2Refresh);
             this.panel1Edit.Controls.Add(this.button1Edit);
@@ -150,30 +153,36 @@
             // 
             // button1Edit
             // 
+            this.button1Edit.BackColor = System.Drawing.Color.Beige;
+            this.button1Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1Edit.Location = new System.Drawing.Point(24, 4);
             this.button1Edit.Name = "button1Edit";
             this.button1Edit.Size = new System.Drawing.Size(94, 41);
             this.button1Edit.TabIndex = 0;
             this.button1Edit.Text = "Редактировать";
-            this.button1Edit.UseVisualStyleBackColor = true;
+            this.button1Edit.UseVisualStyleBackColor = false;
             // 
             // button2Refresh
             // 
+            this.button2Refresh.BackColor = System.Drawing.Color.Beige;
+            this.button2Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2Refresh.Location = new System.Drawing.Point(148, 4);
             this.button2Refresh.Name = "button2Refresh";
             this.button2Refresh.Size = new System.Drawing.Size(94, 41);
             this.button2Refresh.TabIndex = 1;
             this.button2Refresh.Text = "Обновить";
-            this.button2Refresh.UseVisualStyleBackColor = true;
+            this.button2Refresh.UseVisualStyleBackColor = false;
             // 
             // button3Cancel
             // 
+            this.button3Cancel.BackColor = System.Drawing.Color.Beige;
+            this.button3Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3Cancel.Location = new System.Drawing.Point(271, 4);
             this.button3Cancel.Name = "button3Cancel";
             this.button3Cancel.Size = new System.Drawing.Size(94, 41);
             this.button3Cancel.TabIndex = 2;
             this.button3Cancel.Text = "Отменить";
-            this.button3Cancel.UseVisualStyleBackColor = true;
+            this.button3Cancel.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
@@ -192,8 +201,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1GoodsInfo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Добавление/Изменение товара";
             this.panel1Edit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
