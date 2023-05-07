@@ -100,6 +100,7 @@
             // 
             // comboBox1Goods
             // 
+            this.comboBox1Goods.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1Goods.FormattingEnabled = true;
             this.comboBox1Goods.Location = new System.Drawing.Point(16, 26);
             this.comboBox1Goods.Name = "comboBox1Goods";
@@ -155,6 +156,7 @@
             this.button2ChangeListGoods.TabIndex = 6;
             this.button2ChangeListGoods.Text = "Изменить список товаров";
             this.button2ChangeListGoods.UseVisualStyleBackColor = false;
+            this.button2ChangeListGoods.Click += new System.EventHandler(this.button2ChangeListGoods_Click);
             // 
             // panel1
             // 

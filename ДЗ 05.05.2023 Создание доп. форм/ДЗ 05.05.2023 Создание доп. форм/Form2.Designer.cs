@@ -41,9 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1AddProd = new System.Windows.Forms.Button();
             this.panel1Edit = new System.Windows.Forms.Panel();
-            this.button1Edit = new System.Windows.Forms.Button();
-            this.button2Refresh = new System.Windows.Forms.Button();
             this.button3Cancel = new System.Windows.Forms.Button();
+            this.button2Refresh = new System.Windows.Forms.Button();
+            this.button1Edit = new System.Windows.Forms.Button();
             this.panel1Edit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,8 @@
             this.listBox1GoodsInfo.ScrollAlwaysVisible = true;
             this.listBox1GoodsInfo.Size = new System.Drawing.Size(251, 225);
             this.listBox1GoodsInfo.TabIndex = 0;
+            this.listBox1GoodsInfo.SelectedIndexChanged += new System.EventHandler(this.listBox1GoodsInfo_SelectedIndexChanged);
+            this.listBox1GoodsInfo.Leave += new System.EventHandler(this.listBox1GoodsInfo_Leave);
             // 
             // label1
             // 
@@ -132,6 +134,7 @@
             // button1AddProd
             // 
             this.button1AddProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1AddProd.Enabled = false;
             this.button1AddProd.Location = new System.Drawing.Point(283, 221);
             this.button1AddProd.Name = "button1AddProd";
             this.button1AddProd.Size = new System.Drawing.Size(117, 47);
@@ -151,38 +154,44 @@
             this.panel1Edit.Size = new System.Drawing.Size(388, 48);
             this.panel1Edit.TabIndex = 11;
             // 
-            // button1Edit
-            // 
-            this.button1Edit.BackColor = System.Drawing.Color.Beige;
-            this.button1Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1Edit.Location = new System.Drawing.Point(24, 4);
-            this.button1Edit.Name = "button1Edit";
-            this.button1Edit.Size = new System.Drawing.Size(94, 41);
-            this.button1Edit.TabIndex = 0;
-            this.button1Edit.Text = "Редактировать";
-            this.button1Edit.UseVisualStyleBackColor = false;
-            // 
-            // button2Refresh
-            // 
-            this.button2Refresh.BackColor = System.Drawing.Color.Beige;
-            this.button2Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2Refresh.Location = new System.Drawing.Point(148, 4);
-            this.button2Refresh.Name = "button2Refresh";
-            this.button2Refresh.Size = new System.Drawing.Size(94, 41);
-            this.button2Refresh.TabIndex = 1;
-            this.button2Refresh.Text = "Обновить";
-            this.button2Refresh.UseVisualStyleBackColor = false;
-            // 
             // button3Cancel
             // 
             this.button3Cancel.BackColor = System.Drawing.Color.Beige;
             this.button3Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3Cancel.Enabled = false;
             this.button3Cancel.Location = new System.Drawing.Point(271, 4);
             this.button3Cancel.Name = "button3Cancel";
             this.button3Cancel.Size = new System.Drawing.Size(94, 41);
             this.button3Cancel.TabIndex = 2;
             this.button3Cancel.Text = "Отменить";
             this.button3Cancel.UseVisualStyleBackColor = false;
+            this.button3Cancel.Click += new System.EventHandler(this.button3Cancel_Click);
+            // 
+            // button2Refresh
+            // 
+            this.button2Refresh.BackColor = System.Drawing.Color.Beige;
+            this.button2Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2Refresh.Enabled = false;
+            this.button2Refresh.Location = new System.Drawing.Point(148, 4);
+            this.button2Refresh.Name = "button2Refresh";
+            this.button2Refresh.Size = new System.Drawing.Size(94, 41);
+            this.button2Refresh.TabIndex = 1;
+            this.button2Refresh.Text = "Обновить";
+            this.button2Refresh.UseVisualStyleBackColor = false;
+            this.button2Refresh.Click += new System.EventHandler(this.button2Refresh_Click);
+            // 
+            // button1Edit
+            // 
+            this.button1Edit.BackColor = System.Drawing.Color.Beige;
+            this.button1Edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1Edit.Enabled = false;
+            this.button1Edit.Location = new System.Drawing.Point(24, 4);
+            this.button1Edit.Name = "button1Edit";
+            this.button1Edit.Size = new System.Drawing.Size(94, 41);
+            this.button1Edit.TabIndex = 0;
+            this.button1Edit.Text = "Редактировать";
+            this.button1Edit.UseVisualStyleBackColor = false;
+            this.button1Edit.Click += new System.EventHandler(this.button1Edit_Click);
             // 
             // Form2
             // 

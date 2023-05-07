@@ -50,7 +50,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         }
 
         private void button1AddToListSales_Click(object sender, EventArgs e)
-        {
+        { 
             int index = comboBox1Goods.SelectedIndex;
             var product = (Product)comboBox1Goods.Items[index];
             listBox1Sales.Items.Add(product);
@@ -61,7 +61,18 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             // опционально, можно и убрать, но с очисткой удобнее
             comboBox1Goods.ResetText();
             textBox1PriceOfProd.Text = string.Empty;
-            button1AddToListSales.Enabled = false;
+            button1AddToListSales.Enabled = false;  
+        }
+
+        private void button2ChangeListGoods_Click(object sender, EventArgs e)
+        {
+            Form2 changeform = new Form2(goods);
+            changeform.ShowDialog();
+
+            comboBox1Goods.Items.Clear();
+
+            foreach (var item in goods)
+                comboBox1Goods.Items.Add(item);
         }
     }
 }
