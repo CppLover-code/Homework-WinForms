@@ -81,6 +81,7 @@
             this.textBox1Title.Name = "textBox1Title";
             this.textBox1Title.Size = new System.Drawing.Size(117, 20);
             this.textBox1Title.TabIndex = 3;
+            this.textBox1Title.TextChanged += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
             // label3
             // 
@@ -140,6 +141,7 @@
             this.button1AddProd.TabIndex = 10;
             this.button1AddProd.Text = "Добавить товар";
             this.button1AddProd.UseVisualStyleBackColor = true;
+            this.button1AddProd.Click += new System.EventHandler(this.button1AddProd_Click);
             // 
             // panel1Edit
             // 

@@ -59,13 +59,17 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             textBox1TotalCost.Text = total.ToString();
 
             // опционально, можно и убрать, но с очисткой удобнее
-            comboBox1Goods.ResetText();
+            comboBox1Goods.SelectedIndex = default;          
             textBox1PriceOfProd.Text = string.Empty;
-            button1AddToListSales.Enabled = false;  
+            button1AddToListSales.Enabled = false;
         }
 
         private void button2ChangeListGoods_Click(object sender, EventArgs e)
         {
+            comboBox1Goods.Text = string.Empty;
+            //comboBox1Goods.ResetText();
+            textBox1PriceOfProd.Text = string.Empty;
+
             Form2 changeform = new Form2(goods);
             changeform.ShowDialog();
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -78,6 +79,12 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             button1Edit.Enabled = false;
             button2Refresh.Enabled = false;
             button3Cancel.Enabled = false;
+            button1AddProd.Enabled = true;
+
+            textBox1Title.Text = string.Empty;
+            textBox2Detail.Text = string.Empty;
+            textBox3Description.Text = string.Empty;
+            textBox4Price.Text = string.Empty;
         }
 
         private void button3Cancel_Click(object sender, EventArgs e)  // кнопка Отменить
@@ -96,5 +103,58 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             return;
         }
 
+        private void textBoxForm2_TextChanged(object sender, EventArgs e)
+        {
+            if(button1Edit.Focused)
+            {
+                button1AddProd.Enabled = false;
+            }
+            else
+            {
+                button1AddProd.Enabled = true;
+                button1Edit.Enabled = false;
+                listBox1GoodsInfo.ClearSelected();
+            }
+        }
+
+        private void button1AddProd_Click(object sender, EventArgs e)
+        {
+            if (textBox1Title.Text == "" ||                            // проверка заполнения полей
+                textBox2Detail.Text == "" ||
+                textBox3Description.Text == "" ||
+                textBox4Price.Text == "")
+            {
+                MessageBox.Show("Заполните все поля");
+                return;
+            }
+
+            var newProduct = new Product();
+
+            newProduct.Title = textBox1Title.Text;
+            newProduct.Detail = textBox2Detail.Text;
+            newProduct.Description = textBox3Description.Text;
+
+            try
+            {
+                newProduct.Price = Convert.ToDouble(textBox4Price.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Цена указана неверно!");
+                return;
+            }
+
+            products.Add(newProduct);
+            listBox1GoodsInfo.Items.Add(newProduct);
+
+            textBox1Title.Text = string.Empty;
+            textBox2Detail.Text = string.Empty;
+            textBox3Description.Text = string.Empty;
+            textBox4Price.Text = string.Empty;
+
+            button1AddProd.Enabled = false;
+
+            MessageBox.Show("Новый товар добавлен!");
+        }
     }
 }
