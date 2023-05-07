@@ -63,8 +63,8 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
                 return;
             }
 
-            int ind = listBox1GoodsInfo.SelectedIndex;
-            var product = (Product)listBox1GoodsInfo.Items[ind];            
+            int index = listBox1GoodsInfo.SelectedIndex;
+            var product = (Product)listBox1GoodsInfo.Items[index];            
 
             product.Title = textBox1Title.Text;
             product.Detail = textBox2Detail.Text;
@@ -76,14 +76,14 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             }
             catch
             {
-                MessageBox.Show("Цена указана неверно");
+                MessageBox.Show("Цена указана неверно!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            products[ind] = product;
-            listBox1GoodsInfo.Items[ind] = product;
+            products[index] = product;
+            listBox1GoodsInfo.Items[index] = product;
 
-            MessageBox.Show("Информация о товаре обновлена!");           
+            MessageBox.Show("Информация о товаре обновлена!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);           
 
             button1Edit.Enabled = false;
             button2Refresh.Enabled = false;
@@ -136,7 +136,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
                 textBox3Description.Text == "" ||
                 textBox4Price.Text == "")
             {
-                MessageBox.Show("Заполните все поля");
+                MessageBox.Show("Заполните все поля!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -152,7 +152,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             }
             catch
             {
-                MessageBox.Show("Цена указана неверно!");
+                MessageBox.Show("Цена указана неверно!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -166,12 +166,19 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             button1AddProd.Enabled = false;
 
-            MessageBox.Show("Новый товар добавлен!");
+            MessageBox.Show("Новый товар добавлен!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button4Delete_Click(object sender, EventArgs e)
+        private void button4Delete_Click(object sender, EventArgs e)  // кнопка Удалить
         {
+            int index = listBox1GoodsInfo.SelectedIndex;            
+            listBox1GoodsInfo.Items.RemoveAt(index);
+            products.RemoveAt(index);
 
+            MessageBox.Show("Товар удалён!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            button1Edit.Enabled = false;
+            button4Delete.Enabled = false;
         }
     }
 }
