@@ -21,25 +21,14 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             foreach(var item in products)
                 listBox1GoodsInfo.Items.Add(item);
-        }
-
-        private void listBox1GoodsInfo_Leave(object sender, EventArgs e) // не нужное событие ПОДУМАТЬ!!!!
-        {
-            //когда листбокс теряет фокус, то убираем выделение с объекта
-            //listBox1GoodsInfo.ClearSelected();
-            //button1Edit.Enabled = false;
-            //button2Refresh.Enabled = false;
-            //button3Cancel.Enabled = false;
-        }
+        }       
 
         private void listBox1GoodsInfo_SelectedIndexChanged(object sender, EventArgs e)
         {                    
-            button1Edit.Enabled = true;
-            button2Refresh.Enabled = true;
-            button3Cancel.Enabled = true;
+            button1Edit.Enabled = true;           
         }
 
-        private void button1Edit_Click(object sender, EventArgs e)
+        private void button1Edit_Click(object sender, EventArgs e)  // кнопка Редактировать
         {
             int index = listBox1GoodsInfo.SelectedIndex;
             var product = (Product)listBox1GoodsInfo.Items[index];
@@ -48,12 +37,15 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             textBox2Detail.Text = product.Detail;
             textBox3Description.Text = product.Description;
             textBox4Price.Text = product.Price.ToString();
+
+            button2Refresh.Enabled = true;
+            button3Cancel.Enabled = true;
         }
 
-        private void button2Refresh_Click(object sender, EventArgs e)
+        private void button2Refresh_Click(object sender, EventArgs e)  // кнопка Обновить
         {
 
-            if (textBox1Title.Text == "" ||                          //Проверка заполнения полей
+            if (textBox1Title.Text == "" ||                            // проверка заполнения полей
                 textBox2Detail.Text == "" || 
                 textBox3Description.Text == "" ||
                 textBox4Price.Text == "")
@@ -78,16 +70,30 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
                 MessageBox.Show("Цена указана неверно");
                 return;
             }
+            MessageBox.Show("Информация о товаре обновлена!");
+
+            listBox1GoodsInfo.ClearSelected();
+
+            button1Edit.Enabled = false;
+            button2Refresh.Enabled = false;
+            button3Cancel.Enabled = false;
         }
 
-        private void button3Cancel_Click(object sender, EventArgs e)
+        private void button3Cancel_Click(object sender, EventArgs e)  // кнопка Отменить
         {
             textBox1Title.Text = string.Empty;
             textBox2Detail.Text = string.Empty;
             textBox3Description.Text = string.Empty;
             textBox4Price.Text = string.Empty;
+
             listBox1GoodsInfo.ClearSelected();
+
+            button1Edit.Enabled = false;
+            button2Refresh.Enabled = false;
+            button3Cancel.Enabled = false;
+
             return;
         }
+
     }
 }

@@ -56,7 +56,6 @@
             this.listBox1GoodsInfo.Size = new System.Drawing.Size(251, 225);
             this.listBox1GoodsInfo.TabIndex = 0;
             this.listBox1GoodsInfo.SelectedIndexChanged += new System.EventHandler(this.listBox1GoodsInfo_SelectedIndexChanged);
-            this.listBox1GoodsInfo.Leave += new System.EventHandler(this.listBox1GoodsInfo_Leave);
             // 
             // label1
             // 
