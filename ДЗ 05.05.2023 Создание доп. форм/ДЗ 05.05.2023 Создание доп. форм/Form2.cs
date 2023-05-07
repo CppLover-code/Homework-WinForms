@@ -53,11 +53,11 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         private void button2Refresh_Click(object sender, EventArgs e)
         {
 
-            if (textBox1Title.Text == "" || 
+            if (textBox1Title.Text == "" ||                          //Проверка заполнения полей
                 textBox2Detail.Text == "" || 
                 textBox3Description.Text == "" ||
                 textBox4Price.Text == "")
-            {//Проверка заполнения полей
+            {
                 MessageBox.Show("Заполните все поля");
                 return;
             }
