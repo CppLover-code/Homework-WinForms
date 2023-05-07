@@ -44,6 +44,7 @@
             this.button3Cancel = new System.Windows.Forms.Button();
             this.button2Refresh = new System.Windows.Forms.Button();
             this.button1Edit = new System.Windows.Forms.Button();
+            this.button4Delete = new System.Windows.Forms.Button();
             this.panel1Edit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             // 
             this.textBox1Title.Location = new System.Drawing.Point(283, 43);
             this.textBox1Title.Name = "textBox1Title";
-            this.textBox1Title.Size = new System.Drawing.Size(117, 20);
+            this.textBox1Title.Size = new System.Drawing.Size(124, 20);
             this.textBox1Title.TabIndex = 3;
             this.textBox1Title.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             this.textBox1Title.TextChanged += new System.EventHandler(this.textBoxForm2_TextChanged);
@@ -97,7 +98,7 @@
             // 
             this.textBox2Detail.Location = new System.Drawing.Point(283, 86);
             this.textBox2Detail.Name = "textBox2Detail";
-            this.textBox2Detail.Size = new System.Drawing.Size(117, 20);
+            this.textBox2Detail.Size = new System.Drawing.Size(124, 20);
             this.textBox2Detail.TabIndex = 5;
             this.textBox2Detail.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
@@ -105,7 +106,7 @@
             // 
             this.textBox3Description.Location = new System.Drawing.Point(283, 134);
             this.textBox3Description.Name = "textBox3Description";
-            this.textBox3Description.Size = new System.Drawing.Size(117, 20);
+            this.textBox3Description.Size = new System.Drawing.Size(124, 20);
             this.textBox3Description.TabIndex = 7;
             this.textBox3Description.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
@@ -122,7 +123,7 @@
             // 
             this.textBox4Price.Location = new System.Drawing.Point(283, 182);
             this.textBox4Price.Name = "textBox4Price";
-            this.textBox4Price.Size = new System.Drawing.Size(117, 20);
+            this.textBox4Price.Size = new System.Drawing.Size(124, 20);
             this.textBox4Price.TabIndex = 9;
             this.textBox4Price.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
@@ -141,7 +142,7 @@
             this.button1AddProd.Enabled = false;
             this.button1AddProd.Location = new System.Drawing.Point(283, 221);
             this.button1AddProd.Name = "button1AddProd";
-            this.button1AddProd.Size = new System.Drawing.Size(117, 47);
+            this.button1AddProd.Size = new System.Drawing.Size(124, 47);
             this.button1AddProd.TabIndex = 10;
             this.button1AddProd.Text = "Добавить товар";
             this.button1AddProd.UseVisualStyleBackColor = true;
@@ -152,11 +153,12 @@
             this.panel1Edit.BackColor = System.Drawing.Color.Transparent;
             this.panel1Edit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1Edit.Controls.Add(this.button3Cancel);
-            this.panel1Edit.Controls.Add(this.button2Refresh);
+            this.panel1Edit.Controls.Add(this.button4Delete);
             this.panel1Edit.Controls.Add(this.button1Edit);
+            this.panel1Edit.Controls.Add(this.button2Refresh);
             this.panel1Edit.Location = new System.Drawing.Point(12, 274);
             this.panel1Edit.Name = "panel1Edit";
-            this.panel1Edit.Size = new System.Drawing.Size(388, 48);
+            this.panel1Edit.Size = new System.Drawing.Size(399, 48);
             this.panel1Edit.TabIndex = 11;
             // 
             // button3Cancel
@@ -164,7 +166,7 @@
             this.button3Cancel.BackColor = System.Drawing.Color.Beige;
             this.button3Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3Cancel.Enabled = false;
-            this.button3Cancel.Location = new System.Drawing.Point(271, 4);
+            this.button3Cancel.Location = new System.Drawing.Point(300, 3);
             this.button3Cancel.Name = "button3Cancel";
             this.button3Cancel.Size = new System.Drawing.Size(94, 41);
             this.button3Cancel.TabIndex = 2;
@@ -177,7 +179,7 @@
             this.button2Refresh.BackColor = System.Drawing.Color.Beige;
             this.button2Refresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2Refresh.Enabled = false;
-            this.button2Refresh.Location = new System.Drawing.Point(148, 4);
+            this.button2Refresh.Location = new System.Drawing.Point(200, 3);
             this.button2Refresh.Name = "button2Refresh";
             this.button2Refresh.Size = new System.Drawing.Size(94, 41);
             this.button2Refresh.TabIndex = 1;
@@ -190,7 +192,7 @@
             this.button1Edit.BackColor = System.Drawing.Color.Beige;
             this.button1Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1Edit.Enabled = false;
-            this.button1Edit.Location = new System.Drawing.Point(24, 4);
+            this.button1Edit.Location = new System.Drawing.Point(3, 3);
             this.button1Edit.Name = "button1Edit";
             this.button1Edit.Size = new System.Drawing.Size(94, 41);
             this.button1Edit.TabIndex = 0;
@@ -198,11 +200,23 @@
             this.button1Edit.UseVisualStyleBackColor = false;
             this.button1Edit.Click += new System.EventHandler(this.button1Edit_Click);
             // 
+            // button4Delete
+            // 
+            this.button4Delete.BackColor = System.Drawing.Color.Beige;
+            this.button4Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4Delete.Enabled = false;
+            this.button4Delete.Location = new System.Drawing.Point(103, 3);
+            this.button4Delete.Name = "button4Delete";
+            this.button4Delete.Size = new System.Drawing.Size(94, 41);
+            this.button4Delete.TabIndex = 12;
+            this.button4Delete.Text = "Удалить";
+            this.button4Delete.UseVisualStyleBackColor = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 334);
+            this.ClientSize = new System.Drawing.Size(421, 334);
             this.Controls.Add(this.panel1Edit);
             this.Controls.Add(this.button1AddProd);
             this.Controls.Add(this.textBox4Price);
@@ -241,5 +255,6 @@
         private System.Windows.Forms.Button button3Cancel;
         private System.Windows.Forms.Button button2Refresh;
         private System.Windows.Forms.Button button1Edit;
+        private System.Windows.Forms.Button button4Delete;
     }
 }
