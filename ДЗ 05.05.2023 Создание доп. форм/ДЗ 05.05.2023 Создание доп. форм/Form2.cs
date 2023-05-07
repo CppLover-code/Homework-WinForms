@@ -26,12 +26,21 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
         private void listBox1GoodsInfo_SelectedIndexChanged(object sender, EventArgs e)
         {                    
-            button1Edit.Enabled = true;           
+            button1Edit.Enabled = true;
+            button1AddProd.Enabled = false;
         }
 
         private void button1Edit_Click(object sender, EventArgs e)  // кнопка Редактировать
         {
             int index = listBox1GoodsInfo.SelectedIndex;
+            
+
+            if(index == -1)
+            {
+                MessageBox.Show("Выберите товар для редактирования!");
+                return;
+            }
+
             var product = (Product)listBox1GoodsInfo.Items[index];
 
             textBox1Title.Text = product.Title;
@@ -42,6 +51,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             button2Refresh.Enabled = true;
             button3Cancel.Enabled = true;
             button1Edit.Enabled = false;
+            button1AddProd.Enabled = false;
         }
 
         private void button2Refresh_Click(object sender, EventArgs e)  // кнопка Обновить
@@ -56,8 +66,8 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
                 return;
             }
 
-            int index = listBox1GoodsInfo.SelectedIndex;
-            var product = (Product)listBox1GoodsInfo.Items[index];
+            int ind = listBox1GoodsInfo.SelectedIndex;
+            var product = (Product)listBox1GoodsInfo.Items[ind];            
 
             product.Title = textBox1Title.Text;
             product.Detail = textBox2Detail.Text;
@@ -72,19 +82,23 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
                 MessageBox.Show("Цена указана неверно");
                 return;
             }
-            MessageBox.Show("Информация о товаре обновлена!");
 
-            listBox1GoodsInfo.ClearSelected();
+            products[ind] = product;
+            listBox1GoodsInfo.Items[ind] = product;
+
+            MessageBox.Show("Информация о товаре обновлена!");           
 
             button1Edit.Enabled = false;
             button2Refresh.Enabled = false;
             button3Cancel.Enabled = false;
-            button1AddProd.Enabled = true;
+            button1AddProd.Enabled = false;
 
             textBox1Title.Text = string.Empty;
             textBox2Detail.Text = string.Empty;
             textBox3Description.Text = string.Empty;
             textBox4Price.Text = string.Empty;
+
+            listBox1GoodsInfo.ClearSelected();
         }
 
         private void button3Cancel_Click(object sender, EventArgs e)  // кнопка Отменить
@@ -105,7 +119,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
         private void textBoxForm2_TextChanged(object sender, EventArgs e)
         {
-            if(button1Edit.Focused)
+            if(button1Edit.Focused || button2Refresh.Enabled == true)
             {
                 button1AddProd.Enabled = false;
             }

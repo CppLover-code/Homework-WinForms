@@ -81,6 +81,7 @@
             this.textBox1Title.Name = "textBox1Title";
             this.textBox1Title.Size = new System.Drawing.Size(117, 20);
             this.textBox1Title.TabIndex = 3;
+            this.textBox1Title.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             this.textBox1Title.TextChanged += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
             // label3
@@ -98,6 +99,7 @@
             this.textBox2Detail.Name = "textBox2Detail";
             this.textBox2Detail.Size = new System.Drawing.Size(117, 20);
             this.textBox2Detail.TabIndex = 5;
+            this.textBox2Detail.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
             // textBox3Description
             // 
@@ -105,6 +107,7 @@
             this.textBox3Description.Name = "textBox3Description";
             this.textBox3Description.Size = new System.Drawing.Size(117, 20);
             this.textBox3Description.TabIndex = 7;
+            this.textBox3Description.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
             // label4
             // 
@@ -121,6 +124,7 @@
             this.textBox4Price.Name = "textBox4Price";
             this.textBox4Price.Size = new System.Drawing.Size(117, 20);
             this.textBox4Price.TabIndex = 9;
+            this.textBox4Price.Click += new System.EventHandler(this.textBoxForm2_TextChanged);
             // 
             // label5
             // 
