@@ -25,22 +25,18 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         }       
 
         private void listBox1GoodsInfo_SelectedIndexChanged(object sender, EventArgs e)
-        {                    
-            button1Edit.Enabled = true;
-            button1AddProd.Enabled = false;
+        {
+            if (listBox1GoodsInfo.SelectedIndex != -1)
+            {
+                button1Edit.Enabled = true;
+                button4Delete.Enabled = true;
+                button1AddProd.Enabled = false;
+            }
         }
 
         private void button1Edit_Click(object sender, EventArgs e)  // кнопка Редактировать
         {
             int index = listBox1GoodsInfo.SelectedIndex;
-            
-
-            if(index == -1)
-            {
-                MessageBox.Show("Выберите товар для редактирования!");
-                return;
-            }
-
             var product = (Product)listBox1GoodsInfo.Items[index];
 
             textBox1Title.Text = product.Title;
@@ -50,6 +46,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             button2Refresh.Enabled = true;
             button3Cancel.Enabled = true;
+            button4Delete.Enabled = false;
             button1Edit.Enabled = false;
             button1AddProd.Enabled = false;
         }
@@ -91,6 +88,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             button1Edit.Enabled = false;
             button2Refresh.Enabled = false;
             button3Cancel.Enabled = false;
+            button4Delete.Enabled = false;
             button1AddProd.Enabled = false;
 
             textBox1Title.Text = string.Empty;
@@ -169,6 +167,11 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             button1AddProd.Enabled = false;
 
             MessageBox.Show("Новый товар добавлен!");
+        }
+
+        private void button4Delete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
