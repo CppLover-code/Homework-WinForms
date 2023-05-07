@@ -40,6 +40,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             button2Refresh.Enabled = true;
             button3Cancel.Enabled = true;
+            button1Edit.Enabled = false;
         }
 
         private void button2Refresh_Click(object sender, EventArgs e)  // кнопка Обновить
