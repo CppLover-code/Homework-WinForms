@@ -103,6 +103,7 @@
             // listBox1Sales
             // 
             this.listBox1Sales.FormattingEnabled = true;
+            this.listBox1Sales.HorizontalScrollbar = true;
             this.listBox1Sales.Location = new System.Drawing.Point(12, 26);
             this.listBox1Sales.Name = "listBox1Sales";
             this.listBox1Sales.ScrollAlwaysVisible = true;

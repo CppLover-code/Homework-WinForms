@@ -47,7 +47,10 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             toolTip1.SetToolTip(this.listBox1Sales, "Список проданных товаров");
             toolTip1.SetToolTip(this.textBox1TotalCost, "Общая стоимость всех проданных товаров");
-
+            toolTip1.SetToolTip(this.comboBox1Goods, "Выберите из выпадающего списка товар,\n чтобы добавить его в список продаж");
+            toolTip1.SetToolTip(this.textBox1PriceOfProd, "Цена соответствует выбранному из списка товару");
+            toolTip1.SetToolTip(this.button1AddToListSales, "Добавление товара в список продаж");
+            toolTip1.SetToolTip(this.button2ChangeListGoods, "Добавление и редактирование списка товаров магазина");
         }
 
         private void comboBox1Goods_SelectedIndexChanged(object sender, EventArgs e)

@@ -54,6 +54,7 @@
             // listBox1GoodsInfo
             // 
             this.listBox1GoodsInfo.FormattingEnabled = true;
+            this.listBox1GoodsInfo.HorizontalScrollbar = true;
             this.listBox1GoodsInfo.Location = new System.Drawing.Point(13, 40);
             this.listBox1GoodsInfo.Name = "listBox1GoodsInfo";
             this.listBox1GoodsInfo.ScrollAlwaysVisible = true;
