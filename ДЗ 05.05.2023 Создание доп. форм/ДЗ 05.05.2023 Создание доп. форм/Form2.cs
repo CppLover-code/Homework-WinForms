@@ -22,8 +22,28 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
 
             foreach(var item in products)
                 listBox1GoodsInfo.Items.Add(item);
-        }       
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            toolTip1.AutoPopDelay = 5000;       // Установка задержек для объекта ToolTip.
+            toolTip1.InitialDelay = 300;
+            toolTip1.ReshowDelay = 200;
 
+            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы
+
+            toolTip1.SetToolTip(this.panel1AddEdit, "Панель ввода информации о новом товаре и редактирования товара из списка.\nДля добавления нового товара начните вводить данные в поля.\nДля редактирования - выберите товар из списка.");          
+            toolTip1.SetToolTip(this.panel1Edit, "Панель кнопок для работы с товарами.\nЧтобы активировать панель, выберите товар из списка выше");
+            toolTip1.SetToolTip(this.listBox1GoodsInfo, "Выберите товар, который желаете изменить/удалить");
+            toolTip1.SetToolTip(this.button1Edit, "Редактирование информации о товаре");
+            toolTip1.SetToolTip(this.button4Delete, "Удаление товара");
+            toolTip1.SetToolTip(this.button2Refresh, "Обновление информации после редактирования");
+            toolTip1.SetToolTip(this.button3Cancel, "Отмена редактирования и обновления информации");
+            toolTip1.SetToolTip(this.button1AddProd, "Добавление нового товара в список");
+
+
+            //toolTip1.SetToolTip(this.textBox3Mail, "Формат: ИмяПользователя@почтовый сервис.com");
+            //toolTip1.SetToolTip(this.textBox4Tel, "Формат: +380 XX XXX XX XX");
+        }
         private void listBox1GoodsInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listBox1GoodsInfo.SelectedIndex != -1)
@@ -180,5 +200,7 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             button1Edit.Enabled = false;
             button4Delete.Enabled = false;
         }
+
+        
     }
 }

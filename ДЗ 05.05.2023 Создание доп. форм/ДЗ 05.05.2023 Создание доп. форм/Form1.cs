@@ -39,6 +39,15 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             foreach (var item in goods)
                 comboBox1Goods.Items.Add(item);
 
+            toolTip1.AutoPopDelay = 5000;       // Установка задержек для объекта ToolTip.
+            toolTip1.InitialDelay = 300;
+            toolTip1.ReshowDelay = 200;
+
+            toolTip1.ShowAlways = true;         // отображение подсказки в зависимости от активности формы
+
+            toolTip1.SetToolTip(this.listBox1Sales, "Список проданных товаров");
+            toolTip1.SetToolTip(this.textBox1TotalCost, "Общая стоимость всех проданных товаров");
+
         }
 
         private void comboBox1Goods_SelectedIndexChanged(object sender, EventArgs e)

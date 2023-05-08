@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.listBox1GoodsInfo = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@
             this.button2Refresh = new System.Windows.Forms.Button();
             this.button1Edit = new System.Windows.Forms.Button();
             this.button4Delete = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1AddEdit = new System.Windows.Forms.Panel();
             this.panel1Edit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,11 +216,18 @@
             this.button4Delete.UseVisualStyleBackColor = false;
             this.button4Delete.Click += new System.EventHandler(this.button4Delete_Click);
             // 
+            // panel1AddEdit
+            // 
+            this.panel1AddEdit.Location = new System.Drawing.Point(270, 24);
+            this.panel1AddEdit.Name = "panel1AddEdit";
+            this.panel1AddEdit.Size = new System.Drawing.Size(146, 191);
+            this.panel1AddEdit.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 334);
+            this.ClientSize = new System.Drawing.Size(419, 334);
             this.Controls.Add(this.panel1Edit);
             this.Controls.Add(this.button1AddProd);
             this.Controls.Add(this.textBox4Price);
@@ -230,9 +240,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1GoodsInfo);
+            this.Controls.Add(this.panel1AddEdit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Добавление/Изменение товара";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1Edit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,5 +269,7 @@
         private System.Windows.Forms.Button button2Refresh;
         private System.Windows.Forms.Button button1Edit;
         private System.Windows.Forms.Button button4Delete;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1AddEdit;
     }
 }
