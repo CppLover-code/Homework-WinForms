@@ -242,6 +242,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1GoodsInfo);
             this.Controls.Add(this.panel1AddEdit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Добавление/Изменение товара";
