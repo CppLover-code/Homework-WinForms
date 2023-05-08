@@ -19,16 +19,18 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Height = 370;
+            this.Width = 441;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             var p1 = new Product("Процессор Intel Core i7-13700K", "Разъём: Socket 1700; Поколение: 13 поколение (Raptor Lake); Ядро: 16", "Процессор Intel Core 13-го поколения для настольных ПК с разблокированным множителем.", 18599);
             var p2 = new Product("Оперативная память Kingston Fury DDR4", "Объем памяти: 32 ГБ; Тип: DDR4 SDRAM; Частота: 3200 МГц", "Геймерская оперативная память", 3399);
             var p3 = new Product("Жесткий диск Transcend StoreJet 25M3C", "Емкость: 4 ТБ; Совместимость: Для MAC OS и Windows", "Портативный жесткий диск имеет прочный и надежный корпус.", 5109);
             var p4 = new Product("Корпус QUBE Neptune Black", "Форм-фактор материнской платы: ATX, Mini-ITX, microATX; Тип корпуса: Miditower", "Качественный и функциональный корпус.", 2139);
-            var p5 = new Product("Название", "Характеристика", "Описание", 564);
+            var p5 = new Product("Flash-накопитель Kingston", "Объём: 16 ГБ", "Портативный накопитель", 350);
 
             goods.Add(p1);
             goods.Add(p2);

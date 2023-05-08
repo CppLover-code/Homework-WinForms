@@ -18,6 +18,11 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
         public Form2(List<Product> goods)
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.Height = 373;
+            this.Width = 435;
+
             this.products = goods;
 
             foreach(var item in products)
@@ -39,10 +44,6 @@ namespace ДЗ_05._05._2023_Создание_доп.форм
             toolTip1.SetToolTip(this.button2Refresh, "Обновление информации после редактирования");
             toolTip1.SetToolTip(this.button3Cancel, "Отмена редактирования и обновления информации");
             toolTip1.SetToolTip(this.button1AddProd, "Добавление нового товара в список");
-
-
-            //toolTip1.SetToolTip(this.textBox3Mail, "Формат: ИмяПользователя@почтовый сервис.com");
-            //toolTip1.SetToolTip(this.textBox4Tel, "Формат: +380 XX XXX XX XX");
         }
         private void listBox1GoodsInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
