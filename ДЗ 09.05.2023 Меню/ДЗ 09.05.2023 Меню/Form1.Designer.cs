@@ -37,7 +37,7 @@
             this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox1EditorWindow = new System.Windows.Forms.TextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1Open = new System.Windows.Forms.ToolStripButton();
@@ -71,7 +71,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -84,7 +84,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.fileToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.createToolStripMenuItem,
@@ -96,7 +96,7 @@
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.editToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem,
@@ -139,6 +139,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1Open,
             this.toolStripButton1Create,
@@ -157,16 +158,16 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // textBox1
+            // textBox1EditorWindow
             // 
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 49);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(540, 384);
-            this.textBox1.TabIndex = 2;
+            this.textBox1EditorWindow.ContextMenuStrip = this.contextMenuStrip1;
+            this.textBox1EditorWindow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1EditorWindow.Location = new System.Drawing.Point(0, 49);
+            this.textBox1EditorWindow.Multiline = true;
+            this.textBox1EditorWindow.Name = "textBox1EditorWindow";
+            this.textBox1EditorWindow.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1EditorWindow.Size = new System.Drawing.Size(540, 384);
+            this.textBox1EditorWindow.TabIndex = 2;
             // 
             // toolStripSeparator1
             // 
@@ -379,7 +380,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 433);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox1EditorWindow);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -413,7 +414,7 @@
         private System.Windows.Forms.ToolStripMenuItem backgroundColorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox1EditorWindow;
         private System.Windows.Forms.ToolStripButton toolStripButton1Open;
         private System.Windows.Forms.ToolStripButton toolStripButton1Create;
         private System.Windows.Forms.ToolStripButton toolStripButton1Save;
