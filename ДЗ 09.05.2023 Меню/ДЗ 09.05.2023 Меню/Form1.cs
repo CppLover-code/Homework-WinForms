@@ -87,7 +87,11 @@ namespace ДЗ_09._05._2023_Меню
         private void NewDoc()
         {
             //Application.Restart();
-            Form frm = new Form2();
+            var list = new List<Control>();
+            foreach (Control ctl in this.Controls)
+                list.Add(ctl);
+            Form frm = new Form2(list);
+            
             frm.Show();
             textBox1Editor.Text = string.Empty;
             flag = false;
