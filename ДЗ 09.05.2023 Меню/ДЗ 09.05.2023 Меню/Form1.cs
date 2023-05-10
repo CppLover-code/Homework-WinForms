@@ -14,10 +14,14 @@ namespace ДЗ_09._05._2023_Меню
 {
     public partial class Form1 : Form
     {
+        bool flag; // файл был открыт или создан новый
         public Form1()
         {
             InitializeComponent();
             this.Text = "Text editor";
+            
+
+            
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) // панель инструментов
@@ -26,40 +30,20 @@ namespace ДЗ_09._05._2023_Меню
             {               
                 switch (toolStrip1.Items.IndexOf(e.ClickedItem))
                 {
-                    case 0://открыть
-                        openFileDialog1 = new OpenFileDialog();
-                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                        {
-                            StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
-                            textBox1Editor.Text = r.ReadToEnd();
-                            r.Close();
-                        }
-                        this.Text = openFileDialog1.FileName;
-                        break;
-                    case 1://новый док
-                        textBox1Editor.Text = string.Empty;
+                    case 0:
+                        Open();
                         break;
 
-                    case 2://сохранить
-                        
+                    case 1:
+                        NewDoc();
                         break;
 
-                    case 3://сохранить как
-                        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                        {
-                            MessageBox.Show(saveFileDialog1.FileName, "Сохранение файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            try
-                            {
-                                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
+                    case 2:
+                        Save();
+                        break;
 
-                                sw.Write(textBox1Editor.Text);
-                                sw.Close();
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                        }
+                    case 3:
+                        SaveAs();
                         break;
 
                     case 4:
@@ -88,6 +72,66 @@ namespace ДЗ_09._05._2023_Меню
             {
 
             }
-        }       
+        }
+        private void Open()
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
+                textBox1Editor.Text = r.ReadToEnd();
+                flag = true;
+                r.Close();
+            }
+            this.Text = openFileDialog1.FileName;
+        }
+        private void NewDoc()
+        {
+            //Application.Restart();
+            Form frm = new Form2();
+            frm.Show();
+            textBox1Editor.Text = string.Empty;
+            flag = false;
+        }
+        private void Save()
+        {
+            string filename = openFileDialog1.FileName;
+
+            if (flag)
+            {
+                try
+                {
+                    StreamWriter sw = new StreamWriter(filename, false);
+
+                    sw.Write(textBox1Editor.Text);
+                    sw.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            else
+            {
+
+            }
+        }
+        private void SaveAs()
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show(saveFileDialog1.FileName, "Сохранение файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
+
+                    sw.Write(textBox1Editor.Text);
+                    sw.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
     }
 }
