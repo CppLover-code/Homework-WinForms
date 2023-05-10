@@ -46,20 +46,22 @@ namespace ДЗ_09._05._2023_Меню
                         SaveAs();
                         break;
 
-                    case 4:
-                        
-                        break;
-
                     case 5:
+                        Copy();
                         break;
 
                     case 6:
-
+                        Paste();
                         break;
+
                     case 7:
-
+                        Cut();
                         break;
+
                     case 8:
+                        SelectAll();    
+                        break;
+                    case 10:
 
                         break;
 
@@ -87,12 +89,6 @@ namespace ДЗ_09._05._2023_Меню
         private void NewDoc()
         {
             //Application.Restart();
-            var list = new List<Control>();
-            foreach (Control ctl in this.Controls)
-                list.Add(ctl);
-            Form frm = new Form2(list);
-            
-            frm.Show();
             textBox1Editor.Text = string.Empty;
             flag = false;
         }
@@ -136,6 +132,22 @@ namespace ДЗ_09._05._2023_Меню
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+        private void Copy()
+        {
+            textBox1Editor.Copy();
+        }
+        private void Paste()
+        {
+            textBox1Editor.Paste();
+        }
+        private void Cut()
+        {
+            textBox1Editor.Cut();
+        }
+        private void SelectAll()
+        {
+            textBox1Editor.SelectAll();
         }
     }
 }

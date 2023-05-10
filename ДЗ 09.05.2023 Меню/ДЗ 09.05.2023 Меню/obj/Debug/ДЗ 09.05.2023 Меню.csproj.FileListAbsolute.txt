@@ -9,4 +9,3 @@ C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Ме�
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.csproj.CoreCompileInputs.cache
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.exe
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.pdb
-C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ_09._05._2023_Меню.Form2.resources
