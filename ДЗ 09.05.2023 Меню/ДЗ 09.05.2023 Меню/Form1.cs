@@ -23,8 +23,14 @@ namespace ДЗ_09._05._2023_Меню
         {
             InitializeComponent();
             this.Text = "Text editor";
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Height = 700;
+            this.Width = 800;
+
             toolStripStatusLabel1.Text = "Состояние:";
-            toolStripStatusLabel2.Text = "";            
+            toolStripStatusLabel2.Text = "";   
+            
             flag = false; // значит это новый текстовый документ (ни разу не сохранен нигде)
         }
         private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
@@ -40,7 +46,7 @@ namespace ДЗ_09._05._2023_Меню
 
             form1.Text = openFileDialog1.FileName;
             form1.filename = openFileDialog1.FileName;
-            form1.Show();
+            form1.Show();           
         }
         private void toolStripButton1Create_Click(object sender, EventArgs e)   // кнопка Создать
         {           
@@ -181,4 +187,10 @@ namespace ДЗ_09._05._2023_Меню
             }
         }
     }
+    // Оставшиеся вопросы:
+    // как применить цвет шрифта, сам шрифт, только для ВЫДЕЛЕННОГО текста?
+    // нужен способ определить в textbox какой текст выделен и только к нему применить
+    // textBox1Editor.SelectedText - вот и ответ. Свойство устанавливает выделенный текст и возвращает,
+    // если таковой есть в нашем текстовом поле
+
 }

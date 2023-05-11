@@ -230,7 +230,7 @@
             // 
             this.fontColorToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.FontColor;
             this.fontColorToolStripMenuItem1.Name = "fontColorToolStripMenuItem1";
-            this.fontColorToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.fontColorToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.fontColorToolStripMenuItem1.Text = "Цвет шрифта";
             this.fontColorToolStripMenuItem1.Click += new System.EventHandler(this.fontColorToolStripMenuItem1_Click);
             // 
@@ -238,7 +238,7 @@
             // 
             this.backgroundColorToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.BackColor;
             this.backgroundColorToolStripMenuItem1.Name = "backgroundColorToolStripMenuItem1";
-            this.backgroundColorToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.backgroundColorToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.backgroundColorToolStripMenuItem1.Text = "Цвет фона";
             this.backgroundColorToolStripMenuItem1.Click += new System.EventHandler(this.backgroundColorToolStripMenuItem1_Click);
             // 
@@ -246,7 +246,7 @@
             // 
             this.fontToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.Font;
             this.fontToolStripMenuItem1.Name = "fontToolStripMenuItem1";
-            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.fontToolStripMenuItem1.Text = "Шрифт";
             this.fontToolStripMenuItem1.Click += new System.EventHandler(this.fontToolStripMenuItem1_Click);
             // 
@@ -268,7 +268,7 @@
             this.toolStripDropDownButton1EditorSettings});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(720, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(884, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -413,7 +413,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -421,12 +421,13 @@
             // 
             this.textBox1Editor.ContextMenuStrip = this.contextMenuStrip1;
             this.textBox1Editor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1Editor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1Editor.Location = new System.Drawing.Point(0, 51);
             this.textBox1Editor.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1Editor.Multiline = true;
             this.textBox1Editor.Name = "textBox1Editor";
             this.textBox1Editor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1Editor.Size = new System.Drawing.Size(720, 482);
+            this.textBox1Editor.Size = new System.Drawing.Size(884, 710);
             this.textBox1Editor.TabIndex = 2;
             this.textBox1Editor.TextChanged += new System.EventHandler(this.textBox1Editor_TextChanged);
             // 
@@ -436,9 +437,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 511);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 739);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(720, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(884, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -458,7 +459,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 533);
+            this.ClientSize = new System.Drawing.Size(884, 761);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox1Editor);
             this.Controls.Add(this.toolStrip1);
