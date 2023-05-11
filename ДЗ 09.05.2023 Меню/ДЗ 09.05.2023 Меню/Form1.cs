@@ -16,35 +16,76 @@ namespace ДЗ_09._05._2023_Меню
 {
     public partial class Form1 : Form
     {
-        bool flag; // файл был открыт или создан новый
+        bool flag; // файл новый или уже был сохранен
+        string filename;
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Text editor";  
+            this.Text = "Text editor";
+            toolStripStatusLabel1.Text = "Состояние:";
+            toolStripStatusLabel2.Text = "";
+            flag = false; // значит это ноый текстовый документ (ни разу не сохранен нигде)
         }
-        private void toolStripButton1Open_Click(object sender, EventArgs e)
+        private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
         {
+            NewForm form1 = new NewForm(this);                                              // создаем новую форму
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
-                textBox1Editor.Text = r.ReadToEnd();
-                flag = true;
+                form1.textBox1Editor.Text = r.ReadToEnd();                                  // считываем с документа все в новую форму
                 r.Close();
             }
-            this.Text = openFileDialog1.FileName;
-        }
-        private void toolStripButton1Create_Click(object sender, EventArgs e)
-        {
-            //Application.Restart();
-            //  делать вторую форму
-            textBox1Editor.Text = string.Empty;
-            flag = false;
-        }
-        private void toolStripButton1Save_Click(object sender, EventArgs e)
-        {
-            string filename = openFileDialog1.FileName;
 
-            if (flag == true)
+            form1.Text = openFileDialog1.FileName;
+            filename = form1.Text;
+            form1.Show();
+        }
+        private void toolStripButton1Create_Click(object sender, EventArgs e)   // кнопка Создать
+        {           
+            NewForm form1 = new NewForm(this);
+            form1.Show();
+        }
+        private void toolStripButton1Save_Click(object sender, EventArgs e)     // кнопка Сохранить
+        {
+            if(this.Text == "Text editor") flag = false; 
+            else flag = true;
+            
+            if (flag == false)
+            {
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
+
+                        sw.Write(textBox1Editor.Text);
+                        filename = saveFileDialog1.FileName;
+                        sw.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    } 
+                }
+
+                try
+                {
+                    StreamReader r = new StreamReader(filename, Encoding.UTF8);
+                    textBox1Editor.Text = r.ReadToEnd();
+                    flag = true; // значит, что документ уже был сохранен и далее при нажатии на Сохранить - 
+                                 // изменения будут просто сохраняться в уже существующем файле (смотреть ELSE)
+                    r.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+
+                this.Text = saveFileDialog1.FileName;
+            }
+            else
             {
                 try
                 {
@@ -55,19 +96,18 @@ namespace ДЗ_09._05._2023_Меню
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
-            else
-            {
 
-            }
+            toolStripStatusLabel2.Text = "сохранено";
         }
-        private void toolStripButton1SaveAs_Click(object sender, EventArgs e)
+        private void toolStripButton1SaveAs_Click(object sender, EventArgs e)   // кнопка Сохранить как
         {
+            // Происходит сохранение нового документа, но открытым остается всё тот же
+            // но можно сделать иначе - закрыть старый полностью и открыть новосохранённый документ
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(saveFileDialog1.FileName, "Сохранение файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 try
                 {
                     StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
@@ -77,28 +117,29 @@ namespace ДЗ_09._05._2023_Меню
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
+            toolStripStatusLabel2.Text = "сохранено";
         }
-        private void toolStripButton1Copy_Click(object sender, EventArgs e)
+        private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
         {
             textBox1Editor.Copy();
         }
-        private void toolStripButton1Paste_Click(object sender, EventArgs e)
+        private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
         {
             textBox1Editor.Paste();
         }
-        private void toolStripButton1Cut_Click(object sender, EventArgs e)
+        private void toolStripButton1Cut_Click(object sender, EventArgs e)      // кнопка Вырезать
         {
             textBox1Editor.Cut();
 
         }
-        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)
+        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)// кнопка Выделить всё
         {
             textBox1Editor.SelectAll();
         }
-        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e) // кнопка Цвет фона
         {
             colorDialog1.FullOpen = true;
 
@@ -107,20 +148,29 @@ namespace ДЗ_09._05._2023_Меню
             // установка цвета формы
             textBox1Editor.BackColor = colorDialog1.Color;
         }
-        private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)       // кнопка Цвет шрифта
         {
-            if (fontDialog1.ShowDialog() == DialogResult.Cancel)
+            colorDialog1.FullOpen = false;
+            if (colorDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
 
-            // установка цвета шрифта
-            textBox1Editor.ForeColor = fontDialog1.Color;
+            // установка цвета шрифта - меняется цвет шрифта по всей форме!!!(надо бы еще сделать только для выделенного текста)
+            textBox1Editor.ForeColor = colorDialog1.Color;
         }
-        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)            // кнопка Шрифт
         {
             if (fontDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             // установка шрифта
-            textBox1Editor.Font = fontDialog1.Font;
-        }   
+            textBox1Editor.Font = fontDialog1.Font; 
+        }
+        private void textBox1Editor_TextChanged(object sender, EventArgs e)              
+        {
+            toolStripStatusLabel2.Text = "редактирование";
+        }
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // надо предусмотреть сохранение документа призакрытии
+        }
     }
 }
