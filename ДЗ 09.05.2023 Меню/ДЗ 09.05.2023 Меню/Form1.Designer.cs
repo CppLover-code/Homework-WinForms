@@ -81,28 +81,34 @@
             this.cutToolStripMenuItem1,
             this.pasteToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 82);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 82);
             // 
             // copyToolStripMenuItem1
             // 
             this.copyToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.Copy;
             this.copyToolStripMenuItem1.Name = "copyToolStripMenuItem1";
-            this.copyToolStripMenuItem1.Size = new System.Drawing.Size(116, 26);
+            this.copyToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copyToolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
             this.copyToolStripMenuItem1.Text = "Copy";
+            this.copyToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButton1Copy_Click);
             // 
             // cutToolStripMenuItem1
             // 
             this.cutToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.Cut__2_;
             this.cutToolStripMenuItem1.Name = "cutToolStripMenuItem1";
-            this.cutToolStripMenuItem1.Size = new System.Drawing.Size(116, 26);
+            this.cutToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.cutToolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
             this.cutToolStripMenuItem1.Text = "Cut";
+            this.cutToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButton1Cut_Click);
             // 
             // pasteToolStripMenuItem1
             // 
             this.pasteToolStripMenuItem1.Image = global::ДЗ_09._05._2023_Меню.Properties.Resources.Paste;
             this.pasteToolStripMenuItem1.Name = "pasteToolStripMenuItem1";
-            this.pasteToolStripMenuItem1.Size = new System.Drawing.Size(116, 26);
+            this.pasteToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.pasteToolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
             this.pasteToolStripMenuItem1.Text = "Paste";
+            this.pasteToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButton1Paste_Click);
             // 
             // openFileDialog1
             // 
@@ -255,9 +261,9 @@
             this.toolStripButton1SelectAll,
             this.toolStripSeparator2,
             this.toolStripDropDownButton1EditorSettings});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(720, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(720, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -402,7 +408,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(720, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(720, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -410,12 +416,12 @@
             // 
             this.textBox1Editor.ContextMenuStrip = this.contextMenuStrip1;
             this.textBox1Editor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1Editor.Location = new System.Drawing.Point(0, 61);
+            this.textBox1Editor.Location = new System.Drawing.Point(0, 55);
             this.textBox1Editor.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1Editor.Multiline = true;
             this.textBox1Editor.Name = "textBox1Editor";
             this.textBox1Editor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1Editor.Size = new System.Drawing.Size(720, 472);
+            this.textBox1Editor.Size = new System.Drawing.Size(720, 478);
             this.textBox1Editor.TabIndex = 2;
             // 
             // Form1
