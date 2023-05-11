@@ -16,15 +16,16 @@ namespace ДЗ_09._05._2023_Меню
 {
     public partial class Form1 : Form
     {
-        bool flag; // файл новый или уже был сохранен
-        string filename;
+        bool flag;              // файл новый или уже был сохранен
+        bool checksave;         // сохранены ли изменения на момент закрытия формы
+        public string filename; // строка будет хранить путь к файлу
         public Form1()
         {
             InitializeComponent();
             this.Text = "Text editor";
             toolStripStatusLabel1.Text = "Состояние:";
-            toolStripStatusLabel2.Text = "";
-            flag = false; // значит это ноый текстовый документ (ни разу не сохранен нигде)
+            toolStripStatusLabel2.Text = "";            
+            flag = false; // значит это новый текстовый документ (ни разу не сохранен нигде)
         }
         private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
         {
@@ -38,7 +39,7 @@ namespace ДЗ_09._05._2023_Меню
             }
 
             form1.Text = openFileDialog1.FileName;
-            filename = form1.Text;
+            form1.filename = openFileDialog1.FileName;
             form1.Show();
         }
         private void toolStripButton1Create_Click(object sender, EventArgs e)   // кнопка Создать
@@ -48,19 +49,19 @@ namespace ДЗ_09._05._2023_Меню
         }
         private void toolStripButton1Save_Click(object sender, EventArgs e)     // кнопка Сохранить
         {
-            if(this.Text == "Text editor") flag = false; 
-            else flag = true;
+            if(this.Text == "Text editor") flag = false;  // благодаря этой !плохой! проверке мы знаем как нужно сохранять документ,
+            else flag = true;                             // если док Открытый, Созданный или Новый док при первом открытии формы
             
-            if (flag == false)
+            if (flag == false)    // если док новый
             {
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
+                    filename = saveFileDialog1.FileName;
                     try
                     {
-                        StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
-
+                        StreamWriter sw = new StreamWriter(filename, true);         // сохраняем новый док
                         sw.Write(textBox1Editor.Text);
-                        filename = saveFileDialog1.FileName;
+                        checksave = true;
                         sw.Close();
                     }
                     catch (Exception ex)
@@ -71,7 +72,7 @@ namespace ДЗ_09._05._2023_Меню
 
                 try
                 {
-                    StreamReader r = new StreamReader(filename, Encoding.UTF8);
+                    StreamReader r = new StreamReader(filename, Encoding.UTF8);     // и в этой же форме открываем его
                     textBox1Editor.Text = r.ReadToEnd();
                     flag = true; // значит, что документ уже был сохранен и далее при нажатии на Сохранить - 
                                  // изменения будут просто сохраняться в уже существующем файле (смотреть ELSE)
@@ -80,18 +81,17 @@ namespace ДЗ_09._05._2023_Меню
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }
-                
+                }  
 
                 this.Text = saveFileDialog1.FileName;
             }
-            else
-            {
+            else                 // если документ уже был сохранён,
+            {                    // тогда просто перезаписываем его
                 try
                 {
                     StreamWriter sw = new StreamWriter(filename, false, Encoding.UTF8);
-
                     sw.Write(textBox1Editor.Text);
+                    checksave = true;
                     sw.Close();
                 }
                 catch (Exception ex)
@@ -164,13 +164,21 @@ namespace ДЗ_09._05._2023_Меню
             // установка шрифта
             textBox1Editor.Font = fontDialog1.Font; 
         }
-        private void textBox1Editor_TextChanged(object sender, EventArgs e)              
+        private void textBox1Editor_TextChanged(object sender, EventArgs e)     // измененмие текста влияет на строку состояния
         {
             toolStripStatusLabel2.Text = "редактирование";
+            checksave = false;
         }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)     // сохранение документа при закрытии
         {
-            // надо предусмотреть сохранение документа призакрытии
+            if (!checksave)
+            {
+                DialogResult res = MessageBox.Show("Сохранить изменения?", "Text editor", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    toolStripButton1Save.PerformClick();
+                }
+            }
         }
     }
 }
