@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace ДЗ_09._05._2023_Меню
 {
@@ -18,10 +20,7 @@ namespace ДЗ_09._05._2023_Меню
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Text editor";
-            
-
-            
+            this.Text = "Text editor";  
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) // панель инструментов
@@ -61,13 +60,43 @@ namespace ДЗ_09._05._2023_Меню
                     case 8:
                         SelectAll();    
                         break;
+
                     case 10:
 
-                        break;
+                        //FontDialog fontDialog = new FontDialog();
+                        //ColorDialog colorDialog = new ColorDialog();
 
-                    case 9:
+                        //switch (toolStripDropDownButton1EditorSettings.DropDownItemClicked)
+                        //{
+                        //    case 0:
 
+                        //        if (fontDialog.ShowDialog() == DialogResult.Cancel)
+                        //            return;
+
+                        //        // установка цвета шрифта
+                        //        textBox1Editor.ForeColor = fontDialog.Color;
+                        //        break;
+
+                        //    case 1:
+                        //        // расширенное окно для выбора цвета
+                        //        colorDialog.FullOpen = true;
+
+                        //        if (colorDialog.ShowDialog() == DialogResult.Cancel)
+                        //            return;
+                        //        // установка цвета формы
+                        //        textBox1Editor.BackColor = colorDialog.Color;
+                        //        break;
+
+                        //    case 2:
+                        //        if (fontDialog.ShowDialog() == DialogResult.Cancel)
+                        //            return;
+
+                        //        // установка шрифта
+                        //        textBox1Editor.Font = fontDialog.Font;
+                        //        break;
+                        //}
                         break;
+                 
                 }
             }
             catch (Exception)
@@ -89,6 +118,7 @@ namespace ДЗ_09._05._2023_Меню
         private void NewDoc()
         {
             //Application.Restart();
+            //  делать вторую форму
             textBox1Editor.Text = string.Empty;
             flag = false;
         }
@@ -96,11 +126,11 @@ namespace ДЗ_09._05._2023_Меню
         {
             string filename = openFileDialog1.FileName;
 
-            if (flag)
+            if (flag == true)
             {
                 try
                 {
-                    StreamWriter sw = new StreamWriter(filename, false);
+                    StreamWriter sw = new StreamWriter(filename, false, Encoding.UTF8);
 
                     sw.Write(textBox1Editor.Text);
                     sw.Close();
@@ -148,6 +178,41 @@ namespace ДЗ_09._05._2023_Меню
         private void SelectAll()
         {
             textBox1Editor.SelectAll();
+        }
+        private void S()
+        {
+            textBox1Editor.SelectAll();
+        }
+
+        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.FullOpen = true;
+
+            if (colorDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+            // установка цвета формы
+            textBox1Editor.BackColor = colorDialog.Color;
+        }
+
+        private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            // установка цвета шрифта
+            textBox1Editor.ForeColor = fontDialog.Color;
+        }
+
+        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog1 = new FontDialog();
+            if (fontDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            // установка шрифта
+            textBox1Editor.Font = fontDialog1.Font;
         }
     }
 }
