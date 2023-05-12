@@ -1,0 +1,11 @@
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\bin\Debug\ДЗ 11.05.2023 Использование GDI.exe.config
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\bin\Debug\ДЗ 11.05.2023 Использование GDI.exe
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\bin\Debug\ДЗ 11.05.2023 Использование GDI.pdb
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ_11._05._2023_Использование_GDI.Form1.resources
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ_11._05._2023_Использование_GDI.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.exe
+C:\Users\Hp\Desktop\ДЗ 11.05.2023 Использование GDI\ДЗ 11.05.2023 Использование GDI\obj\Debug\ДЗ 11.05.2023 Использование GDI.pdb
