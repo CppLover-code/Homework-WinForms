@@ -71,7 +71,6 @@ namespace ДЗ_11._05._2023_Использование_GDI
 
         private void button1Graph_Click(object sender, EventArgs e)
         {
-            g = Graphics.FromImage(img);
             try
             {
                 object obj = comboBox1.SelectedItem; 
@@ -120,7 +119,6 @@ namespace ДЗ_11._05._2023_Использование_GDI
                         break;
                 }
                 pictureBox1.Invalidate();
-
             }
             catch (Exception ex)
             {
