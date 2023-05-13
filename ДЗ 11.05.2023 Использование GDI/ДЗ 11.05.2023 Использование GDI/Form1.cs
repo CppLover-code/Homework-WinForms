@@ -18,6 +18,7 @@ namespace ДЗ_11._05._2023_Использование_GDI
         Pen pen1;
         Pen pen2;
         Pen pen3;
+        Pen pen4;
 
         public Form1()
         {
@@ -26,7 +27,7 @@ namespace ДЗ_11._05._2023_Использование_GDI
             this.Width = 400;
             this.Height = 480;
 
-            comboBox1.Items.Add("y = x - b");
+            comboBox1.Items.Add("y = x + 3");
             comboBox1.Items.Add("y = x^2");
             comboBox1.Items.Add("y = \u221Ax");
             comboBox1.Items.Add("y = (x - b)^2");
@@ -40,7 +41,8 @@ namespace ДЗ_11._05._2023_Использование_GDI
             pen = new Pen(Color.Black, 2.0f);
             pen1 = new Pen(Color.Black, 1.0f);
             pen2 = new Pen(Color.Red, 5.0f);
-            pen3 = new Pen(Color.Red, 1.0f);
+            pen3 = new Pen(Color.Red, 3.0f);
+            pen4 = new Pen(Color.Black, 5.0f);
 
             g = Graphics.FromImage(pictureBox1.Image);
             
@@ -78,44 +80,40 @@ namespace ДЗ_11._05._2023_Использование_GDI
                                                      // что если поменяется местоположение функции в коллекции
                 switch (func)
                 {
-                    case "y = x - b":
+                    case "y = x + 3":
 
-                        for (int x = 80; x <= 260; x++)
+                        PointF[] points = new PointF[10];
+                        int ind = 0;
+
+                        for (int x = 5; x < 15; x++)  // сохраняем точки в массив
                         {
-                            int y = x - 35;
+                            int r = x * 20;
+                            int y = x * 20 + 3;
+                            points[ind] = new PointF(r, y);
+                            g.DrawEllipse(pen4, new Rectangle(r, y, 1, 1));// точка
+                            ind++;                              
+                        }
 
-                            g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
+                        for (int p = 0; p < points.Length; p++)  // рисуем прямую от точки до точки
+                        {
+                            if (p + 1 >= points.Length) break;
+
+                            g.DrawLine(pen3, points[p].X, points[p].Y, points[p+1].X, points[p+1].Y);
                         }
                         break;
 
                     case "y = x^2":
 
-                        for (int x = 180; x <= 300; x++)
-                        {
-                            int y = x * x / 100 / 2;
-
-                            g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
-                        }
                         break;
 
                     case "y = √x":
 
-                        for (int x = 180; x <= 320; x++)
-                        {
-                            int y = (int)Math.Sqrt(x) + 150;
-
-                            g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
-                        }
+                        
                         break;
 
                     case "y = (x - b)^2":
 
-                        for (int x = 60; x <= 240; x++)
-                        {
-                            int y = (x / 5 - 20) * (x / 5 - 20) + 160;
-
-                            g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
-                        }
+                       
                         break;
                 }
                 pictureBox1.Invalidate();
