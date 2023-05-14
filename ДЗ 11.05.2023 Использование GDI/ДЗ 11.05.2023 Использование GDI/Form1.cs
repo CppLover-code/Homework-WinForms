@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ДЗ_11._05._2023_Использование_GDI
-{
+{ // Можно доделать, чтоб пользователь мог сам вводить диапазоны для функций
     public partial class Form1 : Form
     {
         Graphics g;
@@ -21,8 +21,6 @@ namespace ДЗ_11._05._2023_Использование_GDI
 
         int x0;    
         int y0;
-
-        int pixel;
         int size;
         public Form1()
         {
@@ -41,7 +39,6 @@ namespace ДЗ_11._05._2023_Использование_GDI
             x0 = pictureBox1.Width / 2;    // начало коорд 
             y0 = pictureBox1.Height / 2;   // плоскости
 
-            pixel = 1;
             size = 20;                     // размер одной стороны квадратика на плоскости
 
             Bitmap screenPicture = new Bitmap(pictureBox1.Width, pictureBox1.Height); 
@@ -59,19 +56,19 @@ namespace ДЗ_11._05._2023_Использование_GDI
             {
                 for (int w = 0; w < pictureBox1.Size.Width; w++)
                 {
-                    if (h % 20 == 0) // полосы по Height
+                    if (h % 20 == 0)                                        // полосы по Height
                     {
                         g.DrawLine(pen1, 0, h, pictureBox1.Size.Width, h);
                     }
-                    if (w % 20 == 0) // полосы по Width
+                    if (w % 20 == 0)                                        // полосы по Width
                     {
                         g.DrawLine(pen1, w, 0, w, pictureBox1.Size.Height);
                     }
                     if (h == pictureBox1.Size.Height/2 && w == pictureBox1.Size.Width / 2) // красная точка и оси
                     {
-                        g.DrawEllipse(pen2, new Rectangle(w-1, h-1, 1, 1));// красная точка
-                        g.DrawLine(pen, 0, h, pictureBox1.Size.Width, h);  // ось Y
-                        g.DrawLine(pen, w, 0, w, pictureBox1.Size.Height); // ось X
+                        g.DrawEllipse(pen2, new Rectangle(w-1, h-1, 1, 1));     // красная точка
+                        g.DrawLine(pen, 0, h, pictureBox1.Size.Width, h);       // жирная ось Y
+                        g.DrawLine(pen, w, 0, w, pictureBox1.Size.Height);      // жирная ось X
                     }
 
                 }                
@@ -117,20 +114,25 @@ namespace ДЗ_11._05._2023_Использование_GDI
             g.Dispose();
         }
         private void Linear()
-        {          
-            for (int i = 0; i < 3 * size - 1; i++, pixel++)
+        {
+            int pixel;
+            int limitX = -4;
+            int limitX1 = 9;  
+            
+            for (pixel = limitX * size; pixel< limitX1 * size; pixel++)
             {
                 int x = pixel + x0;
-                int y = 3 * size - pixel + y0;
+                int y = y0 - (pixel - 3 * size);
 
-                int x1 = x0 + pixel + 1;
-                int y1 = 3*size - (pixel+1) + y0;
+                int x1 = pixel + 1 + x0;
+                int y1 = y0 - ((pixel + 1) - 3 * size);
 
                 g.DrawLine(pen3, x, y, x1, y1);
             }
         }
         private void Quadratic()
         {
+            int pixel;
             for (pixel = -3 * size; pixel < 3 * size; pixel++)
             {
                 int x = x0 + pixel;
@@ -144,6 +146,7 @@ namespace ДЗ_11._05._2023_Использование_GDI
         }
         private void Cubic()
         {
+            int pixel;
             for (pixel = -2 * size; pixel < 2 * size; pixel++)
             {
                 int x = x0 + pixel;
