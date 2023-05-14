@@ -27,10 +27,8 @@ namespace ДЗ_11._05._2023_Использование_GDI
             this.Width = 400;
             this.Height = 480;
 
-            comboBox1.Items.Add("y = x + 3");
-            comboBox1.Items.Add("y = x^2");
-            comboBox1.Items.Add("y = \u221Ax");
-            comboBox1.Items.Add("y = (x - b)^2");
+            comboBox1.Items.Add("y = x - 3");
+            comboBox1.Items.Add("y = x * x");
 
             pictureBox1.Width = 360;
             pictureBox1.Height = 320;
@@ -68,7 +66,7 @@ namespace ДЗ_11._05._2023_Использование_GDI
 
                 }                
             }
-            //pictureBox1.Invalidate(); // отвечает за перерисовку изображения
+            //pictureBox1.Invalidate(); 
         }
 
         private void button1Graph_Click(object sender, EventArgs e)
@@ -80,41 +78,13 @@ namespace ДЗ_11._05._2023_Использование_GDI
                                                      // что если поменяется местоположение функции в коллекции
                 switch (func)
                 {
-                    case "y = x + 3":
-
-                        PointF[] points = new PointF[10];
-                        int ind = 0;
-
-                        for (int x = 5; x < 15; x++)  // сохраняем точки в массив
-                        {
-                            int r = x * 20;
-                            int y = x * 20 + 3;
-                            points[ind] = new PointF(r, y);
-                            g.DrawEllipse(pen4, new Rectangle(r, y, 1, 1));// точка
-                            ind++;                              
-                        }
-
-                        for (int p = 0; p < points.Length; p++)  // рисуем прямую от точки до точки
-                        {
-                            if (p + 1 >= points.Length) break;
-
-                            g.DrawLine(pen3, points[p].X, points[p].Y, points[p+1].X, points[p+1].Y);
-                        }
+                    case "y = x - 3":
+                        Linear1(); 
                         break;
 
-                    case "y = x^2":
-
-                        break;
-
-                    case "y = √x":
-
-                        
-                        break;
-
-                    case "y = (x - b)^2":
-
-                       
-                        break;
+                    case "y = x * x":
+                        Quadratic();
+                        break; 
                 }
                 pictureBox1.Invalidate();
             }
@@ -132,5 +102,34 @@ namespace ДЗ_11._05._2023_Использование_GDI
             pen3.Dispose();
             g.Dispose();
         }
+        private void Linear1()
+        {
+            int pixel = 1;
+            int size = 20;
+            int range = 3 * size;
+
+            for (int i = 0; i <= range; i++, pixel++)
+            {
+                int x = pixel + 180;
+                int y = 3 * size - pixel + 160;
+                g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
+            }
+        }
+        private void Quadratic()
+        {
+            int pixel = 1;
+            int size = 20;
+            int range = 3 * size;
+
+            for (int i = 0; i <= range; i++, pixel++)
+            {
+                int x = 180 + pixel;
+                int y = x * x / 100 - 160 - pixel;
+
+                g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
+                //g.DrawEllipse(pen3, new Rectangle(360 - x, y, 1, 1));
+            }
+        }
+
     }
 }
