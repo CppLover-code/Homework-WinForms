@@ -18,8 +18,12 @@ namespace ДЗ_11._05._2023_Использование_GDI
         Pen pen1;
         Pen pen2;
         Pen pen3;
-        Pen pen4;
 
+        int x0;    
+        int y0;
+
+        int pixel;
+        int size;
         public Form1()
         {
             InitializeComponent();
@@ -29,10 +33,17 @@ namespace ДЗ_11._05._2023_Использование_GDI
 
             comboBox1.Items.Add("y = x - 3");
             comboBox1.Items.Add("y = x * x");
+            comboBox1.Items.Add("y = x * x * x");
 
             pictureBox1.Width = 360;
             pictureBox1.Height = 320;
-            
+
+            x0 = pictureBox1.Width / 2;    // начало коорд 
+            y0 = pictureBox1.Height / 2;   // плоскости
+
+            pixel = 1;
+            size = 20;                     // размер одной стороны квадратика на плоскости
+
             Bitmap screenPicture = new Bitmap(pictureBox1.Width, pictureBox1.Height); 
             pictureBox1.Image = screenPicture;
 
@@ -40,7 +51,6 @@ namespace ДЗ_11._05._2023_Использование_GDI
             pen1 = new Pen(Color.Black, 1.0f);
             pen2 = new Pen(Color.Red, 5.0f);
             pen3 = new Pen(Color.Red, 3.0f);
-            pen4 = new Pen(Color.Black, 5.0f);
 
             g = Graphics.FromImage(pictureBox1.Image);
             
@@ -79,12 +89,16 @@ namespace ДЗ_11._05._2023_Использование_GDI
                 switch (func)
                 {
                     case "y = x - 3":
-                        Linear1(); 
+                        Linear(); 
                         break;
 
                     case "y = x * x":
                         Quadratic();
-                        break; 
+                        break;
+
+                    case "y = x * x * x":
+                        Cubic();
+                        break;
                 }
                 pictureBox1.Invalidate();
             }
@@ -102,34 +116,44 @@ namespace ДЗ_11._05._2023_Использование_GDI
             pen3.Dispose();
             g.Dispose();
         }
-        private void Linear1()
-        {
-            int pixel = 1;
-            int size = 20;
-            int range = 3 * size;
-
-            for (int i = 0; i <= range; i++, pixel++)
+        private void Linear()
+        {          
+            for (int i = 0; i < 3 * size - 1; i++, pixel++)
             {
-                int x = pixel + 180;
-                int y = 3 * size - pixel + 160;
-                g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
+                int x = pixel + x0;
+                int y = 3 * size - pixel + y0;
+
+                int x1 = x0 + pixel + 1;
+                int y1 = 3*size - (pixel+1) + y0;
+
+                g.DrawLine(pen3, x, y, x1, y1);
             }
         }
         private void Quadratic()
         {
-            int pixel = 1;
-            int size = 20;
-            int range = 3 * size;
-
-            for (int i = 0; i <= range; i++, pixel++)
+            for (pixel = -3 * size; pixel < 3 * size; pixel++)
             {
-                int x = 180 + pixel;
-                int y = x * x / 100 - 160 - pixel;
+                int x = x0 + pixel;
+                int y = y0 - (pixel * pixel / size);
 
-                g.DrawEllipse(pen3, new Rectangle(x, y, 1, 1));
-                //g.DrawEllipse(pen3, new Rectangle(360 - x, y, 1, 1));
+                int x1 = x0 + pixel + 1;
+                int y1 = y0 - (int)(Math.Pow(pixel + 1, 2) / size);
+
+                g.DrawLine(pen3, x, y, x1, y1);
             }
         }
+        private void Cubic()
+        {
+            for (pixel = -2 * size; pixel < 2 * size; pixel++)
+            {
+                int x = x0 + pixel;
+                int y = y0 - (int)(Math.Pow(pixel,3)/Math.Pow(size, 2));
 
+                int x1 = x0 + pixel + 1;
+                int y1 = y0 - (int)(Math.Pow(pixel+1, 3) / Math.Pow(size, 2));
+
+                g.DrawLine(pen3, x, y, x1, y1);
+            }
+        }
     }
 }
