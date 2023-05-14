@@ -36,48 +36,22 @@ namespace ДЗ_11._05._2023_Использование_GDI
             pictureBox1.Width = 360;
             pictureBox1.Height = 320;
 
-            x0 = pictureBox1.Width / 2;    // начало коорд 
-            y0 = pictureBox1.Height / 2;   // плоскости
+            x0 = pictureBox1.Width / 2;         // начало коорд 
+            y0 = pictureBox1.Height / 2;        // плоскости
 
-            size = 20;                     // размер одной стороны квадратика на плоскости
-
-            Bitmap screenPicture = new Bitmap(pictureBox1.Width, pictureBox1.Height); 
-            pictureBox1.Image = screenPicture;
+            size = 20;                          // размер одной стороны квадратика на плоскости
 
             pen = new Pen(Color.Black, 2.0f);
             pen1 = new Pen(Color.Black, 1.0f);
             pen2 = new Pen(Color.Red, 5.0f);
             pen3 = new Pen(Color.Red, 3.0f);
 
-            g = Graphics.FromImage(pictureBox1.Image);
-            
-
-            for (int h = 0; h < pictureBox1.Size.Height; h++)
-            {
-                for (int w = 0; w < pictureBox1.Size.Width; w++)
-                {
-                    if (h % 20 == 0)                                        // полосы по Height
-                    {
-                        g.DrawLine(pen1, 0, h, pictureBox1.Size.Width, h);
-                    }
-                    if (w % 20 == 0)                                        // полосы по Width
-                    {
-                        g.DrawLine(pen1, w, 0, w, pictureBox1.Size.Height);
-                    }
-                    if (h == pictureBox1.Size.Height/2 && w == pictureBox1.Size.Width / 2) // красная точка и оси
-                    {
-                        g.DrawEllipse(pen2, new Rectangle(w-1, h-1, 1, 1));     // красная точка
-                        g.DrawLine(pen, 0, h, pictureBox1.Size.Width, h);       // жирная ось Y
-                        g.DrawLine(pen, w, 0, w, pictureBox1.Size.Height);      // жирная ось X
-                    }
-
-                }                
-            }
-            //pictureBox1.Invalidate(); 
+            Coord();
         }
 
         private void button1Graph_Click(object sender, EventArgs e)
         {
+            Coord();
             try
             {
                 object obj = comboBox1.SelectedItem; 
@@ -104,7 +78,48 @@ namespace ДЗ_11._05._2023_Использование_GDI
                 MessageBox.Show(ex.Message);
             }
         }
+        private void Coord()  // выводим координатную плоскость
+        {
+            Bitmap screenPicture = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.Image = screenPicture;
 
+            g = Graphics.FromImage(pictureBox1.Image);
+
+            for (int h = 0; h < pictureBox1.Size.Height; h++)
+            {
+                for (int w = 0; w < pictureBox1.Size.Width; w++)
+                {
+
+                    if (h % 20 == 0)                                                            // полосы по Height
+                    {
+                        g.DrawLine(pen1, 0, h, pictureBox1.Size.Width, h);
+                    }
+
+                    if (w % 20 == 0)                                                            // полосы по Width
+                    {
+                        g.DrawLine(pen1, w, 0, w, pictureBox1.Size.Height);
+                    }
+
+                    if (h == pictureBox1.Size.Height / 2 && w == pictureBox1.Size.Width / 2)    // красная точка и оси
+                    {
+                        g.DrawEllipse(pen2, new Rectangle(w - 1, h - 1, 1, 1));                 // красная точка
+                        g.DrawString("0", new Font("Arial", 12.0f), new SolidBrush(Color.Black), w-15, h);
+                        g.DrawLine(pen, 0, h, pictureBox1.Size.Width, h);                       // жирная ось Y
+                        g.DrawLine(pen, w, 0, w, pictureBox1.Size.Height);                      // жирная ось X
+                    }
+
+                    if(w == pictureBox1.Size.Width-1 && h == pictureBox1.Size.Height / 2)
+                    {
+                        g.DrawString("X", new Font("Arial", 12.0f), new SolidBrush(Color.Black), w-20, h);
+                    }
+
+                    if (h == 0 && w == pictureBox1.Size.Width / 2)
+                    {
+                        g.DrawString("Y", new Font("Arial", 12.0f), new SolidBrush(Color.Black), w - 15, h);
+                    }
+                }
+            }
+        }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             pen.Dispose();
@@ -157,6 +172,10 @@ namespace ДЗ_11._05._2023_Использование_GDI
 
                 g.DrawLine(pen3, x, y, x1, y1);
             }
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button1Graph.Enabled = true;
         }
     }
 }

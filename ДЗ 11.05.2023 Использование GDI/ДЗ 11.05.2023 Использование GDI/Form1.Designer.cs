@@ -39,7 +39,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(9, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(358, 308);
             this.pictureBox1.TabIndex = 0;
@@ -47,9 +47,10 @@
             // 
             // button1Graph
             // 
+            this.button1Graph.Enabled = false;
             this.button1Graph.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1Graph.Location = new System.Drawing.Point(250, 346);
-            this.button1Graph.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1Graph.Margin = new System.Windows.Forms.Padding(2);
             this.button1Graph.Name = "button1Graph";
             this.button1Graph.Size = new System.Drawing.Size(96, 38);
             this.button1Graph.TabIndex = 1;
@@ -61,10 +62,11 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(140, 357);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -87,7 +89,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1Graph);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
