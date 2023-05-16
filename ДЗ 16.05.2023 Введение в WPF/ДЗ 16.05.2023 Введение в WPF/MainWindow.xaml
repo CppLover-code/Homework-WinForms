@@ -1,0 +1,41 @@
+﻿<Window x:Class="ДЗ_16._05._2023_Введение_в_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ДЗ_16._05._2023_Введение_в_WPF"
+        mc:Ignorable="d"
+        Title="Список людей" Height="300" Width="350" ResizeMode="NoResize">
+    <Grid Margin="10,15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Width="50" Height="30"  HorizontalContentAlignment="Center" FontSize="13">Names</Label>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox Grid.Column="0" x:Name="listBoxNames" Width="145" Height="195" Margin="5,5" BorderBrush="Gray"></ListBox>
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBox x:Name="textBoxInput" Width="130" Height="40" Margin="5,5" FontSize="13" 
+                         MaxLength="35" TextWrapping="Wrap" HorizontalContentAlignment="Center"
+                         TextAlignment="Left"/>
+                <Button x:Name="buttonAdd" Width="130" Height="40" Margin="5,5">Add Name</Button>
+                <Button x:Name="buttonClearAll" Width="130" Height="40" Margin="5,5">Clear All</Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
