@@ -11,9 +11,12 @@ namespace ДЗ_09._05._2023_Меню.View
     {
         TextBox TextInTextBox { get; set; }
 
-        event EventHandler OpenFile; // события
+        // события
+        event EventHandler OpenFile;
         event EventHandler CreateNew;
         event EventHandler Save;
         event EventHandler Copy;
+        event EventHandler Paste;
+        event EventHandler Cut;
     }
 }

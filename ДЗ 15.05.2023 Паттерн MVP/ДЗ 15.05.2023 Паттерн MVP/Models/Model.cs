@@ -52,5 +52,16 @@ namespace ДЗ_09._05._2023_Меню.Models
             Content.Copy();
             return Content;
         }
+        public TextBox Paste()
+        {
+            Content.Paste();
+            return Content;
+        }
+        public TextBox Cut()
+        {
+            Content.Cut();
+            return Content;
+        }
+
     }
 }

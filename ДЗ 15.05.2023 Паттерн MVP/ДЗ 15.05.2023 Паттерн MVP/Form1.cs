@@ -32,11 +32,15 @@ namespace ДЗ_09._05._2023_Меню
         {
             get => textBox1Editor;
             set => textBox1Editor = value;
-        }      
-        public event EventHandler OpenFile; // событие
-        public event EventHandler CreateNew; // событие
+        }
+        
+        // события
+        public event EventHandler OpenFile;
+        public event EventHandler CreateNew;
         public event EventHandler Save;
         public event EventHandler Copy;
+        public event EventHandler Paste;
+        public event EventHandler Cut;
         #endregion
 
         #region Проброс события
@@ -56,20 +60,21 @@ namespace ДЗ_09._05._2023_Меню
         {
             Copy(this, EventArgs.Empty);
         }
+        private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
+        {
+            Paste(this, EventArgs.Empty);
+        }
+        private void toolStripButton1Cut_Click(object sender, EventArgs e)      // кнопка Вырезать
+        {
+            Cut(this, EventArgs.Empty);
+        }
         #endregion
 
         /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        
-        private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
-        {
-            textBox1Editor.Paste();
-        }
-        private void toolStripButton1Cut_Click(object sender, EventArgs e)      // кнопка Вырезать
-        {
-            textBox1Editor.Cut();
 
-        }
+
+
         private void toolStripButton1SelectAll_Click(object sender, EventArgs e)// кнопка Выделить всё
         {
             textBox1Editor.SelectAll();

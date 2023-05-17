@@ -16,10 +16,13 @@ namespace ДЗ_09._05._2023_Меню.Presenter
         {
             formView = view;
 
-            formView.OpenFile += new EventHandler(formView_OpenFile); // подписка на событие
-            formView.CreateNew += new EventHandler(formView_CreateNew); // подписка на событие
-            formView.Save += new EventHandler(formView_Save); // подписка на событие
+            // подписки на события
+            formView.OpenFile += new EventHandler(formView_OpenFile);
+            formView.CreateNew += new EventHandler(formView_CreateNew);
+            formView.Save += new EventHandler(formView_Save);
             formView.Copy += new EventHandler(formView_Copy);
+            formView.Paste += new EventHandler(formView_Paste);
+            formView.Paste += new EventHandler(formView_Cut);
         }
         private void formView_OpenFile(object sender, EventArgs e)
         {
@@ -42,7 +45,7 @@ namespace ДЗ_09._05._2023_Меню.Presenter
             // передача из модели в вид
             formView.TextInTextBox = model.CreateNew();
         }
-        private void formView_Save(object sender, EventArgs e) // ???????? надо ли что-то сюда?
+        private void formView_Save(object sender, EventArgs e)
         {
             Model model = new Model();
 
@@ -52,15 +55,23 @@ namespace ДЗ_09._05._2023_Меню.Presenter
             // передача из модели в вид
             formView.TextInTextBox = model.Save();
         }
-        private void formView_Copy(object sender, EventArgs e) // 
+        private void formView_Copy(object sender, EventArgs e)
         {
             Model model = new Model();
-
-            // передача из вида в модель
             model.Content = formView.TextInTextBox;
-
-            // передача из модели в вид
             formView.TextInTextBox = model.Copy();
+        }
+        private void formView_Paste(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            model.Content = formView.TextInTextBox;
+            formView.TextInTextBox = model.Paste();
+        }
+        private void formView_Cut(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            model.Content = formView.TextInTextBox;
+            formView.TextInTextBox = model.Cut();
         }
     }
 }
