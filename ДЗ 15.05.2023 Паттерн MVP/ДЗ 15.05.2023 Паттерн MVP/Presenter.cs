@@ -16,12 +16,25 @@ namespace ДЗ_09._05._2023_Меню
             formView = view;
 
             formView.OpenFile += new EventHandler(formView_OpenFile); // подписка на событие
+            formView.CreateNew += new EventHandler(formView_CreateNew); // подписка на событие
+            formView.Save += new EventHandler(formView_Save); // подписка на событие
         }
-        private void formView_OpenFile(object sender, EventArgs e) // 
+        private void formView_OpenFile(object sender, EventArgs e)
         {
             Model model = new Model();
             formView.TextInTextBox = model.OpenFile().ToString();
         }
+        private void formView_CreateNew(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            formView.TextInTextBox = model.CreateNew().ToString();
+        }
+        private void formView_Save(object sender, EventArgs e) // ???????? надо ли что-то сюда?
+        {
+            Model model = new Model();
+            //formView.TextInTextBox = model.CreateNew().ToString();
+        }
+
 
     }
 }

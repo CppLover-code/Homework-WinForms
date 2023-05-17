@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="IForm.cs" />
     <Compile Include="Model.cs" />
-    <Compile Include="NewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

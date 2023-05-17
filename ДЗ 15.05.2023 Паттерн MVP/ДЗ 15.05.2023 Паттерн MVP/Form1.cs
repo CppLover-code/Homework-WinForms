@@ -41,92 +41,28 @@ namespace ДЗ_09._05._2023_Меню
             set => textBox1Editor.Text = value;
         }
         public event EventHandler OpenFile; // событие
+        public event EventHandler CreateNew; // событие
+        public event EventHandler Save;
         #endregion
 
         #region Проброс события
-        private void toolStripButton1Open_Click(object sender, EventArgs e)                 // кнопка Открыть
+        private void toolStripButton1Open_Click(object sender, EventArgs e)    // кнопка Открыть
         {      
             if (OpenFile != null) OpenFile(this, EventArgs.Empty);
         }
-
+        private void toolStripButton1Create_Click(object sender, EventArgs e)  // кнопка Создать
+        {
+            if (CreateNew != null) CreateNew(this, EventArgs.Empty);
+        }
+        private void toolStripButton1Save_Click(object sender, EventArgs e)  // кнопка Создать
+        {
+           Save(this, EventArgs.Empty);
+        }
 
         #endregion
 
-        //private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
-        //{
-        //    NewForm form1 = new NewForm(this);                                              // создаем новую форму
-
-        //    if (openFileDialog1.ShowDialog() == DialogResult.OK)
-        //    {
-        //        StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
-        //        form1.textBox1Editor.Text = r.ReadToEnd();                                  // считываем с документа все в новую форму
-        //        r.Close();
-        //    }
-
-        //    form1.Text = openFileDialog1.FileName;
-        //    form1.filename = openFileDialog1.FileName;
-        //    form1.Show();           
-        //}
-        private void toolStripButton1Create_Click(object sender, EventArgs e)   // кнопка Создать
-        {           
-            NewForm form1 = new NewForm(this);
-            form1.Show();
-        }
-        private void toolStripButton1Save_Click(object sender, EventArgs e)     // кнопка Сохранить
-        {
-            if(this.Text == "Text editor") flag = false;  // благодаря этой !плохой! проверке мы знаем как нужно сохранять документ,
-            else flag = true;                             // если док Открытый, Созданный или Новый док при первом открытии формы
-            
-            if (flag == false)    // если док новый
-            {
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    filename = saveFileDialog1.FileName;
-                    try
-                    {
-                        StreamWriter sw = new StreamWriter(filename, true);         // сохраняем новый док
-                        sw.Write(textBox1Editor.Text);
-                        checksave = true;
-                        sw.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    } 
-                }
-
-                try
-                {
-                    StreamReader r = new StreamReader(filename, Encoding.UTF8);     // и в этой же форме открываем его
-                    textBox1Editor.Text = r.ReadToEnd();
-                    flag = true; // значит, что документ уже был сохранен и далее при нажатии на Сохранить - 
-                                 // изменения будут просто сохраняться в уже существующем файле (смотреть ELSE)
-                    r.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }  
-
-                this.Text = saveFileDialog1.FileName;
-            }
-            else                 // если документ уже был сохранён,
-            {                    // тогда просто перезаписываем его
-                try
-                {
-                    StreamWriter sw = new StreamWriter(filename, false, Encoding.UTF8);
-                    sw.Write(textBox1Editor.Text);
-                    checksave = true;
-                    sw.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-
-            toolStripStatusLabel2.Text = "сохранено";
-        }
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
         private void toolStripButton1SaveAs_Click(object sender, EventArgs e)   // кнопка Сохранить как
         {
             // Происходит сохранение нового документа, но открытым остается всё тот же

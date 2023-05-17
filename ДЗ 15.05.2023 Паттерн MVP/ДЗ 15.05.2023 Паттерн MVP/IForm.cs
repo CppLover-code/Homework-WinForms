@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ДЗ_09._05._2023_Меню
 {
-    internal class IForm
+    internal interface IForm
     {
+        string TextInTextBox { get; set; }
+
+        event EventHandler OpenFile; // события
+        event EventHandler CreateNew; 
+        event EventHandler Save;
+
     }
 }
