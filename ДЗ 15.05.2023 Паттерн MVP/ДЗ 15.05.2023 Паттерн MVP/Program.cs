@@ -16,7 +16,10 @@ namespace ДЗ_09._05._2023_Меню
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Form1 form = new Form1();
+            Presenter presenter = new Presenter(form);
+            Application.Run(form);
         }
     }
 }

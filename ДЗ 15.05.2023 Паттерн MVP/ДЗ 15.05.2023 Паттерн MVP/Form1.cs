@@ -40,30 +40,33 @@ namespace ДЗ_09._05._2023_Меню
             get => textBox1Editor.Text;
             set => textBox1Editor.Text = value;
         }
-        // добавить события public event EventHandler CalculateArea; // событие
+        public event EventHandler OpenFile; // событие
         #endregion
 
         #region Проброс события
-
+        private void toolStripButton1Open_Click(object sender, EventArgs e)                 // кнопка Открыть
+        {      
+            if (OpenFile != null) OpenFile(this, EventArgs.Empty);
+        }
 
 
         #endregion
 
-        private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
-        {
-            NewForm form1 = new NewForm(this);                                              // создаем новую форму
+        //private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
+        //{
+        //    NewForm form1 = new NewForm(this);                                              // создаем новую форму
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
-                form1.textBox1Editor.Text = r.ReadToEnd();                                  // считываем с документа все в новую форму
-                r.Close();
-            }
+        //    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+        //    {
+        //        StreamReader r = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
+        //        form1.textBox1Editor.Text = r.ReadToEnd();                                  // считываем с документа все в новую форму
+        //        r.Close();
+        //    }
 
-            form1.Text = openFileDialog1.FileName;
-            form1.filename = openFileDialog1.FileName;
-            form1.Show();           
-        }
+        //    form1.Text = openFileDialog1.FileName;
+        //    form1.filename = openFileDialog1.FileName;
+        //    form1.Show();           
+        //}
         private void toolStripButton1Create_Click(object sender, EventArgs e)   // кнопка Создать
         {           
             NewForm form1 = new NewForm(this);
