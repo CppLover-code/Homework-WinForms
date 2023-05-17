@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ДЗ_09._05._2023_Меню.Presenter;
 
 namespace ДЗ_09._05._2023_Меню
 {
@@ -18,7 +19,7 @@ namespace ДЗ_09._05._2023_Меню
             Application.SetCompatibleTextRenderingDefault(false);
 
             Form1 form = new Form1();
-            Presenter presenter = new Presenter(form);
+            Presenter1 presenter = new Presenter1(form);
             Application.Run(form);
         }
     }

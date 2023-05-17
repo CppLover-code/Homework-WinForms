@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ДЗ_09._05._2023_Меню.Models;
+using ДЗ_09._05._2023_Меню.View;
 
-namespace ДЗ_09._05._2023_Меню
+namespace ДЗ_09._05._2023_Меню.Presenter
 {
-    internal class Presenter
+    internal class Presenter1
     {
-        IForm formView; // переменная типа интерфейса для передачи из формы
+        IView formView; // переменная типа интерфейса для передачи из формы
 
-        public Presenter(IForm view)
+        public Presenter1(IView view)
         {
             formView = view;
 
@@ -23,23 +24,43 @@ namespace ДЗ_09._05._2023_Меню
         private void formView_OpenFile(object sender, EventArgs e)
         {
             Model model = new Model();
+
+            // передача из вида в модель
+            model.Content = formView.TextInTextBox;
+
+            // передача из модели в вид
             formView.TextInTextBox = model.OpenFile();
+
         }
         private void formView_CreateNew(object sender, EventArgs e)
         {
             Model model = new Model();
+
+            // передача из вида в модель
+            model.Content = formView.TextInTextBox;
+
+            // передача из модели в вид
             formView.TextInTextBox = model.CreateNew();
         }
         private void formView_Save(object sender, EventArgs e) // ???????? надо ли что-то сюда?
         {
             Model model = new Model();
+
+            // передача из вида в модель
+            model.Content = formView.TextInTextBox;
+
+            // передача из модели в вид
             formView.TextInTextBox = model.Save();
         }
         private void formView_Copy(object sender, EventArgs e) // 
         {
             Model model = new Model();
-            formView.TextInTextBox.Text = model.Copy();
-        }
 
+            // передача из вида в модель
+            model.Content = formView.TextInTextBox;
+
+            // передача из модели в вид
+            formView.TextInTextBox = model.Copy();
+        }
     }
 }

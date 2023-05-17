@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ДЗ_09._05._2023_Меню.View;
 using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace ДЗ_09._05._2023_Меню
 {
-    public partial class Form1 : Form, IForm
+    public partial class Form1 : Form, IView
     {
         public Form1()
         {
@@ -26,7 +27,7 @@ namespace ДЗ_09._05._2023_Меню
             this.Width = 800;
         }
 
-        #region IForm
+        #region IView
         public System.Windows.Forms.TextBox TextInTextBox
         {
             get => textBox1Editor;
@@ -40,12 +41,12 @@ namespace ДЗ_09._05._2023_Меню
 
         #region Проброс события
         private void toolStripButton1Open_Click(object sender, EventArgs e)    // кнопка Открыть
-        {      
-            if (OpenFile != null) OpenFile(this, EventArgs.Empty);
+        {
+            OpenFile?.Invoke(this, EventArgs.Empty);
         }
         private void toolStripButton1Create_Click(object sender, EventArgs e)  // кнопка Создать
         {
-            if (CreateNew != null) CreateNew(this, EventArgs.Empty);
+            CreateNew?.Invoke(this, EventArgs.Empty);
         }
         private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Сохранить
         {
@@ -53,7 +54,6 @@ namespace ДЗ_09._05._2023_Меню
         }
         private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
         {
-            textBox1Editor.Copy();
             Copy(this, EventArgs.Empty);
         }
         #endregion
