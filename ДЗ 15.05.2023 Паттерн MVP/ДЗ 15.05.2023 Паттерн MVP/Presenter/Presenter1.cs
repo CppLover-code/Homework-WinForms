@@ -22,7 +22,9 @@ namespace ДЗ_09._05._2023_Меню.Presenter
             formView.Save += new EventHandler(formView_Save);
             formView.Copy += new EventHandler(formView_Copy);
             formView.Paste += new EventHandler(formView_Paste);
-            formView.Paste += new EventHandler(formView_Cut);
+            formView.Cut += new EventHandler(formView_Cut);
+            formView.SelectAll += new EventHandler(formView_SelectAll);
+            formView.BackgrColor += new EventHandler(formView_BackgrColor);
         }
         private void formView_OpenFile(object sender, EventArgs e)
         {
@@ -73,5 +75,19 @@ namespace ДЗ_09._05._2023_Меню.Presenter
             model.Content = formView.TextInTextBox;
             formView.TextInTextBox = model.Cut();
         }
+        private void formView_SelectAll(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            model.Content = formView.TextInTextBox;
+            formView.TextInTextBox = model.SelectAll();
+        }
+        private void formView_BackgrColor(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            model.Content = formView.TextInTextBox;
+            formView.TextInTextBox = model.BackgrColor();
+        }
+
+
     }
 }

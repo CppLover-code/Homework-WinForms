@@ -41,6 +41,8 @@ namespace ДЗ_09._05._2023_Меню
         public event EventHandler Copy;
         public event EventHandler Paste;
         public event EventHandler Cut;
+        public event EventHandler SelectAll;
+        public event EventHandler BackgrColor;
         #endregion
 
         #region Проброс события
@@ -54,40 +56,33 @@ namespace ДЗ_09._05._2023_Меню
         }
         private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Сохранить
         {
-           Save(this, EventArgs.Empty);
+           Save?.Invoke(this, EventArgs.Empty);
         }
         private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
         {
-            Copy(this, EventArgs.Empty);
+            Copy?.Invoke(this, EventArgs.Empty);
         }
         private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
         {
-            Paste(this, EventArgs.Empty);
+            Paste?.Invoke(this, EventArgs.Empty);
         }
         private void toolStripButton1Cut_Click(object sender, EventArgs e)      // кнопка Вырезать
         {
-            Cut(this, EventArgs.Empty);
+            Cut?.Invoke(this, EventArgs.Empty);
+        }
+        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)// кнопка Выделить всё
+        {
+            SelectAll?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e) // кнопка Цвет фона
+        {
+            BackgrColor?.Invoke(this, EventArgs.Empty);
         }
         #endregion
 
         /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)// кнопка Выделить всё
-        {
-            textBox1Editor.SelectAll();
-        }
-        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e) // кнопка Цвет фона
-        {
-            colorDialog1.FullOpen = true;
-
-            if (colorDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка цвета формы
-            textBox1Editor.BackColor = colorDialog1.Color;
-        }
+  
         private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)       // кнопка Цвет шрифта
         {
             colorDialog1.FullOpen = false;

@@ -62,6 +62,23 @@ namespace ДЗ_09._05._2023_Меню.Models
             Content.Cut();
             return Content;
         }
+        public TextBox SelectAll()
+        {
+            Content.SelectAll();
+            return Content;
+        }
+        public TextBox BackgrColor()
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.FullOpen = true;
+
+            if (colorDialog.ShowDialog() == DialogResult.Cancel)
+                return Content;
+            // установка цвета формы
+            Content.BackColor = colorDialog.Color;
+
+            return Content;
+        }
 
     }
 }
