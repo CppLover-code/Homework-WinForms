@@ -33,6 +33,22 @@ namespace ДЗ_09._05._2023_Меню
             
             flag = false; // значит это новый текстовый документ (ни разу не сохранен нигде)
         }
+
+        #region IForm
+        public string TextInTextBox
+        {
+            get => textBox1Editor.Text;
+            set => textBox1Editor.Text = value;
+        }
+        // добавить события public event EventHandler CalculateArea; // событие
+        #endregion
+
+        #region Проброс события
+
+
+
+        #endregion
+
         private void toolStripButton1Open_Click(object sender, EventArgs e)     // кнопка Открыть
         {
             NewForm form1 = new NewForm(this);                                              // создаем новую форму
