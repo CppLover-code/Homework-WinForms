@@ -35,6 +35,7 @@ namespace ДЗ_09._05._2023_Меню
         public event EventHandler OpenFile; // событие
         public event EventHandler CreateNew; // событие
         public event EventHandler Save;
+        public event EventHandler Copy;
         #endregion
 
         #region Проброс события
@@ -46,19 +47,20 @@ namespace ДЗ_09._05._2023_Меню
         {
             if (CreateNew != null) CreateNew(this, EventArgs.Empty);
         }
-        private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Создать
+        private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Сохранить
         {
            Save(this, EventArgs.Empty);
         }
-
-        #endregion
-
-        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
         private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
         {
             textBox1Editor.Copy();
+            Copy(this, EventArgs.Empty);
         }
+        #endregion
+
+        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
         private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
         {
             textBox1Editor.Paste();
@@ -96,11 +98,7 @@ namespace ДЗ_09._05._2023_Меню
                 return;
             // установка шрифта
             textBox1Editor.Font = fontDialog1.Font; 
-        }
-        private void textBox1Editor_TextChanged(object sender, EventArgs e)     // измененмие текста влияет на строку состояния
-        {
-            toolStripStatusLabel2.Text = "редактирование";
-        }
+        }    
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)     // сохранение документа при закрытии
         {
                 DialogResult res = MessageBox.Show("Сохранить изменения?", "Text editor", MessageBoxButtons.YesNo,MessageBoxIcon.Question);

@@ -10,25 +10,25 @@ namespace ДЗ_09._05._2023_Меню
 {
     public class Model
     {
-        public string TextInTextBox { get; set; }
-        OpenFileDialog openFileDialog { get; set; }
-        SaveFileDialog saveFileDialog { get; set; }
+        public TextBox TextInTextBox { get; set; }
+        public OpenFileDialog openFileDialog { get; set; }
+        public SaveFileDialog saveFileDialog { get; set; }
         public string OpenFile()
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 StreamReader r = new StreamReader(openFileDialog.FileName, Encoding.UTF8);
-                TextInTextBox = r.ReadToEnd();                                  
+                TextInTextBox.Text = r.ReadToEnd();                                  
                 r.Close();
             }
 
-            return TextInTextBox;
+            return TextInTextBox.Text;
         }
 
         public string CreateNew()
         {
-            TextInTextBox = string.Empty;
-            return TextInTextBox;
+            TextInTextBox.Text = string.Empty;
+            return TextInTextBox.Text;
         }
         public void Save()
         {
@@ -45,7 +45,11 @@ namespace ДЗ_09._05._2023_Меню
                     MessageBox.Show(ex.Message);
                 }
             }
-
+        }
+        public string Copy()
+        {
+            TextInTextBox.Copy();
+            return TextInTextBox.Text;
         }
     }
 }

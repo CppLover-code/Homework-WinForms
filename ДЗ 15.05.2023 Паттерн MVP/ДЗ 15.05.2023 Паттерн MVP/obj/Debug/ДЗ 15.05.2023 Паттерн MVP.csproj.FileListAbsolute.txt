@@ -20,3 +20,14 @@ C:\Users\Hp\Desktop\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Патт�
 C:\Users\Hp\Desktop\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 15.05.2023 Паттерн MVP.csproj.CoreCompileInputs.cache
 C:\Users\Hp\Desktop\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 09.05.2023 Меню.exe
 C:\Users\Hp\Desktop\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 09.05.2023 Меню.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 15.05.2023 Паттерн MVP.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 15.05.2023 Паттерн MVP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ_09._05._2023_Меню.Form1.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ_09._05._2023_Меню.Properties.Resources.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 15.05.2023 Паттерн MVP.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 15.05.2023 Паттерн MVP.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 09.05.2023 Меню.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\obj\Debug\ДЗ 09.05.2023 Меню.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\bin\Debug\ДЗ 09.05.2023 Меню.exe.config
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\bin\Debug\ДЗ 09.05.2023 Меню.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 15.05.2023 Паттерн MVP\ДЗ 15.05.2023 Паттерн MVP\bin\Debug\ДЗ 09.05.2023 Меню.pdb

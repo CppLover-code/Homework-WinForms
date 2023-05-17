@@ -405,7 +405,6 @@
             this.textBox1Editor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox1Editor.Size = new System.Drawing.Size(663, 567);
             this.textBox1Editor.TabIndex = 2;
-            this.textBox1Editor.TextChanged += new System.EventHandler(this.textBox1Editor_TextChanged);
             // 
             // statusStrip1
             // 

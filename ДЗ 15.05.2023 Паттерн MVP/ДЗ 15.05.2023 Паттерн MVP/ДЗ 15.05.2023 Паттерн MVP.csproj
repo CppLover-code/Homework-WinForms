@@ -52,9 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IForm.cs" />
-    <Compile Include="Model.cs" />
-    <Compile Include="Presenter.cs" />
+    <Compile Include="View\IForm.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Presenter\Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
