@@ -27,7 +27,10 @@ namespace ДЗ_09._05._2023_Меню
             this.Width = 800;
         }
 
-        #region IView
+        // Реализуем интерфейс. Благодаря ему, в Presenter мы можем создать переменную
+        // для передачи данных из формы и организовать обмен данными: из VIEW в MODEL,
+        // из MODEL в VIEW. Presenter является посредником между VIEW и MODEL.  
+        #region IView   
         public System.Windows.Forms.TextBox TextInTextBox
         {
             get => textBox1Editor;
@@ -49,48 +52,47 @@ namespace ДЗ_09._05._2023_Меню
         #endregion
 
         #region Проброс события
-        private void toolStripButton1Open_Click(object sender, EventArgs e)    // кнопка Открыть
+        private void toolStripButton1Open_Click(object sender, EventArgs e)      // кнопка Открыть
         {
             OpenFile?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1Create_Click(object sender, EventArgs e)  // кнопка Создать
+        private void toolStripButton1Create_Click(object sender, EventArgs e)    // кнопка Создать
         {
             CreateNew?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Сохранить
+        private void toolStripButton1Save_Click(object sender, EventArgs e)      // кнопка Сохранить
         {
            Save?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
+        private void toolStripButton1Copy_Click(object sender, EventArgs e)      // кнопка Копировать
         {
             Copy?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1Paste_Click(object sender, EventArgs e)    // кнопка Вставить
+        private void toolStripButton1Paste_Click(object sender, EventArgs e)     // кнопка Вставить
         {
             Paste?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1Cut_Click(object sender, EventArgs e)      // кнопка Вырезать
+        private void toolStripButton1Cut_Click(object sender, EventArgs e)       // кнопка Вырезать
         {
             Cut?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1SelectAll_Click(object sender, EventArgs e) // кнопка Выделить всё
+        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)            // кнопка Выделить всё
         {
             SelectAll?.Invoke(this, EventArgs.Empty);
         }
-
-        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e) // кнопка Цвет фона
+        private void backgroundColorToolStripMenuItem1_Click(object sender, EventArgs e)    // кнопка Цвет фона
         {
             BackgrColor?.Invoke(this, EventArgs.Empty);
         }
-        private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)       // кнопка Цвет шрифта
+        private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)          // кнопка Цвет шрифта
         {
             FontColor?.Invoke(this, EventArgs.Empty);
         }
-        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)            // кнопка Шрифт
+        private void fontToolStripMenuItem1_Click(object sender, EventArgs e)               // кнопка Шрифт
         {
             FontSettings?.Invoke(this, EventArgs.Empty);
         }
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)     // сохранение документа при закрытии
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)                 // сохранение документа при закрытии
         {
             FormClose?.Invoke(this, EventArgs.Empty);
         }
