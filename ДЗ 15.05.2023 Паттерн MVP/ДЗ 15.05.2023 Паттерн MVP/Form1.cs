@@ -43,6 +43,9 @@ namespace ДЗ_09._05._2023_Меню
         public event EventHandler Cut;
         public event EventHandler SelectAll;
         public event EventHandler BackgrColor;
+        public event EventHandler FontColor;
+        public event EventHandler FontSettings;
+        public event EventHandler FormClose;
         #endregion
 
         #region Проброс события
@@ -70,7 +73,7 @@ namespace ДЗ_09._05._2023_Меню
         {
             Cut?.Invoke(this, EventArgs.Empty);
         }
-        private void toolStripButton1SelectAll_Click(object sender, EventArgs e)// кнопка Выделить всё
+        private void toolStripButton1SelectAll_Click(object sender, EventArgs e) // кнопка Выделить всё
         {
             SelectAll?.Invoke(this, EventArgs.Empty);
         }
@@ -79,39 +82,18 @@ namespace ДЗ_09._05._2023_Меню
         {
             BackgrColor?.Invoke(this, EventArgs.Empty);
         }
-        #endregion
-
-        /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
         private void fontColorToolStripMenuItem1_Click(object sender, EventArgs e)       // кнопка Цвет шрифта
         {
-            colorDialog1.FullOpen = false;
-            if (colorDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-
-            // установка цвета шрифта - меняется цвет шрифта по всей форме!!!(надо бы еще сделать только для выделенного текста)
-            textBox1Editor.ForeColor = colorDialog1.Color;
+            FontColor?.Invoke(this, EventArgs.Empty);
         }
         private void fontToolStripMenuItem1_Click(object sender, EventArgs e)            // кнопка Шрифт
         {
-            if (fontDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-            // установка шрифта
-            textBox1Editor.Font = fontDialog1.Font; 
-        }    
+            FontSettings?.Invoke(this, EventArgs.Empty);
+        }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)     // сохранение документа при закрытии
         {
-                DialogResult res = MessageBox.Show("Сохранить изменения?", "Text editor", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
-                {
-                    toolStripButton1Save.PerformClick();
-                }
+            FormClose?.Invoke(this, EventArgs.Empty);
         }
+        #endregion
     }
-    // Оставшиеся вопросы:
-    // как применить цвет шрифта, сам шрифт, только для ВЫДЕЛЕННОГО текста?
-    // нужен способ определить в textbox какой текст выделен и только к нему применить
-    // textBox1Editor.SelectedText - вот и ответ. Свойство устанавливает выделенный текст и возвращает,
-    // если таковой есть в нашем текстовом поле
-
 }

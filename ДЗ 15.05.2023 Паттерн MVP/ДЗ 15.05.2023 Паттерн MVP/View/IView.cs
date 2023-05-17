@@ -20,5 +20,8 @@ namespace ДЗ_09._05._2023_Меню.View
         event EventHandler Cut;
         event EventHandler SelectAll;
         event EventHandler BackgrColor;
+        event EventHandler FontColor;
+        event EventHandler FontSettings;
+        event EventHandler FormClose;
     }
 }

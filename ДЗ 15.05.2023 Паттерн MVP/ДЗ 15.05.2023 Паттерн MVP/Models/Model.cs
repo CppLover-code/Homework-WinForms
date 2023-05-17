@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ДЗ_09._05._2023_Меню.Models
 {
+    // в модели выполняются все необходимые действия для VIEW
     public class Model
     {
         public TextBox Content { get; set; }
@@ -79,6 +81,37 @@ namespace ДЗ_09._05._2023_Меню.Models
 
             return Content;
         }
+        public TextBox FontColor()
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.FullOpen = false;
+            if (colorDialog.ShowDialog() == DialogResult.Cancel)
+                return Content;
 
+            // установка цвета шрифта - меняется цвет шрифта по всей форме!!!(надо бы еще сделать только для выделенного текста)
+            Content.ForeColor = colorDialog.Color;
+
+            return Content;
+        }
+        public TextBox FontSettings()
+        {
+            FontDialog fontDialog = new FontDialog();
+            if (fontDialog.ShowDialog() == DialogResult.Cancel)
+                return Content;
+            // установка шрифта
+            Content.Font = fontDialog.Font;
+
+            return Content;
+        }
+        public TextBox FormClose()
+        {
+            DialogResult res = MessageBox.Show("Сохранить изменения?", "Text editor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Save();
+                Thread.Sleep(500);
+            }
+            return Content;
+        }
     }
 }
