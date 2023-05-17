@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,31 @@ namespace ДЗ_16._05._2023_Введение_в_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            // убираем лишние пробелы между словами
+            textBoxInput.Text = System.Text.RegularExpressions.Regex.Replace(textBoxInput.Text, @"\s+", " "); 
+            listBoxNames.Items.Add(textBoxInput.Text);
+            textBoxInput.Clear();
+            buttonClearAll.IsEnabled = true;
+        }
+
+        private void buttonClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxNames.Items.Clear();
+            buttonClearAll.IsEnabled = false;
+        }
+
+        private void textBoxInput_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if ((String.IsNullOrEmpty(textBoxInput.Text) ||   
+                String.IsNullOrWhiteSpace(textBoxInput.Text)))
+            {
+                buttonAdd.IsEnabled = false;          
+            }
+            else buttonAdd.IsEnabled = true;
         }
     }
 }

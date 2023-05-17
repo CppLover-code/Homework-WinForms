@@ -19,3 +19,24 @@ C:\Users\Hp\Desktop\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Вв
 C:\Users\Hp\Desktop\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.pdb
 C:\Users\Hp\Desktop\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.genruntimeconfig.cache
 C:\Users\Hp\Desktop\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ref\ДЗ 16.05.2023 Введение в WPF.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\bin\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\bin\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.deps.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\bin\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.runtimeconfig.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\bin\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\bin\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF_MarkupCompile.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF_MarkupCompile.lref
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.g.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.AssemblyInfo.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\refint\ДЗ 16.05.2023 Введение в WPF.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ДЗ 16.05.2023 Введение в WPF.genruntimeconfig.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 16.05.2023 Введение в WPF\ДЗ 16.05.2023 Введение в WPF\obj\Debug\net7.0-windows\ref\ДЗ 16.05.2023 Введение в WPF.dll

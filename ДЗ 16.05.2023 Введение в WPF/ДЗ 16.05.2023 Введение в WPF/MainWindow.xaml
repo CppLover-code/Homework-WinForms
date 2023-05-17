@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_16._05._2023_Введение_в_WPF"
         mc:Ignorable="d"
-        Title="Список людей" Height="300" Width="350" ResizeMode="NoResize">
+        Title="Список людей" Height="300" Width="350" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" Background="LightSteelBlue">
+    
     <Grid Margin="10,15">
         <Grid.RowDefinitions>
             <RowDefinition Height ="25"></RowDefinition>
@@ -17,6 +19,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
+            
             <Label Grid.Column="0" Width="50" Height="30"  HorizontalContentAlignment="Center" FontSize="13">Names</Label>
         </Grid>
 
@@ -26,15 +29,39 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox Grid.Column="0" x:Name="listBoxNames" Width="145" Height="195" Margin="5,5" BorderBrush="Gray"></ListBox>
+            <ListBox Grid.Column="0" x:Name="listBoxNames" Width="145" Height="195" Margin="5,5" BorderBrush="Gray">
+                <ListBox.ToolTip>
+                    <TextBlock>Список фамилий и имён</TextBlock>
+                </ListBox.ToolTip>
+            </ListBox>
 
             <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+                
                 <TextBox x:Name="textBoxInput" Width="130" Height="40" Margin="5,5" FontSize="13" 
-                         MaxLength="35" TextWrapping="Wrap" HorizontalContentAlignment="Center"
-                         TextAlignment="Left"/>
-                <Button x:Name="buttonAdd" Width="130" Height="40" Margin="5,5">Add Name</Button>
-                <Button x:Name="buttonClearAll" Width="130" Height="40" Margin="5,5">Clear All</Button>
+                         MaxLength="35" TextWrapping="Wrap" VerticalContentAlignment="Center" 
+                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="2,2,2,2"
+                         TextChanged="textBoxInput_TextChanged_1">
+                    <TextBox.ToolTip>
+                        <TextBlock>Введите фамилию и имя</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+                
+                <Button x:Name="buttonAdd" Width="130" Height="40" Margin="5,5" 
+                        IsEnabled="False" Background="LightGreen" Click="buttonAdd_Click">Add Name
+                    <Button.ToolTip>
+                        <TextBlock>Добавить в список</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+                
+                <Button x:Name="buttonClearAll" Width="130" Height="40" Margin="5,5"
+                        IsEnabled="False" Background="LightPink" Click="buttonClearAll_Click">Clear All
+                    <Button.ToolTip>
+                        <TextBlock>Очистить список</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+                
             </StackPanel>
+            
         </Grid>
 
     </Grid>
