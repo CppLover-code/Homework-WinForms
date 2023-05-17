@@ -14,11 +14,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace ДЗ_09._05._2023_Меню
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IForm
     {
-        bool flag;              // файл новый или уже был сохранен
-        bool checksave;         // сохранены ли изменения на момент закрытия формы
-        public string filename; // строка будет хранить путь к файлу
         public Form1()
         {
             InitializeComponent();
@@ -26,12 +23,7 @@ namespace ДЗ_09._05._2023_Меню
 
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Height = 700;
-            this.Width = 800;
-
-            toolStripStatusLabel1.Text = "Состояние:";
-            toolStripStatusLabel2.Text = "";   
-            
-            flag = false; // значит это новый текстовый документ (ни разу не сохранен нигде)
+            this.Width = 800;            
         }
 
         #region IForm
@@ -54,7 +46,7 @@ namespace ДЗ_09._05._2023_Меню
         {
             if (CreateNew != null) CreateNew(this, EventArgs.Empty);
         }
-        private void toolStripButton1Save_Click(object sender, EventArgs e)  // кнопка Создать
+        private void toolStripButton1Save_Click(object sender, EventArgs e)    // кнопка Создать
         {
            Save(this, EventArgs.Empty);
         }
@@ -63,26 +55,6 @@ namespace ДЗ_09._05._2023_Меню
 
         /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
-        private void toolStripButton1SaveAs_Click(object sender, EventArgs e)   // кнопка Сохранить как
-        {
-            // Происходит сохранение нового документа, но открытым остается всё тот же
-            // но можно сделать иначе - закрыть старый полностью и открыть новосохранённый документ
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    StreamWriter sw = new StreamWriter(saveFileDialog1.FileName, true);
-
-                    sw.Write(textBox1Editor.Text);
-                    sw.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            toolStripStatusLabel2.Text = "сохранено";
-        }
         private void toolStripButton1Copy_Click(object sender, EventArgs e)     // кнопка Копировать
         {
             textBox1Editor.Copy();
@@ -128,18 +100,14 @@ namespace ДЗ_09._05._2023_Меню
         private void textBox1Editor_TextChanged(object sender, EventArgs e)     // измененмие текста влияет на строку состояния
         {
             toolStripStatusLabel2.Text = "редактирование";
-            checksave = false;
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)     // сохранение документа при закрытии
         {
-            if (!checksave)
-            {
                 DialogResult res = MessageBox.Show("Сохранить изменения?", "Text editor", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
                     toolStripButton1Save.PerformClick();
                 }
-            }
         }
     }
     // Оставшиеся вопросы:
