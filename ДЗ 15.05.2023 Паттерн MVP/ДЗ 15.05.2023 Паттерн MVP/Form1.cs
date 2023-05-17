@@ -31,7 +31,7 @@ namespace ДЗ_09._05._2023_Меню
         {
             get => textBox1Editor;
             set => textBox1Editor = value;
-        }
+        }      
         public event EventHandler OpenFile; // событие
         public event EventHandler CreateNew; // событие
         public event EventHandler Save;

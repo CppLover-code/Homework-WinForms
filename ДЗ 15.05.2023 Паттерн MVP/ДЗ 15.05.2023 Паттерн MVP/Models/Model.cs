@@ -13,7 +13,7 @@ namespace ДЗ_09._05._2023_Меню
         public TextBox TextInTextBox { get; set; }
         public OpenFileDialog openFileDialog { get; set; }
         public SaveFileDialog saveFileDialog { get; set; }
-        public string OpenFile()
+        public TextBox OpenFile()
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -22,15 +22,15 @@ namespace ДЗ_09._05._2023_Меню
                 r.Close();
             }
 
-            return TextInTextBox.Text;
+            return TextInTextBox;
         }
 
-        public string CreateNew()
+        public TextBox CreateNew()
         {
             TextInTextBox.Text = string.Empty;
-            return TextInTextBox.Text;
+            return TextInTextBox;
         }
-        public void Save()
+        public TextBox Save()
         {
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -45,6 +45,7 @@ namespace ДЗ_09._05._2023_Меню
                     MessageBox.Show(ex.Message);
                 }
             }
+            return TextInTextBox;
         }
         public string Copy()
         {

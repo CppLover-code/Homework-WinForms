@@ -23,17 +23,17 @@ namespace ДЗ_09._05._2023_Меню
         private void formView_OpenFile(object sender, EventArgs e)
         {
             Model model = new Model();
-            formView.TextInTextBox.Text = model.OpenFile();
+            formView.TextInTextBox = model.OpenFile();
         }
         private void formView_CreateNew(object sender, EventArgs e)
         {
             Model model = new Model();
-            formView.TextInTextBox.Text = model.CreateNew();
+            formView.TextInTextBox = model.CreateNew();
         }
         private void formView_Save(object sender, EventArgs e) // ???????? надо ли что-то сюда?
         {
             Model model = new Model();
-            //formView.TextInTextBox = model.CreateNew().ToString();
+            formView.TextInTextBox = model.Save();
         }
         private void formView_Copy(object sender, EventArgs e) // 
         {
