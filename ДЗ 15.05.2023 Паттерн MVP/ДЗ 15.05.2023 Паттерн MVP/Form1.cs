@@ -23,14 +23,14 @@ namespace ДЗ_09._05._2023_Меню
 
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Height = 700;
-            this.Width = 800;            
+            this.Width = 800;
         }
 
         #region IForm
-        public string TextInTextBox
+        public System.Windows.Forms.TextBox TextInTextBox
         {
-            get => textBox1Editor.Text;
-            set => textBox1Editor.Text = value;
+            get => textBox1Editor;
+            set => textBox1Editor = value;
         }
         public event EventHandler OpenFile; // событие
         public event EventHandler CreateNew; // событие
