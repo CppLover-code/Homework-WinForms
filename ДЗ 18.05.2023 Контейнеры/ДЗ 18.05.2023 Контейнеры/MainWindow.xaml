@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_18._05._2023_Контейнеры"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="200" Width="580">
     <StackPanel>
         <WrapPanel>
             <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Создать</Button>
@@ -20,7 +20,7 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition MinWidth="160"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -28,24 +28,21 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="0" Orientation="Vertical">
-                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Почта</Button>
-                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Календарь</Button>
-                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Задачи</Button>
-                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Журнал</Button>
-                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Расписание</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Почта</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Календарь</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Задачи</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Журнал</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Расписание</Button>
             </StackPanel>
+            
             <DockPanel Grid.Column="2">
-                <TextBox FontSize="13" 
-                         MaxLength="35" TextWrapping="Wrap" VerticalContentAlignment="Center" 
-                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="2,2,2,2">
-                    <TextBox.ToolTip>
-                        <TextBlock>Введите фамилию и имя</TextBlock>
-                    </TextBox.ToolTip>
+                <TextBox FontSize="13" TextWrapping="Wrap" VerticalContentAlignment="Center" 
+                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="1,1,1,1">
                 </TextBox>
             </DockPanel>
 
             <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"                
-                  Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"
+                  Width="10" VerticalAlignment="Stretch" HorizontalAlignment="Center"
                   ShowsPreview="True"></GridSplitter>
         </Grid>
         
