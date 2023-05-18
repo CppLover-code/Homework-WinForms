@@ -1,0 +1,21 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры_MarkupCompile.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры_MarkupCompile.lref
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\bin\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\bin\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.deps.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\bin\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.runtimeconfig.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\bin\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\bin\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.g.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.AssemblyInfo.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\refint\ДЗ 18.05.2023 Контейнеры.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ДЗ 18.05.2023 Контейнеры.genruntimeconfig.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 18.05.2023 Контейнеры\ДЗ 18.05.2023 Контейнеры\obj\Debug\net7.0-windows\ref\ДЗ 18.05.2023 Контейнеры.dll

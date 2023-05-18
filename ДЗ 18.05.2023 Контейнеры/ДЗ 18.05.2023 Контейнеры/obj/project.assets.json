@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\ДЗ WinForms\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры.csproj",
       "projectName": "ДЗ 18.05.2023 Контейнеры",
-      "projectPath": "C:\\Users\\Hp\\Desktop\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры.csproj",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\ДЗ WinForms\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hp\\Desktop\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\ДЗ WinForms\\ДЗ 18.05.2023 Контейнеры\\ДЗ 18.05.2023 Контейнеры\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

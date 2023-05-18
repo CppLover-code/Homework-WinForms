@@ -21,8 +21,12 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
             <StackPanel Grid.Column="0" Orientation="Vertical">
                 <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Почта</Button>
                 <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Календарь</Button>
@@ -30,16 +34,19 @@
                 <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Журнал</Button>
                 <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Расписание</Button>
             </StackPanel>
-            <DockPanel Grid.Column="1">
+            <DockPanel Grid.Column="2">
                 <TextBox FontSize="13" 
                          MaxLength="35" TextWrapping="Wrap" VerticalContentAlignment="Center" 
-                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="2,2,2,2"
-                         TextChanged="textBoxInput_TextChanged_1">
+                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="2,2,2,2">
                     <TextBox.ToolTip>
                         <TextBlock>Введите фамилию и имя</TextBlock>
                     </TextBox.ToolTip>
                 </TextBox>
             </DockPanel>
+
+            <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"                
+                  Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"
+                  ShowsPreview="True"></GridSplitter>
         </Grid>
         
 
