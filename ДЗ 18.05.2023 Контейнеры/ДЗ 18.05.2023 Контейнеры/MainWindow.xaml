@@ -1,0 +1,50 @@
+﻿<Window x:Class="ДЗ_18._05._2023_Контейнеры.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ДЗ_18._05._2023_Контейнеры"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <WrapPanel>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Создать</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Изменить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Удалить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Сохранить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Сохранить как</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Открыть</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Выход</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Завершение сеанса</Button>
+        </WrapPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Почта</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Календарь</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Задачи</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Журнал</Button>
+                <Button Margin ="5,3,5,3" HorizontalAlignment="Left">Расписание</Button>
+            </StackPanel>
+            <DockPanel Grid.Column="1">
+                <TextBox FontSize="13" 
+                         MaxLength="35" TextWrapping="Wrap" VerticalContentAlignment="Center" 
+                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="2,2,2,2"
+                         TextChanged="textBoxInput_TextChanged_1">
+                    <TextBox.ToolTip>
+                        <TextBlock>Введите фамилию и имя</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+            </DockPanel>
+        </Grid>
+        
+
+    </StackPanel>
+    
+
+    
+</Window>
