@@ -30,11 +30,16 @@
 
             <DockPanel  Grid.Column="0" LastChildFill="True">
                 <StackPanel Orientation="Vertical">
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Почта</Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Календарь</Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Задачи</Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Журнал</Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Расписание</Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Почта
+                    </Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Календарь
+                    </Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Задачи
+                    </Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Журнал
+                    </Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Расписание
+                    </Button>
                 </StackPanel>
             </DockPanel>
 
@@ -54,10 +59,10 @@
                   Width="10" VerticalAlignment="Stretch" HorizontalAlignment="Center"
                   ShowsPreview="True"></GridSplitter>
         </Grid>
-        
+
 
     </StackPanel>
-    
 
-    
+
+
 </Window>
