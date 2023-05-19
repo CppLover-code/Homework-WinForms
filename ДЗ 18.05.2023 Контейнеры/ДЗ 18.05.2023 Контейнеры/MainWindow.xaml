@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_18._05._2023_Контейнеры"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="250" MinWidth="300">
+        Title="MainWindow" MinHeight="250" MinWidth="240">
     <StackPanel>
         <WrapPanel>
             <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Создать</Button>
@@ -40,9 +40,12 @@
 
 
             <DockPanel LastChildFill="True" Grid.Column="2">
-                <TextBox FontSize="13" TextWrapping="Wrap" VerticalContentAlignment="Center" 
-                         HorizontalContentAlignment="Center" TextAlignment="Left" BorderThickness="0,1,0,1">
-                </TextBox>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>09:00 Начало занятий</TextBlock>
+                    <TextBlock>10:25 Перерыв</TextBlock>
+                    <TextBlock>10:35 Начало второй пары</TextBlock>
+                    <TextBlock>12:00 Конец занятия</TextBlock>
+                </StackPanel>
             </DockPanel>
 
             <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"                
