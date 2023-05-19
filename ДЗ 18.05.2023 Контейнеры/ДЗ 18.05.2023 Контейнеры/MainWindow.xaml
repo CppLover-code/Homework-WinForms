@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_18._05._2023_Контейнеры"
-        mc:Ignorable="d"
-        Title="MainWindow" MinHeight="250" MinWidth="240">
+        mc:Ignorable="d" 
+        Title="MainWindow" WindowStartupLocation="CenterScreen">
     <StackPanel>
         <WrapPanel>
             <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Создать</Button>
@@ -20,7 +20,7 @@
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition MinWidth="160"></ColumnDefinition>
+                <ColumnDefinition MinWidth="140"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <DockPanel Grid.Column="0" LastChildFill="True">
+            <DockPanel  Grid.Column="0" LastChildFill="True">
                 <StackPanel Orientation="Vertical">
                     <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Почта</Button>
                     <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch">Календарь</Button>
@@ -40,12 +40,14 @@
 
 
             <DockPanel LastChildFill="True" Grid.Column="2">
-                <StackPanel Orientation="Vertical">
-                    <TextBlock>09:00 Начало занятий</TextBlock>
-                    <TextBlock>10:25 Перерыв</TextBlock>
-                    <TextBlock>10:35 Начало второй пары</TextBlock>
-                    <TextBlock>12:00 Конец занятия</TextBlock>
-                </StackPanel>
+                <ScrollViewer>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock>09:00 Начало первой пары</TextBlock>
+                        <TextBlock>10:25 Перерыв</TextBlock>
+                        <TextBlock>10:35 Начало второй пары</TextBlock>
+                        <TextBlock>12:00 Конец занятия</TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
             </DockPanel>
 
             <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"                
