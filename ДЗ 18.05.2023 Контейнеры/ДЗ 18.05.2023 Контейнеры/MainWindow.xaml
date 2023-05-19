@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_18._05._2023_Контейнеры"
         mc:Ignorable="d" 
-        Title="MainWindow" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow"
+        Width="600" Height="300">
     <StackPanel>
         <WrapPanel>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Создать</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Изменить</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Удалить</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Сохранить</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Сохранить как</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Открыть</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Выход</Button>
-            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left">Завершение сеанса</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Создать</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Изменить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Удалить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Сохранить</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Сохранить как</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Открыть</Button>
+            <Button x:Name="butExit" Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634" Click="butExit_Click">Выход</Button>
+            <Button Grid.Column="0" Margin ="5,3,5,3" HorizontalAlignment="Left" Background="#FFB0D634">Завершение сеанса</Button>
         </WrapPanel>
 
         <Grid>
@@ -30,27 +31,21 @@
 
             <DockPanel  Grid.Column="0" LastChildFill="True">
                 <StackPanel Orientation="Vertical">
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Почта
-                    </Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Календарь
-                    </Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Задачи
-                    </Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Журнал
-                    </Button>
-                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591">Расписание
-                    </Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591" Cursor="Hand">Почта</Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591" Cursor="Hand">Календарь</Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591" Cursor="Hand">Задачи</Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591" Cursor="Hand">Журнал</Button>
+                    <Button Margin ="5,3,5,3" HorizontalAlignment="Stretch" Background="#FFEBF591" Cursor="Hand">Расписание</Button>
                 </StackPanel>
             </DockPanel>
-
 
             <DockPanel LastChildFill="True" Grid.Column="2">
                 <ScrollViewer>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock>09:00 Начало первой пары</TextBlock>
-                        <TextBlock>10:25 Перерыв</TextBlock>
-                        <TextBlock>10:35 Начало второй пары</TextBlock>
-                        <TextBlock>12:00 Конец занятия</TextBlock>
+                        <TextBlock Margin ="5,1,0,0" FontStyle="Italic" FontSize="14">09:00 Начало первой пары</TextBlock>
+                        <TextBlock Margin ="5,1,0,0" FontStyle="Italic" FontSize="14">10:25 Перерыв</TextBlock>
+                        <TextBlock Margin ="5,1,0,0" FontStyle="Italic" FontSize="14">10:35 Начало второй пары</TextBlock>
+                        <TextBlock Margin ="5,1,0,0" FontStyle="Italic" FontSize="14" UseLayoutRounding="False">12:00 Конец занятия</TextBlock>
                     </StackPanel>
                 </ScrollViewer>
             </DockPanel>

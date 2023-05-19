@@ -23,10 +23,13 @@ namespace ДЗ_18._05._2023_Контейнеры
         public MainWindow()
         {
             InitializeComponent();
-            this.Width = 600;
-            this.Height = 300;
             this.MinHeight = 275;
             this.MinWidth = 240;
+        }
+
+        private void butExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
