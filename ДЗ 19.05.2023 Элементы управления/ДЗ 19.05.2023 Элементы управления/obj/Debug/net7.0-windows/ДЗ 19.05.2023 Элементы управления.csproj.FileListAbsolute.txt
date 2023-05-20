@@ -1,0 +1,21 @@
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\bin\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\bin\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.deps.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\bin\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.runtimeconfig.json
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\bin\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\bin\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления_MarkupCompile.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления_MarkupCompile.lref
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.g.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.AssemblyInfo.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\refint\ДЗ 19.05.2023 Элементы управления.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ДЗ 19.05.2023 Элементы управления.genruntimeconfig.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 19.05.2023 Элементы управления\ДЗ 19.05.2023 Элементы управления\obj\Debug\net7.0-windows\ref\ДЗ 19.05.2023 Элементы управления.dll

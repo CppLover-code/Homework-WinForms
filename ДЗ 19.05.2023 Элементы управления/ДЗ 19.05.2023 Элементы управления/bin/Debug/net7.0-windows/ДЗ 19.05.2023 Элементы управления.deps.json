@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ДЗ 19.05.2023 Элементы управления/1.0.0": {
+        "runtime": {
+          "ДЗ 19.05.2023 Элементы управления.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ДЗ 19.05.2023 Элементы управления/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

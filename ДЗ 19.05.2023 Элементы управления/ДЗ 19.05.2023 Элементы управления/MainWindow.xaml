@@ -5,8 +5,123 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="700">
+    <StackPanel>
+        
+        <!-- верх -->
+        <StackPanel Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-    </Grid>
+                <!-- Автозаправка -->
+                <GroupBox Grid.Column="0" Header="Автозаправка" Margin="2,2,2,2">
+                    <Grid>
+                        <!-- Автозаправку делим на три строки -->
+                        <Grid.RowDefinitions> 
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <!-- Первая строка Бензин,Цена -->
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <StackPanel Orientation="Vertical">
+                                    <Label Margin="10,10,10,10">Бензин</Label>
+                                    <Label Margin="10,10,10,10">Цена</Label>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <StackPanel Orientation="Vertical">
+                                    <ComboBox Height="25" Width="85" Margin="10,10,10,10"></ComboBox>
+                                    <TextBox Height="25" Width="85"  Margin="10,10,10,10"></TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Orientation="Vertical">
+                                <StackPanel VerticalAlignment="Bottom" Orientation="Vertical">
+                                    <Label Margin="1,15,10,15"></Label>
+                                    <Label Margin="10,10,10,10">грн.</Label>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <!-- Вторая строка Количество,Сумма -->
+                        <Grid Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <GroupBox Grid.Column="0" Padding="3,3,3,3">
+                                    <StackPanel Orientation="Vertical">
+                                        <RadioButton Margin="5,10,3,10">Количество</RadioButton>
+                                        <RadioButton Margin="5,10,3,10">Сумма</RadioButton>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <StackPanel Grid.Column="1" Orientation="Vertical">
+                                    <TextBox Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                    <TextBox Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2" Orientation="Vertical">
+                                    <StackPanel VerticalAlignment="Bottom" Orientation="Vertical">
+                                        <Label Margin="10,5,10,5">л.</Label>
+                                        <Label Margin="10,5,10,5">грн.</Label>
+                                    </StackPanel>
+
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                    
+                    
+                    
+                    
+                    
+                    
+                </GroupBox>
+
+                <!-- Мини-кафе -->
+                <GroupBox Grid.Column="1" Header="Мини-кафе" Margin="2,2,2,2">
+
+                </GroupBox>
+                
+            </Grid>
+        </StackPanel>
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        
+        <!-- низ -->
+        <StackPanel Orientation="Horizontal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!-- ВСЕГО к оплате -->
+                <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2">
+
+                </GroupBox>
+            </Grid>
+        </StackPanel>
+        
+    </StackPanel>
 </Window>
