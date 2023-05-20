@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Copy.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Copy.png" />
+  </ItemGroup>
+
 </Project>

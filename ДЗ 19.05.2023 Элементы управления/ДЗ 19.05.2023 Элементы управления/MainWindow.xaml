@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="700">
+        Title="MainWindow" Height="500" Width="700">
     <StackPanel>
         
         <!-- верх -->
@@ -100,7 +100,7 @@
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
-                                    <Label Grid.Column="1">грн.</Label>
+                                    <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
                                 </Grid>
                             </GroupBox>
                         </StackPanel>
@@ -154,10 +154,19 @@
                             </StackPanel>
                         </Grid>
                         
-                        
                         <!-- Вторая строка - К оплате (Мини-кафе) -->
-                        
-
+                        <StackPanel Grid.Row="2">
+                            <GroupBox Header="К оплате" Padding="20,20,20,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                                    <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
+                                </Grid>
+                            </GroupBox>
+                        </StackPanel>
 
                     </Grid>
                 </GroupBox>
@@ -169,16 +178,23 @@
         
         <!-- низ -->
         <StackPanel Orientation="Horizontal">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-
+           
                 <!-- ВСЕГО к оплате -->
-                <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2">
+            <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
-                </GroupBox>
-            </Grid>
+                    <Image Grid.Column="0" Source="/Copy.png" Margin="5,5,5,5" Stretch="UniformToFill" Width="50"/>
+                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150"> Посчитать </Button>
+                    <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                    <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>
+                </Grid>
+            </GroupBox>
         </StackPanel>
         
     </StackPanel>
