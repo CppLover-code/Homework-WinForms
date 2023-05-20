@@ -16,11 +16,12 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
+                <!-- Первая верхняя колонка -->
                 <!-- Автозаправка -->
                 <GroupBox Grid.Column="0" Header="Автозаправка" Margin="2,2,2,2">
                     <Grid>
                         <!-- Автозаправку делим на три строки -->
-                        <Grid.RowDefinitions> 
+                        <Grid.RowDefinitions>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -33,7 +34,7 @@
                                 <ColumnDefinition></ColumnDefinition>
                                 <ColumnDefinition></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            
+
                             <StackPanel Grid.Column="0" Orientation="Vertical">
                                 <StackPanel Orientation="Vertical">
                                     <Label Margin="10,10,10,10">Бензин</Label>
@@ -90,15 +91,25 @@
                             </Grid>
                         </Grid>
 
+                        <!-- Третья строка К оплате -->
+                        <StackPanel Grid.Row="2">
+                            <GroupBox Header="К оплате" Padding="20,20,20,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                                    <Label Grid.Column="1">грн.</Label>
+                                </Grid>
+                            </GroupBox>
+                        </StackPanel>
+
                     </Grid>
-                    
-                    
-                    
-                    
-                    
-                    
+
                 </GroupBox>
 
+                <!-- Вторая верхняя колонка -->
                 <!-- Мини-кафе -->
                 <GroupBox Grid.Column="1" Header="Мини-кафе" Margin="2,2,2,2">
 
