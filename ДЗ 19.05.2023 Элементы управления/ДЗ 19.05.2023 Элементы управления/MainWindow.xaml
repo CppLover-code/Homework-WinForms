@@ -112,7 +112,54 @@
                 <!-- Вторая верхняя колонка -->
                 <!-- Мини-кафе -->
                 <GroupBox Grid.Column="1" Header="Мини-кафе" Margin="2,2,2,2">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
 
+                        <!-- Первая строка - менюшка с ценой и количеством -->
+                        <!-- Меню -->
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Еда -->
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <CheckBox Margin="5,45,5,5">Хот-дог</CheckBox>
+                                <CheckBox Margin="5,5,5,5">Гамбургер</CheckBox>
+                                <CheckBox Margin="5,5,5,5">Картошка Фри</CheckBox>
+                                <CheckBox Margin="5,5,5,5">Кока-кола</CheckBox>
+                            </StackPanel>
+
+                            <!-- Цена -->
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <Label HorizontalAlignment="Center" Margin="5,0,5,0">Цена</Label>
+                                <TextBox Margin="5,5,5,5">64,00</TextBox>
+                                <TextBox Margin="5,5,5,5">125,00</TextBox>
+                                <TextBox Margin="5,5,5,5">38,00</TextBox>
+                                <TextBox Margin="5,5,5,5">35,00</TextBox>
+                            </StackPanel>
+
+                            <!-- Количество -->
+                            <StackPanel Grid.Column="2" Orientation="Vertical">
+                                <Label HorizontalAlignment="Center" Margin="5,0,5,0">Количество</Label>
+                                <TextBox Margin="5,5,5,5">2</TextBox>
+                                <TextBox Margin="5,5,5,5">0</TextBox>
+                                <TextBox Margin="5,5,5,5">0</TextBox>
+                                <TextBox Margin="5,5,5,5">1</TextBox>
+                            </StackPanel>
+                        </Grid>
+                        
+                        
+                        <!-- Вторая строка - К оплате (Мини-кафе) -->
+                        
+
+
+                    </Grid>
                 </GroupBox>
                 
             </Grid>
