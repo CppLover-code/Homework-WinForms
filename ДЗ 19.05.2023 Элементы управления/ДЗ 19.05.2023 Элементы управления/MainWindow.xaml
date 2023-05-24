@@ -162,19 +162,19 @@
                             <!-- Цена -->
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <Label HorizontalAlignment="Center" Margin="5,0,5,0">Цена</Label>
-                                <TextBox Margin="5,5,5,5" IsReadOnly="True">64,00</TextBox>
-                                <TextBox Margin="5,5,5,5" IsReadOnly="True">125,00</TextBox>
-                                <TextBox Margin="5,5,5,5" IsReadOnly="True">38,00</TextBox>
-                                <TextBox Margin="5,5,5,5" IsReadOnly="True">35,00</TextBox>
+                                <TextBox x:Name="tbHotDogPrice" Margin="5,5,5,5" IsReadOnly="True">64,00</TextBox>
+                                <TextBox x:Name="tbHamburgerPrice" Margin="5,5,5,5" IsReadOnly="True">125,00</TextBox>
+                                <TextBox x:Name="tbFriesPrice" Margin="5,5,5,5" IsReadOnly="True">38,00</TextBox>
+                                <TextBox x:Name="tbColaPrice" Margin="5,5,5,5" IsReadOnly="True">35,00</TextBox>
                             </StackPanel>
 
                             <!-- Количество -->
                             <StackPanel Grid.Column="2" Orientation="Vertical">
                                 <Label HorizontalAlignment="Center" Margin="5,0,5,0">Количество</Label>
-                                <TextBox x:Name="tbHotDogCount" Margin="5,5,5,5">2</TextBox>
-                                <TextBox x:Name="tbHamburgerCount" Margin="5,5,5,5">0</TextBox>
-                                <TextBox x:Name="tbFriesCount" Margin="5,5,5,5">0</TextBox>
-                                <TextBox x:Name="tbColaCount" Margin="5,5,5,5">1</TextBox>
+                                <TextBox x:Name="tbHotDogCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
+                                <TextBox x:Name="tbHamburgerCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
+                                <TextBox x:Name="tbFriesCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
+                                <TextBox x:Name="tbColaCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
                             </StackPanel>
                         </Grid>
 

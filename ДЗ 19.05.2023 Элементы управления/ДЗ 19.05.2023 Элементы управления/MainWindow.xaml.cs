@@ -35,7 +35,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             timerStart();
             cbGas.SelectedIndex = 0;
             rbCountGas.IsChecked = true;
-            //tblCafePayment.Text = PaymentCafe().ToString("N2");
+            tblCafePayment.Text = PaymentCafe().ToString("N2");
         }
 
         //////////////////////////// StatusBar - строка состояния ////////////////////////////
@@ -159,7 +159,28 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
         }
 
-       
+        private double PaymentCafe()
+        {
+            double toPaymentCafe = 0;
 
+            if (checkBoxHotDog.IsChecked == true)
+                toPaymentCafe += (int.Parse(tbHotDogCount.Text) * double.Parse(tbHotDogPrice.Text));
+
+            if (checkBoxHamburger.IsChecked == true)
+                toPaymentCafe += (int.Parse(tbHamburgerCount.Text) * double.Parse(tbHamburgerPrice.Text));
+
+            if (checkBoxFries.IsChecked == true)
+                toPaymentCafe += (int.Parse(tbFriesCount.Text) * double.Parse(tbFriesPrice.Text));
+
+            if (checkBoxCola.IsChecked == true)
+                toPaymentCafe += (int.Parse(tbColaCount.Text) * double.Parse(tbColaPrice.Text));
+
+            return toPaymentCafe;
+        }
+
+        private void tbFoodCount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            tblCafePayment.Text = PaymentCafe().ToString("N2");
+        }
     }
 }
