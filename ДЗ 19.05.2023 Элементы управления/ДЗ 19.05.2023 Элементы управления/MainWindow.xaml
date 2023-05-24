@@ -249,17 +249,17 @@
             </StatusBar.ItemsPanel>
 
             <StatusBarItem Grid.Column="0">
-                <TextBlock Text="время:"/>
+                <TextBlock x:Name="tblStrDT"  Text=""/>
             </StatusBarItem>
 
             <StatusBarItem Grid.Column="1">
-                <TextBlock Text="00:00:00"/>
+                <TextBlock x:Name="tblDateTime" Text=""/>
             </StatusBarItem>
 
             <Separator Grid.Column="2" />
 
             <StatusBarItem Grid.Column="3">
-                <TextBlock Text="день недели"/>
+                <TextBlock x:Name="tblDayOfWeek" Text="день недели"/>
             </StatusBarItem>
         </StatusBar>
     </StackPanel>
