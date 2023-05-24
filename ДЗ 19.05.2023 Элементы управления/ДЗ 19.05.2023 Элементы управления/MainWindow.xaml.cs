@@ -36,6 +36,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             cbGas.SelectedIndex = 0;
             rbCountGas.IsChecked = true;
             tblCafePayment.Text = PaymentCafe().ToString("N2");
+            tbPaymentGas.Text = PaymentGas().ToString("N2");
         }
 
         //////////////////////////// StatusBar - строка состояния ////////////////////////////
@@ -92,6 +93,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
                 tbSumGas.Text = 100.ToString("N2");
                 tbCountGas.Text = string.Empty;
             }
+            tbPaymentGas.Text = PaymentGas().ToString("N2");
         }
         private double PaymentGas()
         {
@@ -124,7 +126,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             else
             {
-                tbHotDogCount.Text = "0";
+                tbHotDogCount.Text = string.Empty;
                 tbHotDogCount.IsReadOnly = true;
             }
 
@@ -134,7 +136,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             else
             {
-                tbHamburgerCount.Text = "0";
+                tbHamburgerCount.Text = string.Empty;
                 tbHamburgerCount.IsReadOnly = true;
             }
 
@@ -144,7 +146,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             else
             {
-                tbFriesCount.Text = "0";
+                tbFriesCount.Text = string.Empty;
                 tbFriesCount.IsReadOnly = true;
             }
 
@@ -154,7 +156,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             else
             {
-                tbColaCount.Text = "0";
+                tbColaCount.Text = string.Empty;
                 tbColaCount.IsReadOnly = true;
             }
         }

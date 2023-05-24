@@ -171,10 +171,10 @@
                             <!-- Количество -->
                             <StackPanel Grid.Column="2" Orientation="Vertical">
                                 <Label HorizontalAlignment="Center" Margin="5,0,5,0">Количество</Label>
-                                <TextBox x:Name="tbHotDogCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
-                                <TextBox x:Name="tbHamburgerCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
-                                <TextBox x:Name="tbFriesCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
-                                <TextBox x:Name="tbColaCount" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged">0</TextBox>
+                                <TextBox x:Name="tbHotDogCount" IsReadOnly="True" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged"></TextBox>
+                                <TextBox x:Name="tbHamburgerCount" IsReadOnly="True" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged"></TextBox>
+                                <TextBox x:Name="tbFriesCount" IsReadOnly="True" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged"></TextBox>
+                                <TextBox x:Name="tbColaCount" IsReadOnly="True" Margin="5,5,5,5" TextChanged="tbFoodCount_TextChanged"></TextBox>
                             </StackPanel>
                         </Grid>
 
