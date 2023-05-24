@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" Height="400" Width="700">
     <StackPanel>
         
         <!-- верх -->
@@ -180,7 +180,7 @@
         <StackPanel Orientation="Horizontal">
            
                 <!-- ВСЕГО к оплате -->
-            <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2">
+            <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2" Width="693">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
