@@ -63,7 +63,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
         }
 
 
-        //////////////////////////// Автозапрвка ////////////////////////////
+        //////////////////////////// Автозаправка ////////////////////////////
         private void cbGas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cbGas.SelectedIndex == 0)
@@ -182,5 +182,9 @@ namespace ДЗ_19._05._2023_Элементы_управления
         {
             tblCafePayment.Text = PaymentCafe().ToString("N2");
         }
+
+
+        //////////////////////////// ВСЕГО к оплате ////////////////////////////
+        
     }
 }
