@@ -124,37 +124,63 @@ namespace ДЗ_19._05._2023_Элементы_управления
             {
                 tbHotDogCount.IsReadOnly = false;
             }
-            else
-            {
-                tbHotDogCount.Text = string.Empty;
-                tbHotDogCount.IsReadOnly = true;
-            }
+            //else
+            //{
+            //    tbHotDogCount.Text = string.Empty;
+            //    tbHotDogCount.IsReadOnly = true;
+            //}
 
             if (checkBoxHamburger.IsChecked == true)
             {
                 tbHamburgerCount.IsReadOnly = false;
             }
-            else
-            {
-                tbHamburgerCount.Text = string.Empty;
-                tbHamburgerCount.IsReadOnly = true;
-            }
+            //else
+            //{
+            //    tbHamburgerCount.Text = string.Empty;
+            //    tbHamburgerCount.IsReadOnly = true;
+            //}
 
             if (checkBoxFries.IsChecked == true)
             {
                 tbFriesCount.IsReadOnly = false;
             }
-            else
-            {
-                tbFriesCount.Text = string.Empty;
-                tbFriesCount.IsReadOnly = true;
-            }
+            //else
+            //{
+            //    tbFriesCount.Text = string.Empty;
+            //    tbFriesCount.IsReadOnly = true;
+            //}
 
             if (checkBoxCola.IsChecked == true)
             {
                 tbColaCount.IsReadOnly = false;
             }
-            else
+            //else
+            //{
+            //    tbColaCount.Text = string.Empty;
+            //    tbColaCount.IsReadOnly = true;
+            //}
+        }
+        private void checkBoxHotDog_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxHotDog.IsChecked == false)
+            {
+                tbHotDogCount.Text = string.Empty;
+                tbHotDogCount.IsReadOnly = true;
+            }
+
+            if (checkBoxHamburger.IsChecked == false)
+            {
+                tbHamburgerCount.Text = string.Empty;
+                tbHamburgerCount.IsReadOnly = true;
+            }
+
+            if (checkBoxFries.IsChecked == false)
+            {
+                tbFriesCount.Text = string.Empty;
+                tbFriesCount.IsReadOnly = true;
+            }
+
+            if (checkBoxCola.IsChecked == false)
             {
                 tbColaCount.Text = string.Empty;
                 tbColaCount.IsReadOnly = true;
@@ -187,6 +213,6 @@ namespace ДЗ_19._05._2023_Элементы_управления
 
 
         //////////////////////////// ВСЕГО к оплате ////////////////////////////
-        
+
     }
 }

@@ -153,10 +153,10 @@
 
                             <!-- Еда -->
                             <StackPanel Grid.Column="0" Orientation="Vertical">
-                                <CheckBox x:Name="checkBoxHotDog" Margin="5,45,5,5" Checked="CheckBox_Checked">Хот-дог</CheckBox>
-                                <CheckBox x:Name="checkBoxHamburger" Margin="5,5,5,5" Checked="CheckBox_Checked">Гамбургер</CheckBox>
-                                <CheckBox x:Name="checkBoxFries" Margin="5,5,5,5" Checked="CheckBox_Checked">Картошка Фри</CheckBox>
-                                <CheckBox x:Name="checkBoxCola" Margin="5,5,5,5" Checked="CheckBox_Checked">Кока-кола</CheckBox>
+                                <CheckBox x:Name="checkBoxHotDog" Margin="5,38,5,5" Checked="CheckBox_Checked" Unchecked="checkBoxHotDog_Unchecked">Хот-дог</CheckBox>
+                                <CheckBox x:Name="checkBoxHamburger" Margin="5,5,5,5" Checked="CheckBox_Checked" Unchecked="checkBoxHotDog_Unchecked">Гамбургер</CheckBox>
+                                <CheckBox x:Name="checkBoxFries" Margin="5,5,5,5" Checked="CheckBox_Checked" Unchecked="checkBoxHotDog_Unchecked">Картошка Фри</CheckBox>
+                                <CheckBox x:Name="checkBoxCola" Margin="5,5,5,5" Checked="CheckBox_Checked" Unchecked="checkBoxHotDog_Unchecked">Кока-кола</CheckBox>
                             </StackPanel>
 
                             <!-- Цена -->
