@@ -62,6 +62,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             tblDayOfWeek.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
         }
 
+
         //////////////////////////// Автозапрвка ////////////////////////////
         private void cbGas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -112,5 +113,53 @@ namespace ДЗ_19._05._2023_Элементы_управления
         {                                                                           // как только мы меняем кол-во литров или тип бензина, 
             tbPaymentGas.Text = PaymentGas().ToString("N2");                        // то происходит перерасчет сразу же
         }
+
+
+        //////////////////////////// Мини-кафе ////////////////////////////
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxHotDog.IsChecked == true)
+            {
+                tbHotDogCount.IsReadOnly = false;
+            }
+            else
+            {
+                tbHotDogCount.Text = "0";
+                tbHotDogCount.IsReadOnly = true;
+            }
+
+            if (checkBoxHamburger.IsChecked == true)
+            {
+                tbHamburgerCount.IsReadOnly = false;
+            }
+            else
+            {
+                tbHamburgerCount.Text = "0";
+                tbHamburgerCount.IsReadOnly = true;
+            }
+
+            if (checkBoxFries.IsChecked == true)
+            {
+                tbFriesCount.IsReadOnly = false;
+            }
+            else
+            {
+                tbFriesCount.Text = "0";
+                tbFriesCount.IsReadOnly = true;
+            }
+
+            if (checkBoxCola.IsChecked == true)
+            {
+                tbColaCount.IsReadOnly = false;
+            }
+            else
+            {
+                tbColaCount.Text = "0";
+                tbColaCount.IsReadOnly = true;
+            }
+        }
+
+       
+
     }
 }

@@ -153,10 +153,10 @@
 
                             <!-- Еда -->
                             <StackPanel Grid.Column="0" Orientation="Vertical">
-                                <CheckBox Margin="5,45,5,5">Хот-дог</CheckBox>
-                                <CheckBox Margin="5,5,5,5">Гамбургер</CheckBox>
-                                <CheckBox Margin="5,5,5,5">Картошка Фри</CheckBox>
-                                <CheckBox Margin="5,5,5,5">Кока-кола</CheckBox>
+                                <CheckBox x:Name="checkBoxHotDog" Margin="5,45,5,5" Checked="CheckBox_Checked">Хот-дог</CheckBox>
+                                <CheckBox x:Name="checkBoxHamburger" Margin="5,5,5,5" Checked="CheckBox_Checked">Гамбургер</CheckBox>
+                                <CheckBox x:Name="checkBoxFries" Margin="5,5,5,5" Checked="CheckBox_Checked">Картошка Фри</CheckBox>
+                                <CheckBox x:Name="checkBoxCola" Margin="5,5,5,5" Checked="CheckBox_Checked">Кока-кола</CheckBox>
                             </StackPanel>
 
                             <!-- Цена -->
@@ -171,10 +171,10 @@
                             <!-- Количество -->
                             <StackPanel Grid.Column="2" Orientation="Vertical">
                                 <Label HorizontalAlignment="Center" Margin="5,0,5,0">Количество</Label>
-                                <TextBox Margin="5,5,5,5">2</TextBox>
-                                <TextBox Margin="5,5,5,5">0</TextBox>
-                                <TextBox Margin="5,5,5,5">0</TextBox>
-                                <TextBox Margin="5,5,5,5">1</TextBox>
+                                <TextBox x:Name="tbHotDogCount" Margin="5,5,5,5">2</TextBox>
+                                <TextBox x:Name="tbHamburgerCount" Margin="5,5,5,5">0</TextBox>
+                                <TextBox x:Name="tbFriesCount" Margin="5,5,5,5">0</TextBox>
+                                <TextBox x:Name="tbColaCount" Margin="5,5,5,5">1</TextBox>
                             </StackPanel>
                         </Grid>
 
