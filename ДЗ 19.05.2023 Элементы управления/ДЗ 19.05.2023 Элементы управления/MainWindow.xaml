@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="BestOil" Height="455" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="455">
     <StackPanel>
 
@@ -54,13 +54,15 @@
 
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <StackPanel Orientation="Vertical">
-                                    <ComboBox Height="25" Width="85" Margin="10,10,10,10"
+                                    <ComboBox x:Name="cbGas" Height="25" Width="85" Margin="10,10,10,10"
                                               ToolTip="Выберите бензин"
                                               ToolTipService.InitialShowDelay="20"
-                                              ToolTipService.ShowDuration="2000">
+                                              ToolTipService.ShowDuration="2000" SelectionChanged="cbGas_SelectionChanged">
+                                        <ComboBoxItem Content="A-95"></ComboBoxItem>
+                                        <ComboBoxItem Content="A-98"></ComboBoxItem>
                                     </ComboBox>
 
-                                    <TextBox Height="25" Width="85"  Margin="10,10,10,10" IsReadOnly="True"
+                                    <TextBox x:Name="tbPriceGas" Height="25" Width="85"  Margin="10,10,10,10" IsReadOnly="True"
                                               ToolTip="Цена за литр бензина"
                                               ToolTipService.InitialShowDelay="20"
                                               ToolTipService.ShowDuration="2000">
@@ -90,14 +92,14 @@
 
                                 <GroupBox Grid.Column="0" Padding="3,3,3,3">
                                     <StackPanel Orientation="Vertical">
-                                        <RadioButton Margin="5,10,3,10">Количество</RadioButton>
-                                        <RadioButton Margin="5,10,3,10">Сумма</RadioButton>
+                                        <RadioButton x:Name="rbCountGas"  Margin="5,10,3,10" Checked="RadioButton_Checked">Количество</RadioButton>
+                                        <RadioButton x:Name="rbSumGas" Margin="5,10,3,10"  Checked="RadioButton_Checked">Сумма</RadioButton>
                                     </StackPanel>
                                 </GroupBox>
 
                                 <StackPanel Grid.Column="1" Orientation="Vertical">
-                                    <TextBox Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
-                                    <TextBox Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                    <TextBox x:Name="tbCountGas" Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                    <TextBox x:Name="tbSumGas" Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Vertical">
@@ -121,7 +123,7 @@
                                         <ColumnDefinition Width="2*"></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                                    <TextBlock x:Name="tbPaymentGas"  Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
                                     <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
                                 </Grid>
                             </GroupBox>
@@ -193,7 +195,7 @@
                                             <ColumnDefinition Width="2*"></ColumnDefinition>
                                             <ColumnDefinition></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                                        <TextBlock x:Name="tblCafePayment" Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
                                         <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
                                     </Grid>
                                 </GroupBox>
@@ -227,7 +229,7 @@
 
                     <Image Grid.Column="0" Source="/free-png.ru-737.png" Margin="5,5,5,5" Width="50" Stretch="UniformToFill"/>
                     <Button Grid.Column="1" Margin="5,5,5,5" Width="150">Посчитать</Button>
-                    <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                    <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
                     <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>
                 </Grid>
             </GroupBox>
