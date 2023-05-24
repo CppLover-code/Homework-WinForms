@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="BestOil" Height="500" Width="700" Icon="/pngwing.com (1).bmp" >
+        Title="BestOil" Height="445" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="445">
     <StackPanel>
 
         <!-- меню -->
         <StackPanel>
-            <Menu  VerticalAlignment="Top" Background="#FFCCE698">
+            <Menu VerticalAlignment="Top" Background="#FFCCE698">
 
                 <MenuItem Header="File"></MenuItem>
 
@@ -22,7 +22,7 @@
 
             </Menu>
         </StackPanel>
-        
+
         <!-- верх -->
         <StackPanel Orientation="Vertical">
             <Grid>
@@ -68,7 +68,7 @@
                             <StackPanel Grid.Column="2" Orientation="Vertical">
                                 <StackPanel VerticalAlignment="Bottom" Orientation="Vertical">
                                     <Label Margin="1,15,10,15"></Label>
-                                    <Label Margin="10,10,10,10">грн.</Label>
+                                    <Label Margin="0,10,10,10">грн.</Label>
                                 </StackPanel>
 
                             </StackPanel>
@@ -98,8 +98,8 @@
 
                                 <StackPanel Grid.Column="2" Orientation="Vertical">
                                     <StackPanel VerticalAlignment="Bottom" Orientation="Vertical">
-                                        <Label Margin="10,5,10,5">л.</Label>
-                                        <Label Margin="10,5,10,5">грн.</Label>
+                                        <Label Margin="0,5,10,5">л.</Label>
+                                        <Label Margin="0,5,10,5">грн.</Label>
                                     </StackPanel>
 
                                 </StackPanel>
@@ -168,7 +168,7 @@
                                 <TextBox Margin="5,5,5,5">1</TextBox>
                             </StackPanel>
                         </Grid>
-                        
+
                         <!-- Вторая строка - К оплате (Мини-кафе) -->
                         <DockPanel Grid.Row="2">
                             <Grid>
@@ -176,7 +176,7 @@
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                
+
                                 <GroupBox Grid.Row="1" Header="К оплате" Padding="20,20,20,0">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -188,21 +188,21 @@
                                     </Grid>
                                 </GroupBox>
                             </Grid>
-                            
+
                         </DockPanel>
 
                     </Grid>
                 </GroupBox>
-                
+
             </Grid>
         </StackPanel>
 
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        
+
         <!-- низ -->
         <StackPanel Orientation="Horizontal">
-           
-                <!-- ВСЕГО к оплате -->
+
+            <!-- ВСЕГО к оплате -->
             <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2" Width="693">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -213,7 +213,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Grid.Column="0" Source="/free-png.ru-737.png" Margin="5,5,5,5" Width="50" Stretch="UniformToFill"/>
-                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150"> Посчитать </Button>
+                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150">Посчитать</Button>
                     <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
                     <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>
                 </Grid>
@@ -221,7 +221,7 @@
         </StackPanel>
 
         <!-- строка состояния -->
-        <StatusBar>
+        <StatusBar Background="#FFE7EFD2">
             <StatusBar.ItemsPanel>
                 <ItemsPanelTemplate>
                     <Grid>
@@ -234,17 +234,17 @@
                     </Grid>
                 </ItemsPanelTemplate>
             </StatusBar.ItemsPanel>
-            
+
             <StatusBarItem Grid.Column="0">
                 <TextBlock Text="время:"/>
             </StatusBarItem>
-            
+
             <StatusBarItem Grid.Column="1">
                 <TextBlock Text="00:00:00"/>
             </StatusBarItem>
-            
+
             <Separator Grid.Column="2" />
-            
+
             <StatusBarItem Grid.Column="3">
                 <TextBlock Text="день недели"/>
             </StatusBarItem>

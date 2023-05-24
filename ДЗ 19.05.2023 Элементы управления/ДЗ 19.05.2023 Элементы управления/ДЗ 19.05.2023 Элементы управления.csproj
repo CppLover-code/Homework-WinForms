@@ -10,12 +10,20 @@
 
   <ItemGroup>
     <None Remove="Copy.png" />
+    <None Remove="free-png.ru-737.png" />
+    <None Remove="kalkuliator-stoimosti-tekhnologicheskogo-prisoedineniia-instruktsiia_LYrXwU3.jpg" />
+    <None Remove="kisspng-computer-icons-payroll-salary-calculator-clip-art-income-5ac10061b43773.0937249615225979857382.jpg" />
     <None Remove="pngwing.com %281%29.bmp" />
+    <None Remove="price.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Copy.png" />
+    <Resource Include="free-png.ru-737.png" />
+    <Resource Include="kalkuliator-stoimosti-tekhnologicheskogo-prisoedineniia-instruktsiia_LYrXwU3.jpg" />
+    <Resource Include="kisspng-computer-icons-payroll-salary-calculator-clip-art-income-5ac10061b43773.0937249615225979857382.jpg" />
     <Resource Include="pngwing.com (1).bmp" />
+    <Resource Include="price.jpg" />
   </ItemGroup>
 
 </Project>
