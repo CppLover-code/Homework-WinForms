@@ -12,14 +12,8 @@
         <StackPanel>
             <Menu VerticalAlignment="Top" Background="#FFCCE698">
 
-                <MenuItem Header="File"></MenuItem>
-
-                <MenuItem Header="Edit"></MenuItem>
-
-                <MenuItem Header="View"></MenuItem>
-
-                <MenuItem Header="Close"></MenuItem>
-
+                <MenuItem Header="Выручка"/>
+                <MenuItem Header="Закрыть"/>
             </Menu>
         </StackPanel>
 
