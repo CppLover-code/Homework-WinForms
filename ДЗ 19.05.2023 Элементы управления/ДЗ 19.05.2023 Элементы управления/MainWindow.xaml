@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="BestOil" Height="445" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="445">
+        Title="BestOil" Height="455" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="455">
     <StackPanel>
 
         <!-- меню -->
         <StackPanel>
             <Menu VerticalAlignment="Top" Background="#FFCCE698">
 
-                <MenuItem Header="Выручка"/>
-                <MenuItem Header="Закрыть"/>
+                <MenuItem Margin="5,5,5,5" Header="Выручка" FontWeight="Bold"/>
+                <MenuItem Margin="5,5,5,5" Header="Закрыть" FontWeight="Bold"/>
             </Menu>
         </StackPanel>
 
@@ -112,7 +112,10 @@
 
                         <!-- Третья строка К оплате -->
                         <StackPanel Grid.Row="2">
-                            <GroupBox Header="К оплате" Padding="20,20,20,0">
+                            <GroupBox Header="К оплате" Padding="20,20,20,0"
+                                      ToolTip="Общая сумма за бензин"
+                                      ToolTipService.InitialShowDelay="20"
+                                      ToolTipService.ShowDuration="2000">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -181,7 +184,10 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
 
-                                <GroupBox Grid.Row="1" Header="К оплате" Padding="20,20,20,0">
+                                <GroupBox Grid.Row="1" Header="К оплате" Padding="20,20,20,0"
+                                          ToolTip="Общая сумма за еду и напитки"
+                                          ToolTipService.InitialShowDelay="20"
+                                          ToolTipService.ShowDuration="2000">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="2*"></ColumnDefinition>
