@@ -98,8 +98,8 @@
                                 </GroupBox>
 
                                 <StackPanel Grid.Column="1" Orientation="Vertical">
-                                    <TextBox x:Name="tbCountGas" Height="25" Width="85"  Margin="10,5,10,5" TextChanged="tbCountGas_TextChanged"></TextBox>
-                                    <TextBox x:Name="tbSumGas" Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                    <TextBox x:Name="tbCountGas" Height="25" Width="85"  Margin="10,5,10,5" TextChanged="tbCountSumGas_TextChanged"></TextBox>
+                                    <TextBox x:Name="tbSumGas" Height="25" Width="85"  Margin="10,5,10,5" TextChanged="tbCountSumGas_TextChanged"></TextBox>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Orientation="Vertical">
@@ -228,8 +228,8 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Grid.Column="0" Source="/free-png.ru-737.png" Margin="5,5,5,5" Width="50" Stretch="UniformToFill"/>
-                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150">Посчитать</Button>
-                    <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
+                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150" Click="Button_Click">Посчитать</Button>
+                    <TextBlock x:Name="tbTotalPayment" Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
                     <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>
                 </Grid>
             </GroupBox>

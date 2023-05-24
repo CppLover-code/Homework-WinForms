@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -25,7 +26,6 @@ namespace ДЗ_19._05._2023_Элементы_управления
     {
         private double a98 = 43;
         private double a95 = 45;
-        private double dayTotal = 0;
 
         private DispatcherTimer? timer = null;
         int flag = 0;
@@ -37,6 +37,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             rbCountGas.IsChecked = true;
             tblCafePayment.Text = PaymentCafe().ToString("N2");
             tbPaymentGas.Text = PaymentGas().ToString("N2");
+            tbTotalPayment.Text = "0,00";
         }
 
         //////////////////////////// StatusBar - строка состояния ////////////////////////////
@@ -111,8 +112,8 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             return toPaymentGas;
         }
-        private void tbCountGas_TextChanged(object sender, TextChangedEventArgs e)  // постоянный перерасчет К Оплате       
-        {                                                                           // как только мы меняем кол-во литров или тип бензина, 
+        private void tbCountSumGas_TextChanged(object sender, TextChangedEventArgs e)  // постоянный перерасчет К Оплате       
+        {                                                                           // как только мы меняем кол-во литров, сумму или тип бензина, 
             tbPaymentGas.Text = PaymentGas().ToString("N2");                        // то происходит перерасчет сразу же
         }
 
@@ -124,41 +125,21 @@ namespace ДЗ_19._05._2023_Элементы_управления
             {
                 tbHotDogCount.IsReadOnly = false;
             }
-            //else
-            //{
-            //    tbHotDogCount.Text = string.Empty;
-            //    tbHotDogCount.IsReadOnly = true;
-            //}
 
             if (checkBoxHamburger.IsChecked == true)
             {
                 tbHamburgerCount.IsReadOnly = false;
             }
-            //else
-            //{
-            //    tbHamburgerCount.Text = string.Empty;
-            //    tbHamburgerCount.IsReadOnly = true;
-            //}
 
             if (checkBoxFries.IsChecked == true)
             {
                 tbFriesCount.IsReadOnly = false;
             }
-            //else
-            //{
-            //    tbFriesCount.Text = string.Empty;
-            //    tbFriesCount.IsReadOnly = true;
-            //}
 
             if (checkBoxCola.IsChecked == true)
             {
                 tbColaCount.IsReadOnly = false;
             }
-            //else
-            //{
-            //    tbColaCount.Text = string.Empty;
-            //    tbColaCount.IsReadOnly = true;
-            //}
         }
         private void checkBoxHotDog_Unchecked(object sender, RoutedEventArgs e)
         {
@@ -186,7 +167,6 @@ namespace ДЗ_19._05._2023_Элементы_управления
                 tbColaCount.IsReadOnly = true;
             }
         }
-
         private double PaymentCafe()
         {
             double toPaymentCafe = 0;
@@ -205,7 +185,6 @@ namespace ДЗ_19._05._2023_Элементы_управления
 
             return toPaymentCafe;
         }
-
         private void tbFoodCount_TextChanged(object sender, TextChangedEventArgs e)
         {
             tblCafePayment.Text = PaymentCafe().ToString("N2");
@@ -213,6 +192,27 @@ namespace ДЗ_19._05._2023_Элементы_управления
 
 
         //////////////////////////// ВСЕГО к оплате ////////////////////////////
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            tbTotalPayment.Text = TotalPayment().ToString("N2");
+            //timer2.Enabled = true;
+        }
+        private double TotalPayment()
+        {
+            double totalPayment = 0;
+            double gasPayment = PaymentGas();
+            double cafePayment = PaymentCafe();
 
+            if (gasPayment > 0 && cafePayment > 0)
+            {
+                totalPayment = gasPayment + cafePayment;
+            }
+            else if (gasPayment > 0 && cafePayment < 1)
+            {
+                totalPayment = gasPayment;
+            }
+
+            return totalPayment;
+        }
     }
 }
