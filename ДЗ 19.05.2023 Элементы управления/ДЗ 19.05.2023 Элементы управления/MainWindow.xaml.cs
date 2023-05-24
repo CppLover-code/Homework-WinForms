@@ -37,6 +37,8 @@ namespace ДЗ_19._05._2023_Элементы_управления
             rbCountGas.IsChecked = true;
             //tblCafePayment.Text = PaymentCafe().ToString("N2");
         }
+
+        //////////////////////////// StatusBar - строка состояния ////////////////////////////
         private void timerStart()  // запуск таймера
         {
             timer = new DispatcherTimer();
@@ -59,7 +61,8 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             tblDayOfWeek.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
         }
-  
+
+        //////////////////////////// Автозапрвка ////////////////////////////
         private void cbGas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cbGas.SelectedIndex == 0)
@@ -74,14 +77,14 @@ namespace ДЗ_19._05._2023_Элементы_управления
         }
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            if (sender is RadioButton rbCountGas)
+            if (rbCountGas.IsChecked == true)
             {
                 tbCountGas.IsReadOnly = false;
                 tbSumGas.IsReadOnly = true;
                 tbCountGas.Text = 10.ToString("N2");
                 tbSumGas.Text = string.Empty;
             }
-            else if (sender is RadioButton rbSumGas)
+            else if (rbSumGas.IsChecked == true)
             {
                 tbCountGas.IsReadOnly = true;
                 tbSumGas.IsReadOnly = false;
@@ -89,7 +92,6 @@ namespace ДЗ_19._05._2023_Элементы_управления
                 tbCountGas.Text = string.Empty;
             }
         }
-
         private double PaymentGas()
         {
             double toPaymentGas = 0;
@@ -106,7 +108,9 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             return toPaymentGas;
         }
-
-        
+        private void tbCountGas_TextChanged(object sender, TextChangedEventArgs e)  // постоянный перерасчет К Оплате       
+        {                                                                           // как только мы меняем кол-во литров или тип бензина, 
+            tbPaymentGas.Text = PaymentGas().ToString("N2");                        // то происходит перерасчет сразу же
+        }
     }
 }

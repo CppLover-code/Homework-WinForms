@@ -98,7 +98,7 @@
                                 </GroupBox>
 
                                 <StackPanel Grid.Column="1" Orientation="Vertical">
-                                    <TextBox x:Name="tbCountGas" Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
+                                    <TextBox x:Name="tbCountGas" Height="25" Width="85"  Margin="10,5,10,5" TextChanged="tbCountGas_TextChanged"></TextBox>
                                     <TextBox x:Name="tbSumGas" Height="25" Width="85"  Margin="10,5,10,5"></TextBox>
                                 </StackPanel>
 
