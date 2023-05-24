@@ -239,8 +239,8 @@
                 <ItemsPanelTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="0.2*"/>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
@@ -249,17 +249,17 @@
             </StatusBar.ItemsPanel>
 
             <StatusBarItem Grid.Column="0">
-                <TextBlock x:Name="tblStrDT"  Text=""/>
+                <TextBlock x:Name="tblStrDT"/>
             </StatusBarItem>
 
             <StatusBarItem Grid.Column="1">
-                <TextBlock x:Name="tblDateTime" Text=""/>
+                <TextBlock x:Name="tblDateTime"/>
             </StatusBarItem>
 
             <Separator Grid.Column="2" />
 
             <StatusBarItem Grid.Column="3">
-                <TextBlock x:Name="tblDayOfWeek" Text="день недели"/>
+                <TextBlock x:Name="tblDayOfWeek"/>
             </StatusBarItem>
         </StatusBar>
     </StackPanel>
