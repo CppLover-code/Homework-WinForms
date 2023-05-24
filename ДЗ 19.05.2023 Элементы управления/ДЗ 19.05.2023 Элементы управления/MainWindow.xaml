@@ -10,7 +10,7 @@
 
         <!-- меню -->
         <StackPanel>
-            <Menu  VerticalAlignment="Top" Background="AliceBlue">
+            <Menu  VerticalAlignment="Top">
 
                 <MenuItem Header="File"></MenuItem>
 
