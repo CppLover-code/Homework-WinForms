@@ -54,8 +54,18 @@
 
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <StackPanel Orientation="Vertical">
-                                    <ComboBox Height="25" Width="85" Margin="10,10,10,10"></ComboBox>
-                                    <TextBox Height="25" Width="85"  Margin="10,10,10,10"></TextBox>
+                                    <ComboBox Height="25" Width="85" Margin="10,10,10,10"
+                                              ToolTip="Выберите бензин"
+                                              ToolTipService.InitialShowDelay="20"
+                                              ToolTipService.ShowDuration="2000">
+                                    </ComboBox>
+
+                                    <TextBox Height="25" Width="85"  Margin="10,10,10,10" IsReadOnly="True"
+                                              ToolTip="Цена за литр бензина"
+                                              ToolTipService.InitialShowDelay="20"
+                                              ToolTipService.ShowDuration="2000">
+                                    </TextBox>
+                                    
                                 </StackPanel>
                             </StackPanel>
 
@@ -147,10 +157,10 @@
                             <!-- Цена -->
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <Label HorizontalAlignment="Center" Margin="5,0,5,0">Цена</Label>
-                                <TextBox Margin="5,5,5,5">64,00</TextBox>
-                                <TextBox Margin="5,5,5,5">125,00</TextBox>
-                                <TextBox Margin="5,5,5,5">38,00</TextBox>
-                                <TextBox Margin="5,5,5,5">35,00</TextBox>
+                                <TextBox Margin="5,5,5,5" IsReadOnly="True">64,00</TextBox>
+                                <TextBox Margin="5,5,5,5" IsReadOnly="True">125,00</TextBox>
+                                <TextBox Margin="5,5,5,5" IsReadOnly="True">38,00</TextBox>
+                                <TextBox Margin="5,5,5,5" IsReadOnly="True">35,00</TextBox>
                             </StackPanel>
 
                             <!-- Количество -->
