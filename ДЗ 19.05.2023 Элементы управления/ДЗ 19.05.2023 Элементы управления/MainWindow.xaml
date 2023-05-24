@@ -219,6 +219,35 @@
                 </Grid>
             </GroupBox>
         </StackPanel>
-        
+
+        <!-- строка состояния -->
+        <StatusBar>
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            
+            <StatusBarItem Grid.Column="0">
+                <TextBlock Text="время:"/>
+            </StatusBarItem>
+            
+            <StatusBarItem Grid.Column="1">
+                <TextBlock Text="00:00:00"/>
+            </StatusBarItem>
+            
+            <Separator Grid.Column="2" />
+            
+            <StatusBarItem Grid.Column="3">
+                <TextBlock Text="день недели"/>
+            </StatusBarItem>
+        </StatusBar>
     </StackPanel>
 </Window>
