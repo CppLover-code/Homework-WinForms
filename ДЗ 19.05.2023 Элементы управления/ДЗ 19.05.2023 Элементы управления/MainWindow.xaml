@@ -213,7 +213,10 @@
         <StackPanel Orientation="Horizontal">
 
             <!-- ВСЕГО к оплате -->
-            <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2" Width="693">
+            <GroupBox Grid.Row="0" Header="ВСЕГО к оплате" Margin="2,2,2,2" Width="693"
+                      ToolTip="Общая сумма за бензин, еду и напитки"
+                      ToolTipService.InitialShowDelay="20"
+                      ToolTipService.ShowDuration="2000">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1.5*"></ColumnDefinition>
