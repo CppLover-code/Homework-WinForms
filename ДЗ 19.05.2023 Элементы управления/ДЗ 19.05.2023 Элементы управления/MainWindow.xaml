@@ -155,18 +155,26 @@
                         </Grid>
                         
                         <!-- Вторая строка - К оплате (Мини-кафе) -->
-                        <StackPanel Grid.Row="2">
-                            <GroupBox Header="К оплате" Padding="20,20,20,0">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                                        <ColumnDefinition></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
-                                    <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
-                                </Grid>
-                            </GroupBox>
-                        </StackPanel>
+                        <DockPanel Grid.Row="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                
+                                <GroupBox Grid.Row="1" Header="К оплате" Padding="20,20,20,0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
+                                        <Label Grid.Column="1" VerticalAlignment="Bottom">грн.</Label>
+                                    </Grid>
+                                </GroupBox>
+                            </Grid>
+                            
+                        </DockPanel>
 
                     </Grid>
                 </GroupBox>
