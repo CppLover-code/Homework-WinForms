@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
+        Title="BestOil" Height="500" Width="700" Icon="/pngwing.com (1).bmp" >
     <StackPanel>
 
         <!-- меню -->
         <StackPanel>
-            <Menu  VerticalAlignment="Top">
+            <Menu  VerticalAlignment="Top" Background="#FFCCE698">
 
                 <MenuItem Header="File"></MenuItem>
 
@@ -212,7 +212,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Image Grid.Column="0" Source="/Copy.png" Margin="5,5,5,5" Stretch="UniformToFill" Width="50"/>
+                    <Image Grid.Column="0" Source="/free-png.ru-737.png" Margin="5,5,5,5" Width="50" Stretch="UniformToFill"/>
                     <Button Grid.Column="1" Margin="5,5,5,5" Width="150"> Посчитать </Button>
                     <TextBlock Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right">64,00</TextBlock>
                     <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>

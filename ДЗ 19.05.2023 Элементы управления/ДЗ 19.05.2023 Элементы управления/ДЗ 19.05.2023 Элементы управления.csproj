@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="Copy.png" />
+    <None Remove="pngwing.com %281%29.bmp" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Copy.png" />
+    <Resource Include="pngwing.com (1).bmp" />
   </ItemGroup>
 
 </Project>
