@@ -26,8 +26,10 @@ namespace ДЗ_19._05._2023_Элементы_управления
     {
         private double a98 = 43;
         private double a95 = 45;
+        private double dayTotal = 0;
 
         private DispatcherTimer? timer = null;
+        private DispatcherTimer? timer1 = null;
         int flag = 0;
         public MainWindow()
         {
@@ -62,6 +64,76 @@ namespace ДЗ_19._05._2023_Элементы_управления
                 tblDateTime.Text = DateTime.Now.ToLongTimeString();
             }
             tblDayOfWeek.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
+        }
+        //////////////////////////// Завершение покупки для 1 клиента ////////////////////////////
+        private void timer1Start()  // запуск таймера
+        {
+            timer1 = new DispatcherTimer();
+            timer1.Tick += new EventHandler(timer1Tick);
+            timer1.Interval = new TimeSpan(0, 0, 0, 0, 1000);
+            timer1.Start();
+        }
+        private void timer1Tick(object sender, EventArgs e)  // событие таймера
+        {
+            timer1.IsEnabled = false;
+
+            if (MessageBox.Show("Завершить покупку?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            {
+                timer1.IsEnabled = true;
+            }
+            else
+            {
+                dayTotal += TotalPayment();
+
+                cbGas.SelectedIndex = 0;
+                rbCountGas.IsChecked = true;
+
+                if (cbGas.SelectedIndex == 0)
+                {
+                    tbPriceGas.Text = a98.ToString();
+                }
+                else if (cbGas.SelectedIndex == 1)
+                {
+                    tbPriceGas.Text = a95.ToString();
+                }
+                tbPaymentGas.Text = PaymentGas().ToString("N2");
+
+                if (rbCountGas.IsChecked == true)
+                {
+                    tbCountGas.IsReadOnly = false;
+                    tbSumGas.IsReadOnly = true;
+                    tbCountGas.Text = 10.ToString("N2");
+                    tbSumGas.Text = string.Empty;
+                }
+                else if (rbSumGas.IsChecked == true)
+                {
+                    tbCountGas.IsReadOnly = true;
+                    tbSumGas.IsReadOnly = false;
+                    tbSumGas.Text = 100.ToString("N2");
+                    tbCountGas.Text = string.Empty;
+                }
+
+                checkBoxHotDog.IsChecked = false;
+                tbHotDogCount.Text = string.Empty;
+                tbHotDogCount.IsReadOnly = true;
+
+                checkBoxHamburger.IsChecked = false;
+                tbHamburgerCount.Text = string.Empty;
+                tbHamburgerCount.IsReadOnly = true;
+
+
+                checkBoxFries.IsChecked = false;
+                tbFriesCount.Text = string.Empty;
+                tbFriesCount.IsReadOnly = true;
+
+
+                checkBoxCola.IsChecked = false;
+                tbColaCount.Text = string.Empty;
+                tbColaCount.IsReadOnly = true;
+
+                tblCafePayment.Text = PaymentCafe().ToString("N2");
+                tbTotalPayment.Text = "0,00";
+            }          
         }
 
 
@@ -195,7 +267,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             tbTotalPayment.Text = TotalPayment().ToString("N2");
-            //timer2.Enabled = true;
+            timer1Start();
         }
         private double TotalPayment()
         {
