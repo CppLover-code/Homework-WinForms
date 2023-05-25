@@ -27,6 +27,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
         private double a98 = 43;
         private double a95 = 45;
         private double dayTotal = 0;
+        private int clientCount = 0;
 
         private DispatcherTimer? timer = null;
         private DispatcherTimer? timer1 = null;
@@ -65,6 +66,8 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
             tblDayOfWeek.Text = CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek).ToString();
         }
+
+
         //////////////////////////// Завершение покупки для 1 клиента ////////////////////////////
         private void timer1Start()  // запуск таймера
         {
@@ -84,6 +87,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
             else
             {
                 dayTotal += TotalPayment();
+                clientCount++;
 
                 cbGas.SelectedIndex = 0;
                 rbCountGas.IsChecked = true;
@@ -285,6 +289,25 @@ namespace ДЗ_19._05._2023_Элементы_управления
             }
 
             return totalPayment;
+        }
+
+
+        //////////////////////////// Закрытие окна - подсчет выручки ////////////////////////////
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Сумма {dayTotal} грн.\nКоличество клиентов {clientCount}", "Выручка за день"); 
+        }
+
+
+        //////////////////////////// Кнопки МЕНЮ ////////////////////////////
+        private void menuCash_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Сумма {dayTotal} грн.\nКоличество клиентов {clientCount}", "Выручка на данный момент");
+        }
+
+        private void menuClose_Click(object sender, RoutedEventArgs e)
+        {
+           Close();
         }
     }
 }

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_19._05._2023_Элементы_управления"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="BestOil" Height="455" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="455">
+        Title="BestOil" Height="455" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="455" Closed="Window_Closed">
     <StackPanel>
 
         <!-- меню -->
         <StackPanel>
             <Menu VerticalAlignment="Top" Background="#FFCCE698">
 
-                <MenuItem Margin="5,5,5,5" Header="Выручка" FontWeight="Bold"/>
-                <MenuItem Margin="5,5,5,5" Header="Закрыть" FontWeight="Bold"/>
+                <MenuItem x:Name="menuCash" Margin="5,5,5,5" Header="Выручка" FontWeight="Bold" Click="menuCash_Click"/>
+                <MenuItem x:Name="menuClose" Margin="5,5,5,5" Header="Закрыть" FontWeight="Bold" Click="menuClose_Click"/>
             </Menu>
         </StackPanel>
 
@@ -228,7 +228,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Grid.Column="0" Source="/free-png.ru-737.png" Margin="5,5,5,5" Width="50" Stretch="UniformToFill"/>
-                    <Button Grid.Column="1" Margin="5,5,5,5" Width="150" Click="Button_Click">Посчитать</Button>
+                    <Button x:Name="btnCalculate" Grid.Column="1" Margin="5,5,5,5" Width="150" Click="Button_Click">Посчитать</Button>
                     <TextBlock x:Name="tbTotalPayment" Grid.Column="2" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="25" HorizontalAlignment="Right"></TextBlock>
                     <Label Grid.Column="3" VerticalAlignment="Bottom">грн.</Label>
                 </Grid>
