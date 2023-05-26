@@ -271,7 +271,7 @@ namespace Пр._27._04._2023_Продолжение_Взаимодействие
         {
             MessageBox.Show($"Сумма {dayTotal} грн.", "Выручка за день", MessageBoxButtons.OK, MessageBoxIcon.Information);
             e.Cancel = false;
-            MessageBox.Show("До свидания!");
+            //MessageBox.Show("До свидания!");
         }
 
         private void timer2_Tick(object sender, EventArgs e) // работа со строкой состояния и таймером

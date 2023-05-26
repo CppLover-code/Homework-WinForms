@@ -43,11 +43,27 @@ namespace ДЗ_19._05._2023_Элементы_управления
             tbTotalPayment.Text = "0,00";
         }
 
+        private void styleMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = (MenuItem)sender;
+            //MessageBox.Show(menuItem.Header.ToString());
+            //styleMenu.styleBox_Click += ThemeChange; // подписка на событие - изменение темы
+            string? style = menuItem.Header.ToString();
+            // определяем путь к файлу ресурсов
+            var uri = new Uri(style + ".xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary? resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // очищаем коллекцию ресурсов приложения
+            Application.Current.Resources.Clear();
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+        }
+
         //////////////////////////// StatusBar - строка состояния ////////////////////////////
         private void timerStart()  // запуск таймера
         {
             timer = new DispatcherTimer();
-            timer.Tick += new EventHandler(timerTick);
+            timer.Tick += new EventHandler(timerTick!);
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1000);
             timer.Start();
         }
@@ -72,13 +88,13 @@ namespace ДЗ_19._05._2023_Элементы_управления
         private void timer1Start()  // запуск таймера
         {
             timer1 = new DispatcherTimer();
-            timer1.Tick += new EventHandler(timer1Tick);
+            timer1.Tick += new EventHandler(timer1Tick!);
             timer1.Interval = new TimeSpan(0, 0, 0, 0, 1000);
             timer1.Start();
         }
         private void timer1Tick(object sender, EventArgs e)  // событие таймера
         {
-            timer1.IsEnabled = false;
+            timer1!.IsEnabled = false;
 
             if (MessageBox.Show("Завершить покупку?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
             {
@@ -309,5 +325,7 @@ namespace ДЗ_19._05._2023_Элементы_управления
         {
            Close();
         }
+
+        
     }
 }
