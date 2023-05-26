@@ -19,6 +19,7 @@
                 <MenuItem x:Name="menuTheme" Margin="5,5,5,5" Header="Темы" FontWeight="Bold">
                     <MenuItem Header="Light" Click="styleMenu_Click"></MenuItem>
                     <MenuItem Header="Dark" Click="styleMenu_Click"></MenuItem>
+                    <MenuItem Header="Coffee" Click="styleMenu_Click"></MenuItem>
                 </MenuItem>
                 
                 <MenuItem x:Name="menuClose" Margin="5,5,5,5" Header="Закрыть" FontWeight="Bold" Click="menuClose_Click"/>
