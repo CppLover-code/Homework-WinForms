@@ -1,22 +1,19 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <Style x:Key="StatusBarStyle" TargetType="StatusBar">
-        <Setter Property="Background" Value="#685c3e" />
-        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="#67923d"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
-    
     <Style x:Key="WindowStyle" TargetType="Window">
-        <Setter Property="Background" Value="#a0906a"/>
+        <Setter Property="Background" Value="#81b74c"/>
     </Style>
-    
     <Style x:Key="MenuStyle" TargetType="Menu">
-        <Setter Property="Background" Value="#685c3e" />
-        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="#67923d"/>
+        <Setter Property="Foreground" Value="Black"/>
     </Style>
-    
     <Style x:Key="GroupBoxStyle" TargetType="GroupBox">
-        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="BorderBrush" Value="Black"/>
     </Style>
     
 </ResourceDictionary>
