@@ -7,7 +7,7 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" 
         Title="BestOil" Height="455" Width="720" Icon="/pngwing.com (1).bmp" MinWidth="720" MinHeight="455" 
         Closed="Window_Closed" Style="{DynamicResource WindowStyle}">
-    
+
     <StackPanel>
 
         <!-- меню -->
@@ -21,7 +21,7 @@
                     <MenuItem Header="Dark" Click="styleMenu_Click"></MenuItem>
                     <MenuItem Header="Coffee" Click="styleMenu_Click"></MenuItem>
                 </MenuItem>
-                
+
                 <MenuItem x:Name="menuClose" Margin="5,5,5,5" Header="Закрыть" FontWeight="Bold" Click="menuClose_Click"/>
             </Menu>
         </StackPanel>
@@ -76,7 +76,7 @@
                                               ToolTipService.InitialShowDelay="20"
                                               ToolTipService.ShowDuration="2000">
                                     </TextBox>
-                                    
+
                                 </StackPanel>
                             </StackPanel>
 
