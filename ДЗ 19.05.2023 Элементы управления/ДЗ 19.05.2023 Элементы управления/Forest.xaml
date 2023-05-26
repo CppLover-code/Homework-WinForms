@@ -5,13 +5,16 @@
         <Setter Property="Background" Value="#67923d"/>
         <Setter Property="Foreground" Value="Black"/>
     </Style>
+    
     <Style x:Key="WindowStyle" TargetType="Window">
         <Setter Property="Background" Value="#81b74c"/>
     </Style>
+    
     <Style x:Key="MenuStyle" TargetType="Menu">
         <Setter Property="Background" Value="#67923d"/>
         <Setter Property="Foreground" Value="Black"/>
     </Style>
+    
     <Style x:Key="GroupBoxStyle" TargetType="GroupBox">
         <Setter Property="BorderBrush" Value="Black"/>
     </Style>
