@@ -41,9 +41,14 @@
         </Border>
 
         <Border Padding="20">
-            <DockPanel>
-                <ListBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="15"></ListBox>
-            </DockPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <ListBox Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="15"></ListBox>
+            </Grid>
         </Border>
                    
     </StackPanel>
