@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ДЗ 30.05.2023 Паттерн MVC/1.0.0": {
+        "runtime": {
+          "ДЗ 30.05.2023 Паттерн MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ДЗ 30.05.2023 Паттерн MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
