@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ДЗ_30._05._2023_Паттерн_MVC"
         mc:Ignorable="d"
-        Title="Persons" Height="500" Width="500" MinHeight="480" MinWidth="500">
+        Title="Persons" Height="500" Width="500" 
+        MinHeight="480" MinWidth="500"
+        WindowStartupLocation="CenterScreen">
+    
     <StackPanel>
         <Border Padding="20">
             <Grid>
@@ -14,16 +17,27 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0" HorizontalAlignment="Stretch" FontSize="15" HorizontalContentAlignment="Center" TextWrapping="Wrap"/>
-                <Button Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Margin="5,5,5,5" Padding="10,5,10,5" FontSize="15">Поиск</Button>
+                <TextBox Grid.Column="0" 
+                         HorizontalAlignment="Stretch" 
+                         FontSize="15" 
+                         HorizontalContentAlignment="Center"
+                         TextWrapping="Wrap"/>
+                
+                <Button Grid.Column="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Margin="5,0,5,0"
+                        Padding="10,5,10,5"
+                        FontSize="14">Поиск
+                </Button>
             </Grid>
         </Border>
 
         <Border Padding="20">
             <StackPanel>
-                <Label FontSize="15">Имя</Label>
+                <Label FontSize="14">Имя</Label>
                 <TextBox FontSize="15"></TextBox>
-                <Label FontSize="15">Возраст</Label>
+                <Label FontSize="14">Возраст</Label>
                 <TextBox FontSize="15"></TextBox>
             </StackPanel>
         </Border>
@@ -41,7 +55,7 @@
                         VerticalAlignment="Stretch" 
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5" 
-                        FontSize="15">Сохранить
+                        FontSize="14">Сохранить
                 </Button>
                 
                 <Button Grid.Column="2" 
@@ -49,7 +63,7 @@
                         VerticalAlignment="Stretch"  
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5"
-                        FontSize="15">Показать
+                        FontSize="14">Показать
                 </Button>
                 
             </Grid>
