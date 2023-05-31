@@ -17,13 +17,13 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Column="0" 
+                <TextBox x:Name="tbSearch" Grid.Column="0" 
                          HorizontalAlignment="Stretch" 
                          FontSize="15" 
                          HorizontalContentAlignment="Center"
                          TextWrapping="Wrap"/>
-                
-                <Button Grid.Column="1"
+
+                <Button x:Name="btnSearch" Grid.Column="1"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
                         Margin="5,0,5,0"
@@ -36,9 +36,9 @@
         <Border Padding="20">
             <StackPanel>
                 <Label FontSize="14">Имя</Label>
-                <TextBox FontSize="15"></TextBox>
+                <TextBox x:Name="tbName" FontSize="15"></TextBox>
                 <Label FontSize="14">Возраст</Label>
-                <TextBox FontSize="15"></TextBox>
+                <TextBox x:Name="tbAge" FontSize="15"></TextBox>
             </StackPanel>
         </Border>
 
