@@ -49,16 +49,16 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
-                <Button Grid.Column="0" 
+
+                <Button x:Name="btnSave"  Grid.Column="0" 
                         HorizontalAlignment="Stretch"  
                         VerticalAlignment="Stretch" 
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5" 
                         FontSize="14">Сохранить
                 </Button>
-                
-                <Button Grid.Column="2" 
+
+                <Button x:Name="btnShow" Grid.Column="2" 
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"  
                         Margin="5,5,5,5" 
@@ -71,7 +71,7 @@
 
         <Border Padding="20">
             <DockPanel LastChildFill="True">
-                <ListBox MinHeight="50" 
+                <ListBox x:Name="lbPersons" MinHeight="50" 
                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
                          ScrollViewer.VerticalScrollBarVisibility="Auto" 
                          VerticalAlignment="Stretch" 
