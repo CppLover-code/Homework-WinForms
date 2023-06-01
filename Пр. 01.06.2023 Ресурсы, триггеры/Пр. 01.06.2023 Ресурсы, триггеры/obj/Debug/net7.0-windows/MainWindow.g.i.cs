@@ -69,7 +69,7 @@ namespace Пр._01._06._2023_Ресурсы__триггеры {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Пр. 01.06.2023 Ресурсы, триггеры;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Пр. 01.06.2023 Ресурсы, триггеры;V1.0.0.0;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -37,4 +37,15 @@
             </Style>
         </Style.Resources>
     </Style>
+    
+    <Style x:Key="GreenBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ce05a"/>
+        <Setter Property="Margin" Value="5,5,5,5" />
+        <Setter Property="Padding" Value="10" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+        </Style.Resources>
+    </Style>
 </ResourceDictionary>
