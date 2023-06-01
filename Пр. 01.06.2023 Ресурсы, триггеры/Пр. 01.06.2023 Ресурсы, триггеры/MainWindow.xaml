@@ -1,0 +1,29 @@
+﻿<Window x:Class="Пр._01._06._2023_Ресурсы__триггеры.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Пр._01._06._2023_Ресурсы__триггеры"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400">
+    
+     <!--<Window.Resources>
+       <SolidColorBrush x:Key="AquaStyle" Color="Aquamarine" />
+
+        <LinearGradientBrush x:Key="gradientStyle" StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="Yellow" Offset="0" />
+            <GradientStop Color="red" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource AquaStyle}">
+        <Button x:Name="button1" MaxHeight="40" MaxWidth="120" Content="Hello world" Background="{StaticResource gradientStyle}">
+            <Button.Resources>
+                <LinearGradientBrush x:Key="gradientStyle" />
+            </Button.Resources>
+        </Button>
+    </Grid>-->
+    <Grid x:Name="MyGrid">
+        <Button  x:Name="button1" MaxHeight="40" MaxWidth="120" Content="Hello world" ></Button>
+    </Grid>
+</Window>

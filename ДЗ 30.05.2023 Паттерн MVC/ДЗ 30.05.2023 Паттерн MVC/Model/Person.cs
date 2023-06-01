@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ДЗ_30._05._2023_Паттерн_MVC.Model
 {
-    class Controller
+    public class Controller
     {
     }
 }
