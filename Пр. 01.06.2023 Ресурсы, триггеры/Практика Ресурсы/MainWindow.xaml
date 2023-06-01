@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Практика_Ресурсы"
         mc:Ignorable="d"
-        Title="MainWindow" Height="380" Width="720" WindowStartupLocation="CenterScreen"
-         MinHeight="380" MinWidth="720">
+        Height="400" Width="760" WindowStartupLocation="CenterScreen"
+        MinHeight="400" MinWidth="760" Title="Keyboard trainer">
     <!--В App.xaml прописываем подключение наших стилей
     https://www.cyberforum.ru/wpf-silverlight/thread1378723.html-->
 
@@ -24,19 +24,19 @@
 
 
                     <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <TextBlock Text="Speed: "></TextBlock>
-                        <TextBlock FontWeight="Bold">0</TextBlock>
-                        <TextBlock Text=" chars/min"></TextBlock>
+                        <TextBlock Text="Speed:"></TextBlock>
+                        <TextBlock Style ="{StaticResource txtBlStyle1}">0</TextBlock>
+                        <TextBlock Text="chars/min"></TextBlock>
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal">
-                        <TextBlock Text="Fails: "></TextBlock>
-                        <TextBlock FontWeight="Bold">0</TextBlock>
+                        <TextBlock Text="Fails:"></TextBlock>
+                        <TextBlock Style ="{StaticResource txtBlStyle1}">0</TextBlock>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="2" Orientation="Horizontal">
-                        <TextBlock Text="Difficulty: "></TextBlock>
-                        <TextBlock FontWeight="Bold">5</TextBlock>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Difficulty:"></TextBlock>
+                        <TextBlock Style ="{StaticResource txtBlStyle1}">5</TextBlock>
                     </StackPanel>
 
                     <Slider Grid.Column="3" Maximum="100"/>
@@ -321,7 +321,7 @@
                     <Button Grid.Column="0" Style="{StaticResource GrayBtnStyle}">Ctrl</Button>
                     <Button Grid.Column="1" Style="{StaticResource GrayBtnStyle}">Win</Button>
                     <Button Grid.Column="2" Style="{StaticResource GrayBtnStyle}">Alt</Button>
-                    <Button Grid.Column="3" Style="{StaticResource YellowBtnStyle}">Space</Button>
+                    <Button Grid.Column="3" Style="{StaticResource OrangeBtnStyle}">Space</Button>
                     <Button Grid.Column="4" Style="{StaticResource GrayBtnStyle}">Alt</Button>
                     <Button Grid.Column="5" Style="{StaticResource GrayBtnStyle}">Win</Button>
                     <Button Grid.Column="6" Style="{StaticResource GrayBtnStyle}">Ctrl</Button>

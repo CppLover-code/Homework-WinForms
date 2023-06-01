@@ -21,3 +21,26 @@ C:\Users\Hp\Desktop\Пр. 01.06.2023 Ресурсы, триггеры\Практ
 C:\Users\Hp\Desktop\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\ref\Практика Ресурсы.dll
 C:\Users\Hp\Desktop\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\KeyboardStyles.baml
 C:\Users\Hp\Desktop\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\App.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\bin\Debug\net7.0-windows\Практика Ресурсы.exe
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\bin\Debug\net7.0-windows\Практика Ресурсы.deps.json
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\bin\Debug\net7.0-windows\Практика Ресурсы.runtimeconfig.json
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\bin\Debug\net7.0-windows\Практика Ресурсы.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\bin\Debug\net7.0-windows\Практика Ресурсы.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\KeyboardStyles.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы_MarkupCompile.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы_MarkupCompile.lref
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\App.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.g.resources
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.AssemblyInfo.cs
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\refint\Практика Ресурсы.dll
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.pdb
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\Практика Ресурсы.genruntimeconfig.cache
+C:\Users\Hp\Desktop\ДЗ WinForms\Пр. 01.06.2023 Ресурсы, триггеры\Практика Ресурсы\obj\Debug\net7.0-windows\ref\Практика Ресурсы.dll
