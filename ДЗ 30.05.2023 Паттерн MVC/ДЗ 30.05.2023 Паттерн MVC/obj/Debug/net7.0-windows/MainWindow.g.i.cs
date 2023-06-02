@@ -109,7 +109,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ДЗ 30.05.2023 Паттерн MVC;V1.0.0.0;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ДЗ 30.05.2023 Паттерн MVC;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
