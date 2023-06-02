@@ -26,7 +26,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
             InitializeComponent();
             controller = new Controller();           
         }
-        private void btnSave_Click(object sender, RoutedEventArgs e)
+        private void btnSave_Click(object sender, RoutedEventArgs e)                // обработка кнопка Сохранить
         {
             controller.AddPerson(tbName.Text, int.Parse(tbAge.Text)); // передаем контроллеру данные из вида
             btnShow.IsEnabled = true;   
@@ -41,11 +41,11 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
                 lbPersons.Items.Add(a);
             }
         }
-        private void btnShow_Click(object sender, RoutedEventArgs e)
+        private void btnShow_Click(object sender, RoutedEventArgs e)                // обработка кнопка Показать
         {
             Print();
         }
-        private void ShowMenuItem_Click(object sender, RoutedEventArgs e)
+        private void ShowMenuItem_Click(object sender, RoutedEventArgs e)           // обработка Показать выбранный элемент
         {
             try
             {
@@ -57,12 +57,11 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
                 MessageBox.Show("Объект не выбран!");
             }
         }
-        private void ClearAllMenuItem_Click(object sender, RoutedEventArgs e)
+        private void ClearAllMenuItem_Click(object sender, RoutedEventArgs e)       // очистка списка (НЕ УДАЛЕНИЕ!!!!)
         {
             lbPersons.Items.Clear();
         }
-
-        private void DeleteSelectedMenuItem_Click(object sender, RoutedEventArgs e)
+        private void DeleteSelectedMenuItem_Click(object sender, RoutedEventArgs e) // удаление выделенного элемента
         {
             try
             {
@@ -77,7 +76,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
 
             if(lbPersons.Items.Count == 0) { btnShow.IsEnabled = false; }
         }       
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        private void btnSearch_Click(object sender, RoutedEventArgs e)              // обработка нажатия на кнопку Поиск
         {
             try
             {
@@ -100,8 +99,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
 
             tbSearch.Text = string.Empty;
         }
-
-        private void txtBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtBox_TextChanged(object sender, TextChangedEventArgs e)      // обработка изменения текста в текст боксах Имя и Возраст
         {
             if(tbAge.Text != string.Empty && tbName.Text != string.Empty)
             {
