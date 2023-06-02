@@ -10,28 +10,7 @@
         WindowStartupLocation="CenterScreen">
     
     <StackPanel>
-        <Border Padding="20">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <TextBox x:Name="tbSearch" Grid.Column="0" 
-                         HorizontalAlignment="Stretch" 
-                         FontSize="15" 
-                         HorizontalContentAlignment="Center"
-                         TextWrapping="Wrap"/>
-
-                <Button x:Name="btnSearch" Grid.Column="1"
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        Margin="5,0,5,0"
-                        Padding="10,5,10,5"
-                        FontSize="14" Click="btnSearch_Click">Поиск
-                </Button>
-            </Grid>
-        </Border>
+        
 
         <Border Padding="20">
             <StackPanel>
@@ -77,9 +56,46 @@
                          VerticalAlignment="Stretch" 
                          HorizontalAlignment="Stretch" 
                          FontSize="15">
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Показать" Click="ShowMenuItem_Click"></MenuItem>
+                            <MenuItem Header="Очистить список" Click="ClearAllMenuItem_Click"></MenuItem>
+                            <MenuItem Header="Удалить выбранный элемент" Click="DeleteSelectedMenuItem_Click"></MenuItem>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
                 </ListBox>
             </DockPanel>
         </Border>
-                   
+        
+        <Border Padding="20">
+            <StackPanel>
+                <Label Height="15" Background="LightBlue"></Label>
+            </StackPanel>
+        </Border>
+        
+        
+        <Border Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="tbSearch" Grid.Column="0" 
+                         HorizontalAlignment="Stretch" 
+                         FontSize="15" 
+                         HorizontalContentAlignment="Center"
+                         TextWrapping="Wrap"/>
+
+                <Button x:Name="btnSearch" Grid.Column="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Margin="5,0,5,0"
+                        Padding="10,5,10,5"
+                        FontSize="14" Click="btnSearch_Click">Поиск
+                </Button>
+            </Grid>
+        </Border>
+
     </StackPanel>
 </Window>

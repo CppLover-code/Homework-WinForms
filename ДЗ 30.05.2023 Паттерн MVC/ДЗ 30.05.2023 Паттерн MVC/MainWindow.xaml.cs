@@ -29,6 +29,8 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             controller.AddPerson(tbName.Text, int.Parse(tbAge.Text)); // передаем контроллеру данные из вида
+            tbName.Text = string.Empty;
+            tbAge.Text = string.Empty;
         }
         void Print()  // для показа обновленного списка людей из базы данных
         {
@@ -41,8 +43,8 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
         private void btnShow_Click(object sender, RoutedEventArgs e)
         {
             Print();
-        }   
-        private void ShowToolStripMenuItem_Click(object sender, EventArgs e)
+        }
+        private void ShowMenuItem_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -54,13 +56,12 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
                 MessageBox.Show("Объект не выбран!");
             }
         }
-
-        private void ClearAllToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClearAllMenuItem_Click(object sender, RoutedEventArgs e)
         {
             lbPersons.Items.Clear();
         }
 
-        private void DeleteSelectedToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteSelectedMenuItem_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -72,8 +73,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
             {
                 MessageBox.Show("Объект не выбран!");
             }
-        }
-
+        }       
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -84,11 +84,18 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
                 {
                     lbPersons.Items.Add(a);
                 }
+
+                if(lbPersons.Items.Count == 0)
+                {
+                    MessageBox.Show("Данных не найдено!");
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Данных не найдено!");
             }
+
+            tbSearch.Text = string.Empty;
         }
 
         
