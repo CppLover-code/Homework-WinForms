@@ -28,6 +28,7 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
         }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            // сделать проверку пусты ли текстбоксы, что ж сохранять-то?
             controller.AddPerson(tbName.Text, int.Parse(tbAge.Text)); // передаем контроллеру данные из вида
             tbName.Text = string.Empty;
             tbAge.Text = string.Empty;
