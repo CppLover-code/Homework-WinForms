@@ -7,17 +7,16 @@
         mc:Ignorable="d"
         Title="Persons" Height="500" Width="500" 
         MinHeight="480" MinWidth="500"
-        WindowStartupLocation="CenterScreen">
-    
+        WindowStartupLocation="CenterScreen" Icon="/free-icon-group-4155625.png">
+   
     <StackPanel>
-        
-
+       
         <Border Padding="20">
             <StackPanel>
                 <Label FontSize="14">Имя</Label>
-                <TextBox x:Name="tbName" FontSize="15"></TextBox>
+                <TextBox x:Name="tbName" FontSize="15" TextChanged="txtBox_TextChanged"></TextBox>
                 <Label FontSize="14">Возраст</Label>
-                <TextBox x:Name="tbAge" FontSize="15"></TextBox>
+                <TextBox x:Name="tbAge" FontSize="15" TextChanged="txtBox_TextChanged"></TextBox>
             </StackPanel>
         </Border>
 
@@ -34,7 +33,7 @@
                         VerticalAlignment="Stretch" 
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5" 
-                        FontSize="14" Click="btnSave_Click">Сохранить
+                        FontSize="14" Click="btnSave_Click" IsEnabled="False">Сохранить
                 </Button>
 
                 <Button x:Name="btnShow" Grid.Column="2" 
@@ -42,7 +41,7 @@
                         VerticalAlignment="Stretch"  
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5"
-                        FontSize="14" Click="btnShow_Click">Показать
+                        FontSize="14" Click="btnShow_Click" IsEnabled="False">Показать
                 </Button>
                 
             </Grid>

@@ -24,12 +24,12 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
         public MainWindow()
         {
             InitializeComponent();
-            controller = new Controller();
+            controller = new Controller();           
         }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            // сделать проверку пусты ли текстбоксы, что ж сохранять-то?
             controller.AddPerson(tbName.Text, int.Parse(tbAge.Text)); // передаем контроллеру данные из вида
+            btnShow.IsEnabled = true;   
             tbName.Text = string.Empty;
             tbAge.Text = string.Empty;
         }
@@ -74,6 +74,8 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
             {
                 MessageBox.Show("Объект не выбран!");
             }
+
+            if(lbPersons.Items.Count == 0) { btnShow.IsEnabled = false; }
         }       
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
@@ -99,6 +101,13 @@ namespace ДЗ_30._05._2023_Паттерн_MVC
             tbSearch.Text = string.Empty;
         }
 
-        
+        private void txtBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(tbAge.Text != string.Empty && tbName.Text != string.Empty)
+            {
+                btnSave.IsEnabled = true;
+            }    
+            else btnSave.IsEnabled = false;
+        }
     }
 }

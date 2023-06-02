@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="free-icon-group-4155625.png" />
+    <None Remove="free-icon-people-3280979.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="free-icon-group-4155625.png" />
+    <Resource Include="free-icon-people-3280979.png" />
+  </ItemGroup>
+
 </Project>
