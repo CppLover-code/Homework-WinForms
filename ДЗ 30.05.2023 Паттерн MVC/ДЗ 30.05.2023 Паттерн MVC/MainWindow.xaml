@@ -28,7 +28,7 @@
                         VerticalAlignment="Stretch"
                         Margin="5,0,5,0"
                         Padding="10,5,10,5"
-                        FontSize="14">Поиск
+                        FontSize="14" Click="btnSearch_Click">Поиск
                 </Button>
             </Grid>
         </Border>
@@ -55,7 +55,7 @@
                         VerticalAlignment="Stretch" 
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5" 
-                        FontSize="14">Сохранить
+                        FontSize="14" Click="btnSave_Click">Сохранить
                 </Button>
 
                 <Button x:Name="btnShow" Grid.Column="2" 
@@ -63,7 +63,7 @@
                         VerticalAlignment="Stretch"  
                         Margin="5,5,5,5" 
                         Padding="10,5,10,5"
-                        FontSize="14">Показать
+                        FontSize="14" Click="btnShow_Click">Показать
                 </Button>
                 
             </Grid>
