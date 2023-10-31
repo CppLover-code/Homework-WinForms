@@ -9,3 +9,13 @@ C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Ме�
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.csproj.CoreCompileInputs.cache
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.exe
 C:\Users\Hp\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.pdb
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\bin\Debug\ДЗ 09.05.2023 Меню.exe.config
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\bin\Debug\ДЗ 09.05.2023 Меню.exe
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\bin\Debug\ДЗ 09.05.2023 Меню.pdb
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.csproj.AssemblyReference.cache
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ_09._05._2023_Меню.Form1.resources
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ_09._05._2023_Меню.Properties.Resources.resources
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.csproj.GenerateResource.cache
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.csproj.CoreCompileInputs.cache
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.exe
+C:\Users\boiko\Desktop\ДЗ WinForms\ДЗ 09.05.2023 Меню\ДЗ 09.05.2023 Меню\obj\Debug\ДЗ 09.05.2023 Меню.pdb
